@@ -28,6 +28,7 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   <summary>Click here to unfold solved challenges list</summary>
 
   - [Challenge 1](challenges/c0001)
+  - [Challenge 2](challenges/c0002)
 </details>
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat&logo=cplusplus

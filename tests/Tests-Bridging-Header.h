@@ -10,5 +10,6 @@
 #define Tests_Bridging_Header_h
 
 long solveChallenge1(long limit);
+long solveChallenge2(long limit);
 
 #endif /* Tests_Bridging_Header_h */

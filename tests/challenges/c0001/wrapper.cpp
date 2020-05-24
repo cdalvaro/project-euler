@@ -8,6 +8,8 @@
 
 #include "challenges/c0001/challenge.cpp"
 
+using namespace challenges;
+
 extern "C" long solveChallenge1(long limit) {
-    return std::any_cast<challenges::Challenge1::Type_t>(challenges::Challenge1(limit).solve());
+    return std::any_cast<Challenge1::Type_t>(Challenge1(limit).solve());
 }

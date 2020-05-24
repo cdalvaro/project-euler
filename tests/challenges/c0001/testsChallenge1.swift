@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Tests: XCTestCase {
+class TestsChallenge1: XCTestCase {
 
     func testChallenge1() throws {
         let expected = 233_168
