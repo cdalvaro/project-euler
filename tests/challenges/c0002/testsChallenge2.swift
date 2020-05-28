@@ -1,5 +1,5 @@
 //
-//  Tests.swift
+//  testsChallenge2.swift
 //  Tests
 //
 //  Created by Carlos David on 24/05/2020.

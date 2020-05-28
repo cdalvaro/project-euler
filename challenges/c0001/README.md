@@ -16,5 +16,5 @@ You can find the algorithm to solve this challenge inside [challenge.cpp](challe
 <details>
   <summary>Click here to see the result!</summary>
 
-  Result is: `233.168`
+  Result is: `233,168`
 </details>

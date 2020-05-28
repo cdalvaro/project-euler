@@ -11,5 +11,6 @@
 
 long solveChallenge1(long limit);
 long solveChallenge2(long limit);
+unsigned long long solveChallenge3(unsigned long long limit);
 
 #endif /* Tests_Bridging_Header_h */
