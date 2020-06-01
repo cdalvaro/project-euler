@@ -12,6 +12,12 @@
 		0708FA94247AD78A00247F5F /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0708FA93247AD78A00247F5F /* wrapper.cpp */; };
 		0708FA97247AD7DF00247F5F /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0708FA95247AD7DA00247F5F /* wrapper.cpp */; };
 		0708FA9B247AD87B00247F5F /* testsChallenge2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0708FA9A247AD87B00247F5F /* testsChallenge2.swift */; };
+		070B7D0E2482DD4F000AABB4 /* power.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 070B7D0C2482DD4F000AABB4 /* power.hpp */; };
+		070B7D102482DE9E000AABB4 /* math.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 070B7D0F2482DE9E000AABB4 /* math.hpp */; };
+		0735FC9724817F3800D6F69F /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0735FC9524817F3800D6F69F /* challenge.cpp */; };
+		0735FC9824817F3800D6F69F /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0735FC9624817F3800D6F69F /* challenge.hpp */; };
+		074123342483B8DC003B4369 /* testsChallenge4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074123322483B7C3003B4369 /* testsChallenge4.swift */; };
+		074123352483B8DC003B4369 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 074123332483B7C3003B4369 /* wrapper.cpp */; };
 		0760B33E247FFC300092F926 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0760B33C247FFC300092F926 /* challenge.cpp */; };
 		0760B33F247FFC300092F926 /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0760B33D247FFC300092F926 /* challenge.hpp */; };
 		0760B345248002370092F926 /* factorization.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0760B343248002370092F926 /* factorization.hpp */; };
@@ -44,6 +50,13 @@
 		0708FA93247AD78A00247F5F /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		0708FA95247AD7DA00247F5F /* wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		0708FA9A247AD87B00247F5F /* testsChallenge2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testsChallenge2.swift; sourceTree = "<group>"; };
+		070B7D0C2482DD4F000AABB4 /* power.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = power.hpp; sourceTree = "<group>"; };
+		070B7D0F2482DE9E000AABB4 /* math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = math.hpp; sourceTree = "<group>"; };
+		0735FC9424817EF900D6F69F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0735FC9524817F3800D6F69F /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
+		0735FC9624817F3800D6F69F /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
+		074123322483B7C3003B4369 /* testsChallenge4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge4.swift; sourceTree = "<group>"; };
+		074123332483B7C3003B4369 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		0760B33C247FFC300092F926 /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
 		0760B33D247FFC300092F926 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		0760B343248002370092F926 /* factorization.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = factorization.hpp; sourceTree = "<group>"; };
@@ -109,6 +122,25 @@
 			path = c0002;
 			sourceTree = "<group>";
 		};
+		0735FC9324817EE500D6F69F /* c0004 */ = {
+			isa = PBXGroup;
+			children = (
+				0735FC9424817EF900D6F69F /* README.md */,
+				0735FC9524817F3800D6F69F /* challenge.cpp */,
+				0735FC9624817F3800D6F69F /* challenge.hpp */,
+			);
+			path = c0004;
+			sourceTree = "<group>";
+		};
+		074123312483B771003B4369 /* c0004 */ = {
+			isa = PBXGroup;
+			children = (
+				074123322483B7C3003B4369 /* testsChallenge4.swift */,
+				074123332483B7C3003B4369 /* wrapper.cpp */,
+			);
+			path = c0004;
+			sourceTree = "<group>";
+		};
 		0760B340248002090092F926 /* tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +153,9 @@
 		0760B3412480021F0092F926 /* math */ = {
 			isa = PBXGroup;
 			children = (
+				070B7D0F2482DE9E000AABB4 /* math.hpp */,
 				0760B343248002370092F926 /* factorization.hpp */,
+				070B7D0C2482DD4F000AABB4 /* power.hpp */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -181,6 +215,7 @@
 				0708FA73247ABC2600247F5F /* c0001 */,
 				0708FA8C247ACDAA00247F5F /* c0002 */,
 				078AA36A247EC0600059A7F4 /* c0003 */,
+				0735FC9324817EE500D6F69F /* c0004 */,
 			);
 			path = challenges;
 			sourceTree = "<group>";
@@ -196,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				07C76112247A945E00CBF52D /* challenges */,
+				07DA0636248404A1000458C7 /* tools */,
 				07C7610B247A944300CBF52D /* Info.plist */,
 				07C76121247AB3AC00CBF52D /* Tests-Bridging-Header.h */,
 			);
@@ -208,6 +244,7 @@
 				07C76118247A95A600CBF52D /* c0001 */,
 				0708FA92247AD77000247F5F /* c0002 */,
 				0760B346248013F90092F926 /* c0003 */,
+				074123312483B771003B4369 /* c0004 */,
 			);
 			path = challenges;
 			sourceTree = "<group>";
@@ -221,6 +258,13 @@
 			path = c0001;
 			sourceTree = "<group>";
 		};
+		07DA0636248404A1000458C7 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -232,6 +276,9 @@
 				07C76102247A8D2100CBF52D /* ichallenge.hpp in Headers */,
 				0760B33F247FFC300092F926 /* challenge.hpp in Headers */,
 				0760B34F248032FF0092F926 /* homogeneous_partition.hpp in Headers */,
+				070B7D0E2482DD4F000AABB4 /* power.hpp in Headers */,
+				0735FC9824817F3800D6F69F /* challenge.hpp in Headers */,
+				070B7D102482DE9E000AABB4 /* math.hpp in Headers */,
 				0760B345248002370092F926 /* factorization.hpp in Headers */,
 				07C76117247A94C000CBF52D /* challenge.hpp in Headers */,
 			);
@@ -329,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0760B33E247FFC300092F926 /* challenge.cpp in Sources */,
+				0735FC9724817F3800D6F69F /* challenge.cpp in Sources */,
 				07C76116247A94C000CBF52D /* challenge.cpp in Sources */,
 				0708FA90247ACE0E00247F5F /* challenge.cpp in Sources */,
 			);
@@ -343,7 +391,9 @@
 				0708FA94247AD78A00247F5F /* wrapper.cpp in Sources */,
 				0760B3492480154C0092F926 /* testsChallenge3.swift in Sources */,
 				0708FA97247AD7DF00247F5F /* wrapper.cpp in Sources */,
+				074123352483B8DC003B4369 /* wrapper.cpp in Sources */,
 				0760B34A248015770092F926 /* wrapper.cpp in Sources */,
+				074123342483B8DC003B4369 /* testsChallenge4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

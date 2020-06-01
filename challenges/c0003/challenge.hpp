@@ -15,7 +15,7 @@ namespace challenges {
     
     /**
      @class Challenge3
-     @brief This class is intended to solve Challenge 3
+     @brief This class is intended to solve Challenge #3
      
      @link https://projecteuler.net/problem=3 @endlink
      */

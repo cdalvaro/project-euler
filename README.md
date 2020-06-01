@@ -30,6 +30,7 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge 1](challenges/c0001)
   - [Challenge 2](challenges/c0002)
   - [Challenge 3](challenges/c0003)
+  - [Challenge 4](challenges/c0004)
 </details>
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat&logo=C%2B%2B
