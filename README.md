@@ -1,5 +1,6 @@
 [![C++ Version][cpp_badge]][cpp_link]
 [![Unit Tests][unit_testing_badge]][unit_testing_link]
+![Challenges Soved][challenges_solved_badge]
 
 # Project Euler Challenges
 
@@ -31,6 +32,7 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge 2](challenges/c0002)
   - [Challenge 3](challenges/c0003)
   - [Challenge 4](challenges/c0004)
+  - [Challenge 5](challenges/c0005)
 </details>
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat&logo=C%2B%2B
@@ -38,3 +40,4 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
 
 [unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?style=flat&logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
+[challenges_solved_badge]: https://img.shields.io/badge/Solved-%235-lightgrey
