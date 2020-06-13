@@ -15,5 +15,6 @@ unsigned long long solveChallenge3(unsigned long long limit);
 unsigned long long solveChallenge4(unsigned long long number_of_digits,
                                    unsigned long long number_of_products);
 unsigned long long solveChallenge5(unsigned long long last_number);
+unsigned long long solveChallenge6(unsigned long long last_number);
 
 #endif /* tests_Tests_Bridging_Header_h */
