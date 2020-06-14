@@ -38,6 +38,10 @@
 		07C7610C247A944300CBF52D /* libChallenges.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C760EE247A899500CBF52D /* libChallenges.dylib */; };
 		07C76116247A94C000CBF52D /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C76114247A94C000CBF52D /* challenge.cpp */; };
 		07C76117247A94C000CBF52D /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07C76115247A94C000CBF52D /* challenge.hpp */; };
+		07FEAD0724961179003E1BFC /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD0524961179003E1BFC /* challenge.cpp */; };
+		07FEAD0824961179003E1BFC /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07FEAD0624961179003E1BFC /* challenge.hpp */; };
+		07FEAD0B249619CE003E1BFC /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD0A24961983003E1BFC /* wrapper.cpp */; };
+		07FEAD0C24961A25003E1BFC /* testsChallenge7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD0924961983003E1BFC /* testsChallenge7.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,11 @@
 		07C76114247A94C000CBF52D /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
 		07C76115247A94C000CBF52D /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		07C76121247AB3AC00CBF52D /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		07FEAD042496113D003E1BFC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		07FEAD0524961179003E1BFC /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
+		07FEAD0624961179003E1BFC /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
+		07FEAD0924961983003E1BFC /* testsChallenge7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge7.swift; sourceTree = "<group>"; };
+		07FEAD0A24961983003E1BFC /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +285,7 @@
 				0735FC9324817EE500D6F69F /* c0004 */,
 				075B83D02492882F00CF244A /* c0005 */,
 				07907EBD24956AB500BD99CE /* c0006 */,
+				07FEAD02249610E2003E1BFC /* c0007 */,
 				0760B340248002090092F926 /* tools */,
 			);
 			path = challenges;
@@ -308,6 +318,7 @@
 				074123312483B771003B4369 /* c0004 */,
 				075B83D62492B58000CF244A /* c0005 */,
 				07907EC324956EA000BD99CE /* c0006 */,
+				07FEAD03249610F6003E1BFC /* c0007 */,
 			);
 			path = challenges;
 			sourceTree = "<group>";
@@ -328,6 +339,25 @@
 			path = tools;
 			sourceTree = "<group>";
 		};
+		07FEAD02249610E2003E1BFC /* c0007 */ = {
+			isa = PBXGroup;
+			children = (
+				07FEAD042496113D003E1BFC /* README.md */,
+				07FEAD0524961179003E1BFC /* challenge.cpp */,
+				07FEAD0624961179003E1BFC /* challenge.hpp */,
+			);
+			path = c0007;
+			sourceTree = "<group>";
+		};
+		07FEAD03249610F6003E1BFC /* c0007 */ = {
+			isa = PBXGroup;
+			children = (
+				07FEAD0924961983003E1BFC /* testsChallenge7.swift */,
+				07FEAD0A24961983003E1BFC /* wrapper.cpp */,
+			);
+			path = c0007;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -340,6 +370,7 @@
 				075B83D42492884C00CF244A /* challenge.hpp in Headers */,
 				0760B33F247FFC300092F926 /* challenge.hpp in Headers */,
 				075B83DC2492B98000CF244A /* factorial.hpp in Headers */,
+				07FEAD0824961179003E1BFC /* challenge.hpp in Headers */,
 				0760B34F248032FF0092F926 /* homogeneous_partition.hpp in Headers */,
 				07907EC124956ACB00BD99CE /* challenge.hpp in Headers */,
 				070B7D0E2482DD4F000AABB4 /* power.hpp in Headers */,
@@ -441,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FEAD0724961179003E1BFC /* challenge.cpp in Sources */,
 				0760B33E247FFC300092F926 /* challenge.cpp in Sources */,
 				0735FC9724817F3800D6F69F /* challenge.cpp in Sources */,
 				075B83D32492884C00CF244A /* challenge.cpp in Sources */,
@@ -459,10 +491,12 @@
 				0708FA94247AD78A00247F5F /* wrapper.cpp in Sources */,
 				0760B3492480154C0092F926 /* testsChallenge3.swift in Sources */,
 				07907EC624956EB500BD99CE /* testsChallenge6.swift in Sources */,
+				07FEAD0C24961A25003E1BFC /* testsChallenge7.swift in Sources */,
 				07907EC724956EB500BD99CE /* wrapper.cpp in Sources */,
 				0708FA97247AD7DF00247F5F /* wrapper.cpp in Sources */,
 				074123352483B8DC003B4369 /* wrapper.cpp in Sources */,
 				0760B34A248015770092F926 /* wrapper.cpp in Sources */,
+				07FEAD0B249619CE003E1BFC /* wrapper.cpp in Sources */,
 				075B83D92492B65C00CF244A /* testsChallenge5.swift in Sources */,
 				074123342483B8DC003B4369 /* testsChallenge4.swift in Sources */,
 				075B83DA2492B67200CF244A /* wrapper.cpp in Sources */,
