@@ -46,12 +46,11 @@ namespace challenges {
          
          @return The solution for challenge #4
          */
-        std::any solve() override;
+        std::any solve() override final;
         
     private:
-        
-        size_t number_of_digits;
-        size_t number_of_products;
+        size_t number_of_digits; /**< The number of digits of each product number */
+        size_t number_of_products; /**< The number of products to multipy */
         
         /**
          @brief Check if given number fulfills the required conditions
@@ -65,7 +64,7 @@ namespace challenges {
          @return True if the number fulfills the requirements, false otherwise.
          */
         bool checkDivisors(const Type_t &number,
-                          const size_t &depth) const;
+                           const size_t &depth) const;
         
         /**
          @brief Check wether \p number is a palindromic number or not

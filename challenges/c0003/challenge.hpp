@@ -47,7 +47,7 @@ namespace challenges {
         std::any solve() override final;
         
     private:
-        Type_t number;
+        Type_t number; /**< The number whose biggest prime factor is going to be computed */
     };
 }
 
