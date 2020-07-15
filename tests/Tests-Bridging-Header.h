@@ -18,5 +18,6 @@ unsigned long long solveChallenge5(unsigned long long last_number);
 unsigned long long solveChallenge6(unsigned long long last_number);
 unsigned long long solveChallenge7(unsigned long long nth_prime);
 unsigned long long solveChallenge8(unsigned long long number_of_digits);
+unsigned long long solveChallenge9(unsigned long long number);
 
 #endif /* tests_Tests_Bridging_Header_h */
