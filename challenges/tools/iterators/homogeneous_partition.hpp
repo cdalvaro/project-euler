@@ -56,23 +56,23 @@ namespace challenges::tools::iterators {
          
          @return A set with homogeneous partitions
          */
-        const Partitions_t &Partitions() const {
-            if (partitions.empty()) {
+        const Partitions_t &partitions() const {
+            if (partitions_cache.empty()) {
                 auto step = (last - first) / number_of_partitions;
                 
                 auto __first = first;
                 auto __last = __first + step;
                 auto __last_index = number_of_partitions - 1;
                 for (size_t index = 0; index < __last_index; ++index) {
-                    partitions.emplace(__first, __last);
+                    partitions_cache.emplace(__first, __last);
                     __first = __last + 1;
                     __last = __first + step;
                 }
                 
-                partitions.emplace(__first, last);
+                partitions_cache.emplace(__first, last);
             }
             
-            return partitions;
+            return partitions_cache;
         }
         
         /**
@@ -81,7 +81,7 @@ namespace challenges::tools::iterators {
          @return A constant iterator pointing to the first partition
          */
         ConstIterator_t begin() const {
-            return Partitions().begin();
+            return partitions().begin();
         }
         
         /**
@@ -90,7 +90,7 @@ namespace challenges::tools::iterators {
          @return A constant iterator pointing to the element following the las element
          */
         ConstIterator_t end() const {
-            return Partitions().end();
+            return partitions().end();
         }
         
     private:
@@ -98,7 +98,7 @@ namespace challenges::tools::iterators {
         Integer_t last;
         size_t number_of_partitions;
         
-        mutable Partitions_t partitions;
+        mutable Partitions_t partitions_cache;
     };
 }
 
