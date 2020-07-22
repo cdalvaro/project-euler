@@ -37,6 +37,7 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge #7](challenges/c0007)
   - [Challenge #8](challenges/c0008)
   - [Challenge #9](challenges/c0009)
+  - [Challenge #10](challenges/c0010)
 </details>
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat&logo=C%2B%2B
@@ -45,4 +46,4 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
 [unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?style=flat&logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
-[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-%239-lightgrey
+[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-%2310-lightgrey
