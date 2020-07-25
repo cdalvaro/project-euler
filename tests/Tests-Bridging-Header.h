@@ -21,5 +21,6 @@ unsigned long long solveChallenge8(unsigned long long number_of_digits);
 unsigned long long solveChallenge9(unsigned long long number);
 unsigned long long solveChallenge10(unsigned long long limit);
 unsigned long long solveChallenge11(unsigned long long numbers_to_take);
+unsigned long long solveChallenge12(unsigned long long numbers_of_divisors);
 
 #endif /* tests_Tests_Bridging_Header_h */
