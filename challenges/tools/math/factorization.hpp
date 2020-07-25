@@ -59,10 +59,11 @@ namespace challenges::tools::math {
     constexpr std::set<Integer_t> divisors(const Integer_t &number) {
         std::set<Integer_t> divisors;
         
-        Integer_t half_number = number / 2;
-        for (Integer_t factor = 2; factor <= half_number; ++factor) {
+        Integer_t limit = std::sqrt(number);
+        for (Integer_t factor = 1; factor <= limit; ++factor) {
             if (number % factor == 0) {
                 divisors.insert(factor);
+                divisors.insert(number / factor);
             }
         }
         
