@@ -22,7 +22,7 @@ std::any Challenge10::solve() {
     
     while (number < limit) {
         number += 2;
-        if (challenges::tools::math::isPrime(number)) {
+        if (tools::math::isPrime(number)) {
             sum += number;
         }
     }

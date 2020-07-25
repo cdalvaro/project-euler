@@ -19,12 +19,12 @@ numbers_of_divisors(numbers_of_divisors) {
 
 std::any Challenge12::solve() {
     Type_t triangle_number = 1;
-    auto divisors = challenges::tools::math::divisors(triangle_number);
+    auto divisors = tools::math::divisors(triangle_number);
     
     Type_t increment = 1;
     while (divisors.size() < numbers_of_divisors) {
         triangle_number += ++increment;
-        divisors = challenges::tools::math::divisors(triangle_number);
+        divisors = tools::math::divisors(triangle_number);
     }
     
     return triangle_number;
