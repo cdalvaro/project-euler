@@ -10,6 +10,7 @@
 		0700DB9624C8C37800A76E37 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0700DB9424C8C37500A76E37 /* challenge.cpp */; };
 		0700DB9A24C8C56800A76E37 /* testsChallenge10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700DB9924C8C56400A76E37 /* testsChallenge10.swift */; };
 		0700DB9B24C8C56800A76E37 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0700DB9824C8C56400A76E37 /* wrapper.cpp */; };
+		0700DBA024C8C79100A76E37 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0700DB9D24C8C78D00A76E37 /* challenge.cpp */; };
 		0708FA90247ACE0E00247F5F /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0708FA8E247ACE0E00247F5F /* challenge.cpp */; };
 		0708FA91247ACE0E00247F5F /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0708FA8F247ACE0E00247F5F /* challenge.hpp */; };
 		0708FA94247AD78A00247F5F /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0708FA93247AD78A00247F5F /* wrapper.cpp */; };
@@ -32,6 +33,8 @@
 		0760B3492480154C0092F926 /* testsChallenge3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760B348248014060092F926 /* testsChallenge3.swift */; };
 		0760B34A248015770092F926 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0760B347248014060092F926 /* wrapper.cpp */; };
 		0760B34F248032FF0092F926 /* homogeneous_partition.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0760B34D248032FF0092F926 /* homogeneous_partition.hpp */; };
+		07618E8B24CA182C00602560 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07618E8924CA17FF00602560 /* wrapper.cpp */; };
+		07618E8C24CA183100602560 /* testsChallenge11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07618E8A24CA17FF00602560 /* testsChallenge11.swift */; };
 		07907EC024956ACB00BD99CE /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07907EBE24956ACB00BD99CE /* challenge.cpp */; };
 		07907EC124956ACB00BD99CE /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07907EBF24956ACB00BD99CE /* challenge.hpp */; };
 		07907EC624956EB500BD99CE /* testsChallenge6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07907EC524956EB200BD99CE /* testsChallenge6.swift */; };
@@ -69,6 +72,9 @@
 		0700DB9524C8C37500A76E37 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		0700DB9824C8C56400A76E37 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		0700DB9924C8C56400A76E37 /* testsChallenge10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge10.swift; sourceTree = "<group>"; };
+		0700DB9D24C8C78D00A76E37 /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
+		0700DB9E24C8C78D00A76E37 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
+		0700DB9F24C8C78D00A76E37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0708FA72247ABA5600247F5F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0708FA8B247AC93900247F5F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0708FA8D247ACDBC00247F5F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 		0760B347248014060092F926 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		0760B348248014060092F926 /* testsChallenge3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge3.swift; sourceTree = "<group>"; };
 		0760B34D248032FF0092F926 /* homogeneous_partition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = homogeneous_partition.hpp; sourceTree = "<group>"; };
+		07618E8924CA17FF00602560 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		07618E8A24CA17FF00602560 /* testsChallenge11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge11.swift; sourceTree = "<group>"; };
 		078AA36B247EC0740059A7F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		07907EBE24956ACB00BD99CE /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
 		07907EBF24956ACB00BD99CE /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
@@ -163,6 +171,16 @@
 				0700DB9824C8C56400A76E37 /* wrapper.cpp */,
 			);
 			path = c0010;
+			sourceTree = "<group>";
+		};
+		0700DB9C24C8C78500A76E37 /* c0011 */ = {
+			isa = PBXGroup;
+			children = (
+				0700DB9F24C8C78D00A76E37 /* README.md */,
+				0700DB9D24C8C78D00A76E37 /* challenge.cpp */,
+				0700DB9E24C8C78D00A76E37 /* challenge.hpp */,
+			);
+			path = c0011;
 			sourceTree = "<group>";
 		};
 		0708FA73247ABC2600247F5F /* c0001 */ = {
@@ -269,6 +287,15 @@
 			path = iterators;
 			sourceTree = "<group>";
 		};
+		07618E8824CA17EF00602560 /* c0011 */ = {
+			isa = PBXGroup;
+			children = (
+				07618E8A24CA17FF00602560 /* testsChallenge11.swift */,
+				07618E8924CA17FF00602560 /* wrapper.cpp */,
+			);
+			path = c0011;
+			sourceTree = "<group>";
+		};
 		078AA36A247EC0600059A7F4 /* c0003 */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +359,7 @@
 				07DF411D24BF5E360038FF6F /* c0008 */,
 				07DF412724BF73290038FF6F /* c0009 */,
 				0700DB9224C8C31D00A76E37 /* c0010 */,
+				0700DB9C24C8C78500A76E37 /* c0011 */,
 				0760B340248002090092F926 /* tools */,
 			);
 			path = challenges;
@@ -368,6 +396,7 @@
 				07DF412224BF61160038FF6F /* c0008 */,
 				07DF412824BF73360038FF6F /* c0009 */,
 				0700DB9724C8C55B00A76E37 /* c0010 */,
+				07618E8824CA17EF00602560 /* c0011 */,
 			);
 			path = challenges;
 			sourceTree = "<group>";
@@ -568,6 +597,7 @@
 				07DF412D24BF79900038FF6F /* challenge.cpp in Sources */,
 				0700DB9624C8C37800A76E37 /* challenge.cpp in Sources */,
 				07C76116247A94C000CBF52D /* challenge.cpp in Sources */,
+				0700DBA024C8C79100A76E37 /* challenge.cpp in Sources */,
 				0708FA90247ACE0E00247F5F /* challenge.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,9 +617,11 @@
 				0708FA97247AD7DF00247F5F /* wrapper.cpp in Sources */,
 				0700DB9B24C8C56800A76E37 /* wrapper.cpp in Sources */,
 				07DF413024BF7A580038FF6F /* wrapper.cpp in Sources */,
+				07618E8B24CA182C00602560 /* wrapper.cpp in Sources */,
 				074123352483B8DC003B4369 /* wrapper.cpp in Sources */,
 				07DF413124BF7B220038FF6F /* testsChallenge9.swift in Sources */,
 				0760B34A248015770092F926 /* wrapper.cpp in Sources */,
+				07618E8C24CA183100602560 /* testsChallenge11.swift in Sources */,
 				07FEAD0B249619CE003E1BFC /* wrapper.cpp in Sources */,
 				075B83D92492B65C00CF244A /* testsChallenge5.swift in Sources */,
 				07DF412624BF614D0038FF6F /* wrapper.cpp in Sources */,
