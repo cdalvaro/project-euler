@@ -9,6 +9,7 @@
 #ifndef tests_Tests_Bridging_Header_h
 #define tests_Tests_Bridging_Header_h
 
+// MARK: - Challenges
 long solveChallenge1(long limit);
 long solveChallenge2(long limit);
 unsigned long long solveChallenge3(unsigned long long limit);
@@ -22,5 +23,11 @@ unsigned long long solveChallenge9(unsigned long long number);
 unsigned long long solveChallenge10(unsigned long long limit);
 unsigned long long solveChallenge11(unsigned long long numbers_to_take);
 unsigned long long solveChallenge12(unsigned long long numbers_of_divisors);
+
+// MARK: - Tools
+unsigned long long addNumbersAsBigInt(unsigned long long a,
+                                      unsigned long long b);
+char *addNumbersAsBigIntFromChars(const char *a,
+                                  const char *b);
 
 #endif /* tests_Tests_Bridging_Header_h */
