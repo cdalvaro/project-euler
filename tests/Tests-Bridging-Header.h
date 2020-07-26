@@ -23,6 +23,7 @@ unsigned long long solveChallenge9(unsigned long long number);
 unsigned long long solveChallenge10(unsigned long long limit);
 unsigned long long solveChallenge11(unsigned long long numbers_to_take);
 unsigned long long solveChallenge12(unsigned long long numbers_of_divisors);
+unsigned long long solveChallenge13();
 
 // MARK: - Tools
 unsigned long long addNumbersAsBigInt(unsigned long long a,
