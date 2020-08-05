@@ -51,7 +51,7 @@ std::any Challenge3::solve() {
                 }
             }
             
-        }, partition.first, partition.second, it_candidate);
+        }, partition.first, partition.second, it_candidate++);
     }
     
     std::for_each(workers.begin(), workers.end(), std::mem_fn(&std::thread::join));
