@@ -6,9 +6,8 @@
 //  Copyright © 2020 cdalvaro. All rights reserved.
 //
 
-#include "challenges/tools/math/factorization.hpp"
-
 #include "challenges/c0012/challenge.hpp"
+#include "challenges/tools/math/factorization.hpp"
 
 using namespace challenges;
 
