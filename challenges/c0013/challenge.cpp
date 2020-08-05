@@ -122,7 +122,7 @@ Challenge13::Challenge13() {
 }
 
 std::any Challenge13::solve() {
-    size_t result;
+    Type_t result;
     
     tools::types::BigInt bigint;
     for (const auto &number : bigints) {
