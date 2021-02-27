@@ -42,12 +42,13 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge #12](challenges/c0012)
   - [Challenge #13](challenges/c0013)
   - [Challenge #14](challenges/c0014)
+  - [Challenge #15](challenges/c0015)
 </details>
 
-[cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat&logo=C%2B%2B
+[cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat-square&logo=C%2B%2B
 [cpp_link]: https://en.cppreference.com/w/cpp/17
 
-[unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?style=flat&logo=Xcode
+[unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?style=flat-square&logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
-[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-%2314-lightgrey
+[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-%2315-lightgrey?style=flat-square
