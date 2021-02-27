@@ -11,10 +11,10 @@ on:
 env:
   PROJECT: Project Euler.xcodeproj
   SCHEME: Challenges
-  CONFIGURATION: Release
+  CONFIGURATION: Debug
 
 jobs:
-  Tests:
+  Challenges:
     runs-on: macOS-latest
     steps:
     - name: Checkout repository
