@@ -53,9 +53,25 @@
 		07AE136324DC674C000E7DC0 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07AE136124DC65D6000E7DC0 /* challenge.cpp */; };
 		07C76102247A8D2100CBF52D /* ichallenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07C76100247A8D2100CBF52D /* ichallenge.hpp */; };
 		07C7610A247A944300CBF52D /* testsChallenge1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C76109247A944300CBF52D /* testsChallenge1.swift */; };
-		07C7610C247A944300CBF52D /* libChallenges.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C760EE247A899500CBF52D /* libChallenges.dylib */; };
 		07C76116247A94C000CBF52D /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C76114247A94C000CBF52D /* challenge.cpp */; };
 		07C76117247A94C000CBF52D /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07C76115247A94C000CBF52D /* challenge.hpp */; };
+		07CF365925EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C76114247A94C000CBF52D /* challenge.cpp */; };
+		07CF365A25EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0708FA8E247ACE0E00247F5F /* challenge.cpp */; };
+		07CF365B25EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0760B33C247FFC300092F926 /* challenge.cpp */; };
+		07CF365C25EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0735FC9524817F3800D6F69F /* challenge.cpp */; };
+		07CF365D25EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075B83D12492884C00CF244A /* challenge.cpp */; };
+		07CF365E25EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07907EBE24956ACB00BD99CE /* challenge.cpp */; };
+		07CF365F25EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD0524961179003E1BFC /* challenge.cpp */; };
+		07CF366025EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DF412024BF5E450038FF6F /* challenge.cpp */; };
+		07CF366125EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DF412A24BF73600038FF6F /* challenge.cpp */; };
+		07CF366225EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0700DB9424C8C37500A76E37 /* challenge.cpp */; };
+		07CF366325EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0700DB9D24C8C78D00A76E37 /* challenge.cpp */; };
+		07CF366425EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F8E49524CC8A1B0059A771 /* challenge.cpp */; };
+		07CF366525EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F8E49F24CC98BC0059A771 /* challenge.cpp */; };
+		07CF366625EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 073996A824D0917D003A79B4 /* challenge.cpp */; };
+		07CF366725EAB213009582B9 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07AE136124DC65D6000E7DC0 /* challenge.cpp */; };
+		07CF366825EAB213009582B9 /* big_int.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F8E4A224CC9BC60059A771 /* big_int.cpp */; };
+		07CF366925EAB214009582B9 /* collatz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0744493124CF3EBB0033BB07 /* collatz.cpp */; };
 		07DF412124BF608B0038FF6F /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DF412024BF5E450038FF6F /* challenge.cpp */; };
 		07DF412524BF61300038FF6F /* testsChallenge8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DF412324BF61230038FF6F /* testsChallenge8.swift */; };
 		07DF412624BF614D0038FF6F /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07DF412424BF61230038FF6F /* wrapper.cpp */; };
@@ -74,16 +90,6 @@
 		07FEAD0B249619CE003E1BFC /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD0A24961983003E1BFC /* wrapper.cpp */; };
 		07FEAD0C24961A25003E1BFC /* testsChallenge7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FEAD0924961983003E1BFC /* testsChallenge7.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		07C7610D247A944300CBF52D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07C760D8247A867E00CBF52D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07C760ED247A899500CBF52D;
-			remoteInfo = challenges;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0700DB9324C8C32700A76E37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -193,7 +199,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C7610C247A944300CBF52D /* libChallenges.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +697,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				07C7610E247A944300CBF52D /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
@@ -776,6 +780,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CF365925EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF365A25EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF365B25EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF365C25EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF365D25EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF365E25EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF365F25EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366025EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366125EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366225EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366325EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366425EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366525EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366625EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366725EAB213009582B9 /* challenge.cpp in Sources */,
+				07CF366825EAB213009582B9 /* big_int.cpp in Sources */,
+				07CF366925EAB214009582B9 /* collatz.cpp in Sources */,
 				0708FA9B247AD87B00247F5F /* testsChallenge2.swift in Sources */,
 				07C7610A247A944300CBF52D /* testsChallenge1.swift in Sources */,
 				0708FA94247AD78A00247F5F /* wrapper.cpp in Sources */,
@@ -812,14 +833,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		07C7610E247A944300CBF52D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07C760ED247A899500CBF52D /* Challenges */;
-			targetProxy = 07C7610D247A944300CBF52D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		07C760E5247A867E00CBF52D /* Debug */ = {

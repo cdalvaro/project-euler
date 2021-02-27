@@ -11,7 +11,7 @@ on:
 env:
   PROJECT: Project Euler.xcodeproj
   SCHEME: Challenges
-  CONFIGURATION: Debug
+  CONFIGURATION: Release
 
 jobs:
   Tests:
