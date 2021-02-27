@@ -1,0 +1,28 @@
+name: Challenges
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  PROJECT_NAME: Project Euler.xcodeproj
+
+jobs:
+  Tests:
+    runs-on: macOS-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Xcode build library
+      run: xcodebuild build -project "${PROJECT_NAME}" -scheme Challenges -configuration Release | xcpretty && exit ${PIPESTATUS[0]}
+
+    - name: Xcode unit tests
+      run: xcodebuild test -project "${PROJECT_NAME}" -scheme Tests -enableCodeCoverage YES -configuration Release | xcpretty && exit ${PIPESTATUS[0]}
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1.2.1
