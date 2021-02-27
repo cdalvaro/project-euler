@@ -9,7 +9,8 @@ on:
       - main
 
 env:
-  PROJECT_NAME: Project Euler.xcodeproj
+  PROJECT: Project Euler.xcodeproj
+  SCHEME: Challenges
   CONFIGURATION: Debug
 
 jobs:
@@ -21,13 +22,13 @@ jobs:
 
     - name: Xcode build library
       run: |
-        xcodebuild build -project "${PROJECT_NAME}" -scheme Challenges \
+        xcodebuild build -project "${PROJECT}" -scheme "${SCHEME}" \
           -configuration ${CONFIGURATION} \
         | xcpretty && exit ${PIPESTATUS[0]}
 
-    - name: Xcode unit tests
+    - name: Xcode unit test
       run: |
-        xcodebuild test -project "${PROJECT_NAME}" -scheme Tests \
+        xcodebuild test -project "${PROJECT}" -scheme "${SCHEME}" \
           -enableCodeCoverage YES -configuration ${CONFIGURATION} \
         | xcpretty && exit ${PIPESTATUS[0]}
 
