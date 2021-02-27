@@ -1,0 +1,36 @@
+name: Challenges
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  PROJECT: Project Euler.xcodeproj
+  SCHEME: Challenges
+  CONFIGURATION: Debug
+  NSUnbufferedIO: YES
+
+jobs:
+  Challenges:
+    runs-on: macOS-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install xcbeautify
+      run: brew install xcbeautify
+
+    - name: Xcode unit test
+      run: |
+        set -o pipefail && \
+        xcodebuild clean test \
+          -project "${PROJECT}" -scheme "${SCHEME}" \
+          -configuration ${CONFIGURATION} 2>&1 \
+        | xcbeautify && exit ${PIPESTATUS[0]}
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1.2.1

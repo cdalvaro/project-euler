@@ -6,7 +6,7 @@
 //  Copyright © 2020 cdalvaro. All rights reserved.
 //
 
-#include "challenges/c0001/challenge.cpp"
+#include "challenges/c0001/challenge.hpp"
 
 using namespace challenges;
 

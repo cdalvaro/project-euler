@@ -1,6 +1,8 @@
 [![C++ Version][cpp_badge]][cpp_link]
 [![Unit Tests][unit_testing_badge]][unit_testing_link]
 ![Challenges Soved][challenges_solved_badge]
+[![GitHub Challenges][gh_challenges_badge]][gh_challenges_link]
+[![Code coverage][codecov_badge]][codecov_link]
 
 # Project Euler Challenges
 
@@ -52,3 +54,9 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
 [challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-%2315-lightgrey?style=flat-square
+
+[gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges?style=flat-square
+[gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
+
+[codecov_badge]: https://img.shields.io/codecov/c/github/cdalvaro/project-euler?style=flat-square
+[codecov_link]: https://app.codecov.io/gh/cdalvaro/project-euler/
