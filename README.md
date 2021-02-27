@@ -58,5 +58,5 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
 [gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges?style=flat-square
 [gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
 
-[codecov_badge]: https://img.shields.io/codecov/c/github/cdalvaro/project-euler?style=flat-square
-[codecov_link]: https://app.codecov.io/gh/cdalvaro/project-euler/
+[codecov_badge]: https://img.shields.io/codecov/c/github/cdalvaro/project-euler?logo=codecov&style=flat-square
+[codecov_link]: https://codecov.io/gh/cdalvaro/project-euler
