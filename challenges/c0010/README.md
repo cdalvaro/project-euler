@@ -15,5 +15,5 @@ You can find the algorithm to solve this challenge inside [challenge.cpp](challe
 <details>
   <summary>Click here to see the result!</summary>
 
-  Result is: `142.913.828.922`
+  Result is: `142,913,828,922`
 </details>
