@@ -26,6 +26,7 @@ unsigned long long solveChallenge12(unsigned long long numbers_of_divisors);
 unsigned long long solveChallenge13();
 unsigned long long solveChallenge14(unsigned long long maximum_number);
 unsigned long long solveChallenge15(unsigned int width, unsigned int height);
+unsigned long long solveChallenge16(unsigned int exponent);
 
 // MARK: - Tools
 unsigned long long addNumbersAsBigInt(unsigned long long a,
