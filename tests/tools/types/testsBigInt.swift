@@ -8,7 +8,7 @@
 
 import XCTest
 
-class TestsBigInt: XCTestCase {
+class TestsToolsTypesBigInt: XCTestCase {
 
     func testAdditionWithSmallNumbers() throws {
         let numberA: UInt64 = 99

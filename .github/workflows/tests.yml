@@ -9,9 +9,6 @@ on:
       - main
 
 env:
-  PROJECT: Project Euler.xcodeproj
-  SCHEME: Challenges
-  CONFIGURATION: Debug
   NSUnbufferedIO: YES
 
 jobs:
@@ -27,9 +24,8 @@ jobs:
     - name: Xcode unit test
       run: |
         set -o pipefail && \
-        xcodebuild clean test \
-          -project "${PROJECT}" -scheme "${SCHEME}" \
-          -configuration ${CONFIGURATION} 2>&1 \
+        xcodebuild test -project "Project Euler.xcodeproj" -scheme Challenges \
+          -enableCodeCoverage YES build test 2>&1 \
         | xcbeautify && exit ${PIPESTATUS[0]}
 
     - name: Upload coverage to Codecov
