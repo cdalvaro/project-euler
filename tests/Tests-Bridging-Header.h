@@ -27,11 +27,17 @@ unsigned long long solveChallenge13();
 unsigned long long solveChallenge14(unsigned long long maximum_number);
 unsigned long long solveChallenge15(unsigned int width, unsigned int height);
 unsigned long long solveChallenge16(unsigned int exponent);
+unsigned long long solveChallenge17(unsigned int first, unsigned int last);
 
 // MARK: - Tools
+
+// MARK: - Types/BigInt
 unsigned long long addNumbersAsBigInt(unsigned long long a,
                                       unsigned long long b);
 char *addNumbersAsBigIntFromChars(const char *a,
                                   const char *b);
+
+// MARK: - Types/NamedNumber
+char *nameForNumber(long long number);
 
 #endif /* tests_Tests_Bridging_Header_h */
