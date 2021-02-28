@@ -38,5 +38,5 @@ You can find the algorithm to solve this challenge inside [challenge.cpp](challe
 <details>
   <summary>Click here to see the result!</summary>
 
-  Result is: `70.600.674`
+  Result is: `70,600,674`
 </details>

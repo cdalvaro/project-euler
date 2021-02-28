@@ -28,5 +28,5 @@ and the implementation of the Collatz sequence can be found inside [tools/math/s
 <details>
   <summary>Click here to see the result!</summary>
 
-  Result is: `837.799`
+  Result is: `837,799`
 </details>

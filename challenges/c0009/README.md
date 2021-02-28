@@ -21,5 +21,5 @@ You can find the algorithm to solve this challenge inside [challenge.cpp](challe
 <details>
   <summary>Click here to see the result!</summary>
 
-  Result is: `31.875.000`
+  Result is: `31,875,000`
 </details>

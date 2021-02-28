@@ -115,5 +115,5 @@ althought the core code for solving this challenge is inside [challenges/tools/t
 <details>
   <summary>Click here to see the result!</summary>
 
-  Result is: `5.537.376.230`
+  Result is: `5,537,376,230`
 </details>
