@@ -8,9 +8,6 @@ on:
     branches:
       - main
 
-env:
-  NSUnbufferedIO: YES
-
 jobs:
   Challenges:
     runs-on: macOS-latest
@@ -22,6 +19,8 @@ jobs:
       run: brew install xcbeautify
 
     - name: Xcode unit test
+      env:
+        NSUnbufferedIO: YES
       run: |
         set -o pipefail && \
         xcodebuild -scheme Challenges build test 2>&1 | xcbeautify && exit ${PIPESTATUS[0]}
@@ -38,4 +37,7 @@ jobs:
       run: slather
 
     - name: Upload coverage to Codecov
-      run: bash <(curl -s https://codecov.io/bash) -f xml_report/cobertura.xml -X coveragepy -X gcov -X xcode
+      uses: codecov/codecov-action@v1
+      with:
+        files: xml_report/cobertura.xml
+        functionalities: coveragepy,gcov,xcode
