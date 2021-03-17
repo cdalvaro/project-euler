@@ -24,9 +24,18 @@ jobs:
     - name: Xcode unit test
       run: |
         set -o pipefail && \
-        xcodebuild test -project "Project Euler.xcodeproj" -scheme Challenges \
-          -enableCodeCoverage YES build test 2>&1 \
-        | xcbeautify && exit ${PIPESTATUS[0]}
+        xcodebuild -scheme Challenges build test 2>&1 | xcbeautify && exit ${PIPESTATUS[0]}
+
+    - name: Use ruby 3.0
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0
+
+    - name: Install slather for code coverage
+      run: gem install slather
+
+    - name: Run slather for code coverage
+      run: slather
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1.2.1
+      run: bash <(curl -s https://codecov.io/bash) -f xml_report/cobertura.xml -X coveragepy -X gcov -X xcode
