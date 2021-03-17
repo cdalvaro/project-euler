@@ -10,6 +10,7 @@ on:
 
 env:
   NSUnbufferedIO: YES
+  SCHEME: Challenges
 
 jobs:
   Challenges:
@@ -24,11 +25,9 @@ jobs:
     - name: Xcode unit test
       run: |
         set -o pipefail && \
-        xcodebuild test -project "Project Euler.xcodeproj" -scheme Challenges \
+        xcodebuild test -project "Project Euler.xcodeproj" -scheme ${SCHEME} \
           -enableCodeCoverage YES build test 2>&1 \
         | xcbeautify && exit ${PIPESTATUS[0]}
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1.2.1
-      with:
-        xcode_package: -J 'Challenges'
+      run: bash <(curl -s https://codecov.io/bash) -J "${SCHEME}"
