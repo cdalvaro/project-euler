@@ -1,2 +1,5 @@
+ignore:
+  - "tests/"
+
 github_checks:
   annotations: true

@@ -1,0 +1,7 @@
+coverage_service: cobertura_xml
+xcodeproj: "Project Euler.xcodeproj"
+scheme: Challenges
+source_directory: challenges
+output_directory: xml_report
+ignore:
+  - tests/*
