@@ -50,16 +50,16 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge #18](challenges/c0018)
 </details>
 
-[cpp_badge]: https://img.shields.io/badge/C++-17-00599C?style=flat-square&logo=C%2B%2B
+[cpp_badge]: https://img.shields.io/badge/C++-17-00599C?logo=C%2B%2B
 [cpp_link]: https://en.cppreference.com/w/cpp/17
 
-[unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?style=flat-square&logo=Xcode
+[unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
-[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-18-lightgrey?style=flat-square
+[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-18-lightgrey
 
-[gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges?style=flat-square
+[gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges
 [gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
 
-[codecov_badge]: https://img.shields.io/codecov/c/github/cdalvaro/project-euler?logo=codecov&style=flat-square
+[codecov_badge]: https://img.shields.io/codecov/c/github/cdalvaro/project-euler?logo=codecov
 [codecov_link]: https://codecov.io/gh/cdalvaro/project-euler
