@@ -29,6 +29,7 @@ unsigned long long solveChallenge15(unsigned int width, unsigned int height);
 unsigned long long solveChallenge16(unsigned int exponent);
 unsigned long long solveChallenge17(unsigned int first, unsigned int last);
 long long solveChallenge18(long long *triangle, unsigned long long number_of_rows);
+unsigned long long solveChallenge19(int first_year, int last_year);
 
 // MARK: - Tools
 
