@@ -13,15 +13,11 @@
 
 using namespace challenges;
 
-Challenge18::Challenge18(const Triangle_t &triangle) :
-triangle(triangle) {
-    
+Challenge18::Challenge18(const Triangle_t &triangle) : triangle(triangle) {
 }
 
 std::any Challenge18::solve() {
-    Cumulated_t cumulated {
-        {{0, 0}, triangle.front().front()}
-    };
+    Cumulated_t cumulated{{{0, 0}, triangle.front().front()}};
 
     for (size_t index = 1; index < triangle.size(); ++index) {
         cumulated = cumulateNextLevel(cumulated, index);
@@ -42,7 +38,7 @@ Challenge18::Cumulated_t Challenge18::cumulateNextLevel(const Cumulated_t &cumul
     for (const auto &[indexes, value] : cumulated) {
         auto column_index = indexes.second;
         new_cumulated.push_back({{next_level_index, column_index}, value + next_level[column_index]});
-        new_cumulated.push_back({{next_level_index, column_index+1}, value + next_level[column_index+1]});
+        new_cumulated.push_back({{next_level_index, column_index + 1}, value + next_level[column_index + 1]});
     }
 
     return new_cumulated;

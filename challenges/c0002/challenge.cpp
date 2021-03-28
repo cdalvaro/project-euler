@@ -10,25 +10,23 @@
 
 using namespace challenges;
 
-Challenge2::Challenge2(const Type_t &limit) :
-limit(limit) {
-    
+Challenge2::Challenge2(const Type_t &limit) : limit(limit) {
 }
 
 std::any Challenge2::solve() {
-    
+
     Type_t f0 = 0, f1 = 1;
     Type_t sum = 0, tmp;
-    
+
     while (f1 < limit) {
         tmp = f1;
         f1 += f0;
         f0 = tmp;
-        
+
         if (f1 % 2 == 0) {
             sum += f1;
         }
     }
-    
+
     return sum;
 }

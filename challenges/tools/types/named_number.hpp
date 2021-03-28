@@ -21,8 +21,7 @@ namespace challenges::tools::types {
      @class NamedNumber
      @brief A class to convert an integer number into its english name
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
-    class NamedNumber {
+    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>> class NamedNumber {
     private:
         Integer_t number; /**< The value of the number */
         std::string name; /**< The name of the number */
@@ -83,41 +82,30 @@ namespace challenges::tools::types {
             return segments;
         }
 
-        inline static const std::vector<std::string> DIGITS {
-            "zero", "one", "two", "three", "four",
-            "five", "six", "seven", "eight", "nine",
+        inline static const std::vector<std::string> DIGITS{
+            "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
         };
 
-        inline static const std::vector<std::string> TEENS {
-            "ten", "eleven", "twelve", "thirteen", "fourteen",
-            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+        inline static const std::vector<std::string> TEENS{
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
         };
 
-        inline static const std::vector<std::string> TENS {
-            "_", "ten", "twenty", "thirty", "forty", "fifty",
-            "sixty", "seventy", "eighty", "ninety",
+        inline static const std::vector<std::string> TENS{
+            "_", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety",
         };
 
-        inline static const std::vector<std::string> SEGMENTS {
-            "_", "thousand", "million", "billion",
-            "trillion", "quatrillion", "quintillion",
+        inline static const std::vector<std::string> SEGMENTS{
+            "_", "thousand", "million", "billion", "trillion", "quatrillion", "quintillion",
         };
 
     public:
-        NamedNumber(const Integer_t &number) :
-        number(number), name(nameForNumber(number)) {
+        NamedNumber(const Integer_t &number) : number(number), name(nameForNumber(number)) {}
 
-        }
+        const std::string &getName() const { return name; }
 
-        const std::string &getName() const {
-            return name;
-        }
-
-        friend std::ostream &operator<<(std::ostream &os, const NamedNumber &named_number) {
-            return os << named_number.getName();
-        }
+        friend std::ostream &operator<<(std::ostream &os, const NamedNumber &named_number) { return os << named_number.getName(); }
     };
 
-}
+} // namespace challenges::tools::types
 
 #endif /* challenges_tools_types_named_number_hpp */

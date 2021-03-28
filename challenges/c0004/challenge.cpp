@@ -14,11 +14,8 @@
 
 using namespace challenges;
 
-Challenge4::Challenge4(const size_t &number_of_digits,
-                       const size_t &number_of_products) :
-number_of_digits(number_of_digits),
-number_of_products(number_of_products) {
-    
+Challenge4::Challenge4(const size_t &number_of_digits, const size_t &number_of_products) :
+number_of_digits(number_of_digits), number_of_products(number_of_products) {
 }
 
 std::any Challenge4::solve() {
@@ -26,25 +23,24 @@ std::any Challenge4::solve() {
     for (auto n = 0u; n < number_of_digits; ++n) {
         factor += 9 * tools::math::pow10<Type_t>(n);
     }
-    
+
     Type_t number = std::pow(factor, number_of_products);
     if (isPalindromic(number)) {
         return number;
     }
-    
+
     do {
         number = findNextPalindrome(number);
     } while (!checkDivisors(number, number_of_products));
-    
+
     return number;
 }
 
-bool Challenge4::checkDivisors(const Type_t &number,
-                              const size_t &depth) const {
+bool Challenge4::checkDivisors(const Type_t &number, const size_t &depth) const {
     if (depth == 1) {
         return getNumberOfDigits(number) == number_of_digits;
     }
-    
+
     std::set<Type_t> divisors;
     for (const auto &divisor : tools::math::divisors(number)) {
         if (getNumberOfDigits(divisor) == number_of_digits) {
@@ -55,14 +51,14 @@ bool Challenge4::checkDivisors(const Type_t &number,
     if (divisors.empty() || divisors.size() < depth) {
         return false;
     }
-    
+
     for (const auto &divisor : divisors) {
         Type_t new_number = number / divisor;
         if (checkDivisors(new_number, depth - 1)) {
             return true;
         }
     }
-    
+
     return false;
 }
 
@@ -83,7 +79,7 @@ Challenge4::Type_t Challenge4::findNextPalindrome(const Type_t &number) {
         first_part -= 1;
         new_second_part = flip(first_part / truncator);
     }
-    
+
     return first_part * first_part_power + new_second_part;
 }
 

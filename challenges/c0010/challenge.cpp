@@ -11,21 +11,19 @@
 
 using namespace challenges;
 
-Challenge10::Challenge10(const Type_t &limit) :
-limit(limit) {
-    
+Challenge10::Challenge10(const Type_t &limit) : limit(limit) {
 }
 
 std::any Challenge10::solve() {
     Type_t number = 3;
     Type_t sum = 2 + number; // 2 is the only even prime number
-    
+
     while (number < limit) {
         number += 2;
         if (tools::math::isPrime(number)) {
             sum += number;
         }
     }
-    
+
     return sum;
 }

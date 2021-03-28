@@ -19,39 +19,38 @@ namespace challenges {
     /**
      @class Challenge16
      @brief This class is intended to solve challenge #16
-     
+
      @link https://projecteuler.net/problem=16 @endlink
      */
     class Challenge16 : virtual public IChallenge {
     public:
-        
         //! @copydoc IChallenge::Type_t
         using Type_t = size_t;
 
         /**
          @brief Class constructor
-         
+
          This is the main constructor of Challenge16 class
-         
+
          @param exponent The exponent to solve the problem
          */
         Challenge16(const size_t &exponent);
-        
+
         /**
          @brief Default destructor
          */
         virtual ~Challenge16() = default;
-        
+
         /**
          This method contains the algorithm that solves challenge #16
-         
+
          @return The solution for challenge #16
          */
         std::any solve() override final;
-        
+
     private:
         size_t exponent; /**< The exponent of the problem */
     };
-}
+} // namespace challenges
 
 #endif /* challenges_c0016_challenge_hpp */
