@@ -1,0 +1,38 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+
+# Configurable Format Style Options
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options
+
+ColumnLimit: 140
+IndentWidth: 4
+ContinuationIndentWidth: 4
+AccessModifierOffset: -4
+MaxEmptyLinesToKeep: 1
+Cpp11BracedListStyle: true
+BreakConstructorInitializers: AfterColon
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+ConstructorInitializerIndentWidth: 0
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+BreakInheritanceList: AfterColon
+AlignTrailingComments: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeCpp11BracedList: false
+IndentCaseLabels: false
+IndentCaseBlocks: true
+SpaceBeforeAssignmentOperators: true
+PointerAlignment: Right
+SortIncludes: true
+IndentExternBlock: true
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: InlineOnly
+BreakBeforeBinaryOperators: NonAssignment
+AlignOperands: Align
+BreakBeforeBraces: Attach
+NamespaceIndentation: All
+
+# EmptyLineBeforeAccessModifier: LogicalBlock - Not supported
+# SpaceBeforeCaseColon: false - Not supported
+# SpaceAroundPointerQualifiers: Default - Not supported
