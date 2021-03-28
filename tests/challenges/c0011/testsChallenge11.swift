@@ -13,7 +13,7 @@ class TestsChallenge11: XCTestCase {
     func testChallenge11() throws {
         let expected: UInt64 = 70_600_674
         let obtained = solveChallenge11(4)
-        XCTAssertEqual(expected, obtained, "Challenge #11")
+        XCTAssertEqual(expected, obtained, "Challenge 11")
     }
 
     func testPerformanceChallenge11() throws {

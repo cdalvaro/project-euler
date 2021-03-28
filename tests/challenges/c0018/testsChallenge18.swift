@@ -34,7 +34,7 @@ class TestsChallenge18: XCTestCase {
 
         let expected: Int64 = 1_074
         let obtained = solveChallenge18(pointer, UInt64(triangle.count))
-        XCTAssertEqual(expected, obtained, "Challenge #18")
+        XCTAssertEqual(expected, obtained, "Challenge 18")
 
         pointer.deinitialize(count: triangle.count)
         pointer.deallocate()

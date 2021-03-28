@@ -15,7 +15,7 @@ namespace challenges {
 
     /**
      @class Challenge3
-     @brief This class is intended to solve Challenge #3
+     @brief This class is intended to solve Challenge 3
 
      @link https://projecteuler.net/problem=3 @endlink
      */
@@ -40,9 +40,9 @@ namespace challenges {
         virtual ~Challenge3() = default;
 
         /**
-         This method contains the algorithm that solves challenge #3
+         This method contains the algorithm that solves challenge 3
 
-         @return The solution for challenge #3
+         @return The solution for challenge 3
          */
         std::any solve() override final;
 
