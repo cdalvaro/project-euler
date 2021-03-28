@@ -14,6 +14,7 @@
 
 using namespace challenges;
 
+// clang-format off
 const Challenge11::Matrix_t Challenge11::matrix = {
     {  8,  2, 22, 97, 38, 15,  0, 40,  0, 75,  4,  5,  7, 78, 52, 12, 50, 77, 91,  8 },
     { 49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48,  4, 56, 62,  0 },
@@ -36,18 +37,16 @@ const Challenge11::Matrix_t Challenge11::matrix = {
     { 20, 73, 35, 29, 78, 31, 90,  1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57,  5, 54 },
     {  1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48 },
 };
+// clang-format on
 
 const size_t Challenge11::number_of_rows = Challenge11::matrix.size();
 const size_t Challenge11::number_of_columns = Challenge11::matrix.front().size();
 
-Challenge11::Challenge11(const Type_t &numbers_to_take) :
-numbers_to_take(numbers_to_take) {
+Challenge11::Challenge11(const Type_t &numbers_to_take) : numbers_to_take(numbers_to_take) {
     if (numbers_to_take > number_of_rows || numbers_to_take > number_of_columns) {
         std::stringstream message;
-        message
-            << "Numbers to take (" << numbers_to_take
-            << ") cannot be bigger than the number of rows ("
-            << number_of_rows << ") or columns (" << number_of_columns << ")";
+        message << "Numbers to take (" << numbers_to_take << ") cannot be bigger than the number of rows (" << number_of_rows
+                << ") or columns (" << number_of_columns << ")";
         throw std::logic_error(message.str());
     }
 }
@@ -64,50 +63,42 @@ std::any Challenge11::solve() {
 
 Challenge11::Type_t Challenge11::maxProductForPosition(const size_t &row, const size_t &column) const {
     std::set<Type_t> products;
-    
+
     // Horizontal: Left -> Right
     auto valid_column = column + numbers_to_take < number_of_columns;
     if (valid_column) {
         auto it_first = std::next(matrix[row].begin(), column);
         auto it_last = std::next(it_first, numbers_to_take);
-        products.insert(std::accumulate(it_first, it_last, Type_t(1),
-                                        std::multiplies<Type_t>()));
+        products.insert(std::accumulate(it_first, it_last, Type_t(1), std::multiplies<Type_t>()));
     }
-    
+
     // Vertical: Top -> Bottom
     auto valid_row = row + numbers_to_take < number_of_rows;
     if (valid_row) {
         auto it_first = std::next(matrix.begin(), row);
         auto it_last = std::next(it_first, numbers_to_take);
-        products.insert(std::accumulate(it_first, it_last, Type_t(1),
-                                        [&column](const auto &a, const auto &b) {
-            return a * b[column];
-        }));
+        products.insert(std::accumulate(it_first, it_last, Type_t(1), [&column](const auto &a, const auto &b) { return a * b[column]; }));
     }
-    
+
     // Diagonal: Left -> Right
     if (valid_column && valid_row) {
         auto it_first = std::next(matrix.begin(), row);
         auto it_last = std::next(it_first, numbers_to_take);
-        
+
         auto _column = column;
-        products.insert(std::accumulate(it_first, it_last, Type_t(1),
-                                        [&_column](const auto &a, const auto &b) {
-            return a * b[_column++];
-        }));
+        products.insert(
+            std::accumulate(it_first, it_last, Type_t(1), [&_column](const auto &a, const auto &b) { return a * b[_column++]; }));
     }
-    
+
     // Diagonal: Right -> Left
     if (valid_row && column >= numbers_to_take - 1 && column < number_of_columns) {
         auto it_first = std::next(matrix.begin(), row);
         auto it_last = std::next(it_first, numbers_to_take);
-        
+
         auto _column = column;
-        products.insert(std::accumulate(it_first, it_last, Type_t(1),
-                                        [&_column](const auto &a, const auto &b) {
-            return a * b[_column--];
-        }));
+        products.insert(
+            std::accumulate(it_first, it_last, Type_t(1), [&_column](const auto &a, const auto &b) { return a * b[_column--]; }));
     }
-    
-    return (* products.rbegin());
+
+    return (*products.rbegin());
 }

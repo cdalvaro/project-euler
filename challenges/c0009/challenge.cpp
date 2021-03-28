@@ -10,24 +10,22 @@
 
 using namespace challenges;
 
-Challenge9::Challenge9(const Type_t &number) :
-number(number) {
-    
+Challenge9::Challenge9(const Type_t &number) : number(number) {
 }
 
 std::any Challenge9::solve() {
     Type_t a = 0, b = 0, c = 0;
     Type_t triplet = 0;
-    
+
     do {
         ++a;
         b = a;
         do {
             ++b;
             c = number - (a + b);
-            triplet = a*a + b*b - c*c;
+            triplet = a * a + b * b - c * c;
         } while (b < c && triplet != 0);
     } while (triplet != 0);
-    
-    return a*b*c;
+
+    return a * b * c;
 }

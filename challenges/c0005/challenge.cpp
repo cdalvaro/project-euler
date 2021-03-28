@@ -14,24 +14,22 @@
 
 using namespace challenges;
 
-Challenge5::Challenge5(const Type_t &last_number) :
-last_number(last_number) {
-    
+Challenge5::Challenge5(const Type_t &last_number) : last_number(last_number) {
 }
 
 std::any Challenge5::solve() {
     std::vector<Type_t> divisors(last_number - 1, 0);
     std::iota(divisors.begin(), divisors.end(), 2);
-    
+
     auto smallest_number = tools::math::factorial(last_number);
-    
+
     bool new_number_found;
     do {
         new_number_found = false;
         for (const auto &divisor : divisors) {
             if (smallest_number % divisor == 0) {
                 Type_t new_smallest_number = smallest_number / divisor;
-                
+
                 bool is_multiple = true;
                 for (const auto &divisor : divisors) {
                     if (new_smallest_number % divisor != 0) {
@@ -39,7 +37,7 @@ std::any Challenge5::solve() {
                         break;
                     }
                 }
-                
+
                 if (is_multiple) {
                     smallest_number = new_smallest_number;
                     new_number_found = true;
@@ -47,6 +45,6 @@ std::any Challenge5::solve() {
             }
         }
     } while (new_number_found);
-    
+
     return smallest_number;
 }

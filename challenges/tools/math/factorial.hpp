@@ -16,10 +16,10 @@
  @brief Math namespace with mathematical functions
  */
 namespace challenges::tools::math {
-    
+
     /**
      @brief Function to compute the factorial of a number
-     
+
      @return The factorial for the given number
      */
     template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
@@ -30,6 +30,6 @@ namespace challenges::tools::math {
         }
         return product;
     }
-}
+} // namespace challenges::tools::math
 
 #endif /* challenges_tools_math_factorial_hpp */

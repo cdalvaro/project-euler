@@ -20,12 +20,11 @@ namespace challenges {
     /**
      @class Challenge18
      @brief This class is intended to solve challenge #18
-     
+
      @link https://projecteuler.net/problem=18 @endlink
      */
     class Challenge18 : virtual public IChallenge {
     public:
-        
         //! @copydoc IChallenge::Type_t
         using Type_t = long long;
 
@@ -34,25 +33,25 @@ namespace challenges {
 
         /**
          @brief Class constructor
-         
+
          This is the main constructor of Challenge18 class
-         
+
          @param triangle The triangle to be solved
          */
         Challenge18(const Triangle_t &triangle);
-        
+
         /**
          @brief Default destructor
          */
         virtual ~Challenge18() = default;
-        
+
         /**
          This method contains the algorithm that solves challenge #18
-         
+
          @return The solution for challenge #18
          */
         std::any solve() override final;
-        
+
     private:
         using Cumulated_t = std::vector<std::pair<std::pair<size_t, size_t>, Type_t>>;
 
@@ -70,6 +69,6 @@ namespace challenges {
          */
         Cumulated_t cumulateNextLevel(const Cumulated_t &cumulated, const size_t &next_level_index) const;
     };
-}
+} // namespace challenges
 
 #endif /* challenges_c0018_challenge_hpp */

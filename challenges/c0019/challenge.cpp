@@ -10,9 +10,7 @@
 
 using namespace challenges;
 
-Challenge19::Challenge19(const int &first_year, const int &last_year) :
-first_year(first_year), last_year(last_year) {
-    
+Challenge19::Challenge19(const int &first_year, const int &last_year) : first_year(first_year), last_year(last_year) {
 }
 
 std::any Challenge19::solve() {
@@ -22,14 +20,14 @@ std::any Challenge19::solve() {
 
     size_t number_of_sundays = 0;
     const auto final_date = dateFor(last_year, 12, 31);
-    
+
     for (auto date = dateFor(first_year, 1, 1); date <= final_date; date += one_day) {
         auto tm_date = tmFrom(date);
         if (tm_date.tm_mday == first_of_month && tm_date.tm_wday == sunday) {
             ++number_of_sundays;
         }
     }
-    
+
     return number_of_sundays;
 }
 
@@ -41,7 +39,7 @@ Challenge19::Date_t Challenge19::dateFor(const int &year, const int &month, cons
     tm_date.tm_hour = 0;
     tm_date.tm_min = 0;
     tm_date.tm_sec = 0;
-    
+
     return Clock_t::from_time_t(std::mktime(&tm_date));
 }
 

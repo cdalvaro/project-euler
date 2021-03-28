@@ -12,6 +12,7 @@
 
 using namespace challenges;
 
+// clang-format off
 const std::string_view Challenge8::big_number {
     "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843"
     "8586156078911294949545950173795833195285320880551112540698747158523863050715693290963295227443043557"
@@ -24,31 +25,31 @@ const std::string_view Challenge8::big_number {
     "0719840385096245544436298123098787992724428490918884580156166097919133875499200524063689912560717606"
     "0588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"
 };
+// clang-format on
 
-Challenge8::Challenge8(const Type_t &number_of_digits) :
-number_of_digits(number_of_digits) {
+Challenge8::Challenge8(const Type_t &number_of_digits) : number_of_digits(number_of_digits) {
     if (number_of_digits > big_number.size()) {
-        throw std::logic_error("The given number of digits is greater than the number of digits of the big number");
+        throw std::logic_error("The given number of digits is greater than the "
+                               "number of digits of the big number");
     }
 }
 
 std::any Challenge8::solve() {
     auto it_lhs = big_number.begin();
     auto it_rhs = std::next(it_lhs, number_of_digits);
-    
+
     Type_t biggest_product = accumulate(it_lhs, it_rhs);
-    
+
     it_lhs = it_rhs;
     it_rhs = std::next(it_lhs, number_of_digits);
     for (; it_rhs != big_number.end(); ++it_lhs, ++it_rhs) {
         biggest_product = std::max(biggest_product, accumulate(it_lhs, it_rhs));
     }
-    
+
     return biggest_product;
 }
 
-Challenge8::Type_t Challenge8::accumulate(std::string_view::const_iterator first,
-                                          std::string_view::const_iterator last) {
+Challenge8::Type_t Challenge8::accumulate(std::string_view::const_iterator first, std::string_view::const_iterator last) {
     Type_t product = 1;
     for (auto it = first; it != last; ++it) {
         product *= *it - '0';

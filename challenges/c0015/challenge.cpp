@@ -10,9 +10,7 @@
 
 using namespace challenges;
 
-Challenge15::Challenge15(const size_t &width, const size_t &height) :
-lattice({width, height}) {
-    
+Challenge15::Challenge15(const size_t &width, const size_t &height) : lattice({width, height}) {
 }
 
 std::any Challenge15::solve() {
@@ -38,7 +36,7 @@ Challenge15::Type_t Challenge15::computeNumberOfPaths(const Lattice_t &lattice) 
     }
 
     size_t number_of_paths = 0;
-    
+
     if (width > 0) {
         number_of_paths += getNumberOfPaths({width - 1, height});
     }

@@ -13,8 +13,7 @@
 long solveChallenge1(long limit);
 long solveChallenge2(long limit);
 unsigned long long solveChallenge3(unsigned long long limit);
-unsigned long long solveChallenge4(unsigned long long number_of_digits,
-                                   unsigned long long number_of_products);
+unsigned long long solveChallenge4(unsigned long long number_of_digits, unsigned long long number_of_products);
 unsigned long long solveChallenge5(unsigned long long last_number);
 unsigned long long solveChallenge6(unsigned long long last_number);
 unsigned long long solveChallenge7(unsigned long long nth_prime);
@@ -34,10 +33,8 @@ unsigned long long solveChallenge19(int first_year, int last_year);
 // MARK: - Tools
 
 // MARK: - Types/BigInt
-unsigned long long addNumbersAsBigInt(unsigned long long a,
-                                      unsigned long long b);
-char *addNumbersAsBigIntFromChars(const char *a,
-                                  const char *b);
+unsigned long long addNumbersAsBigInt(unsigned long long a, unsigned long long b);
+char *addNumbersAsBigIntFromChars(const char *a, const char *b);
 
 // MARK: - Types/NamedNumber
 char *nameForNumber(long long number);
