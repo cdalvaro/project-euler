@@ -26,7 +26,9 @@ BigInt::BigInt(const char *number) : BigInt{std::string_view{number}} {
 
 BigInt::BigInt(const std::string_view &number) {
     this->number.reserve(number.size());
-    std::transform(number.begin(), number.end(), std::back_inserter(this->number), [](const auto &character) { return character - '0'; });
+    std::transform(number.begin(), number.end(), std::back_inserter(this->number), [](const auto &character) {
+        return character - '0';
+    });
 }
 
 BigInt::BigInt(const BigInt &number) : number(number.number) {
@@ -104,18 +106,46 @@ BigInt BigInt::operator+(const BigInt &rhs) const {
     return sum;
 }
 
+bool BigInt::operator==(const BigInt &rhs) {
+    if (this->number.size() != rhs.number.size()) {
+        return false;
+    }
+
+    auto it_number = this->number.begin();
+    auto it_rhs = rhs.begin();
+    for (; it_number != this->number.end(); ++it_number, ++it_rhs) {
+        if (*it_number != *it_rhs) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 bool BigInt::operator<(const BigInt &rhs) const {
     if (this->number.size() < rhs.number.size()) {
         return true;
     }
+
     if (this->number.size() > rhs.number.size()) {
         return false;
     }
-    return this->number.front() < rhs.number.front();
+
+    auto it_number = this->number.begin();
+    auto it_rhs = rhs.begin();
+    for (; it_number != this->number.end(); ++it_number, ++it_rhs) {
+        if (*it_number != *it_rhs) {
+            return *it_number < *it_rhs;
+        }
+    }
+
+    return false;
 }
 
 BigInt::operator std::string_view() const {
-    auto snumber = std::accumulate(begin(), end(), std::string{""}, [](const auto &s, const auto &n) { return s + std::to_string(n); });
+    auto snumber = std::accumulate(begin(), end(), std::string{""}, [](const auto &s, const auto &n) {
+        return s + std::to_string(n);
+    });
     return std::string_view{snumber};
 }
 

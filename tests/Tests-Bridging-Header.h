@@ -35,6 +35,8 @@ unsigned long long solveChallenge19(int first_year, int last_year);
 // MARK: - Types/BigInt
 unsigned long long addNumbersAsBigInt(unsigned long long a, unsigned long long b);
 char *addNumbersAsBigIntFromChars(const char *a, const char *b);
+short compareBigInt(const char *a, const char *b);
+short bigIntEqual(const char *a, const char *b);
 
 // MARK: - Types/NamedNumber
 char *nameForNumber(long long number);

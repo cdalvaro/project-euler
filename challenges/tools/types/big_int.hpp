@@ -50,6 +50,7 @@ namespace challenges::tools::types {
         BigInt &operator+=(const BigInt &rhs);
         BigInt operator+(const BigInt &rhs) const;
 
+        bool operator==(const BigInt &rhs);
         bool operator<(const BigInt &rhs) const;
 
         operator std::string_view() const;

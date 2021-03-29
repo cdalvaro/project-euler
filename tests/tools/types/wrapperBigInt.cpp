@@ -25,3 +25,19 @@ extern "C" char *addNumbersAsBigIntFromChars(const char *a, const char *b) {
 
     return sum;
 }
+
+extern "C" short compareBigInt(const char *a, const char *b) {
+    BigInt number_a{a}, number_b{b};
+    
+    if (number_a < number_b) {
+        return -1;
+    } else if (number_b < number_a) {
+        return 1;
+    }
+    
+    return 0;
+}
+
+extern "C" short bigIntEqual(const char *a, const char *b) {
+    return BigInt{a} == BigInt{b} ? 1 : 0;
+}
