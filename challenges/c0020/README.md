@@ -1,0 +1,22 @@
+# [Challenge 20 - Factorial digit sum](https://projecteuler.net/problem=20)
+
+## Description
+
+n! means n × (n − 1) × ... × 3 × 2 × 1
+
+For example, 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,
+and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+
+## Exercise
+
+Find the sum of the digits in the number 100!
+
+## Solution
+
+You can find the algorithm to solve this challenge inside [challenge.cpp](challenge.cpp).
+
+<details>
+  <summary>Click here to see the result!</summary>
+
+  Result is: `648`
+</details>
