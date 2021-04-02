@@ -7,9 +7,9 @@
 //
 
 #include <charconv>
+#include <limits>
 #include <numeric>
 #include <sstream>
-#include <string>
 
 #include "challenges/tools/types/big_int.hpp"
 
@@ -75,16 +75,23 @@ BigInt &BigInt::operator+=(const BigInt &rhs) {
 }
 
 BigInt BigInt::operator+(const BigInt &rhs) const {
-    BigInt sum = *this < rhs ? rhs : *this;
-    const auto other = *this < rhs ? this : &rhs;
+    BigInt sum;
+    const BigInt *other;
+    if (*this < rhs) {
+        sum = rhs;
+        other = this;
+    } else {
+        sum = *this;
+        other = &rhs;
+    }
 
-    auto it_last = std::next(sum.number.rbegin(), other->number.size());
-    if (it_last == sum.number.rbegin()) {
+    if (other->isZero()) {
         return sum;
     }
 
     BigInt_t::value_type reminder = 0;
     auto it_other = other->number.rbegin();
+    auto it_last = std::next(sum.number.rbegin(), other->number.size());
     for (auto it = sum.number.rbegin(); it != it_last; ++it, ++it_other) {
         auto sum = *it + *it_other + reminder;
         *it = sum % 10;
@@ -104,6 +111,26 @@ BigInt BigInt::operator+(const BigInt &rhs) const {
     }
 
     return sum;
+}
+
+BigInt &BigInt::operator*=(const BigInt &rhs) {
+    *this = *this * rhs;
+    return *this;
+}
+
+BigInt BigInt::operator*(const BigInt &rhs) const {
+    if (this->isZero() || rhs.isZero()) {
+        return BigInt("0");
+    }
+
+    BigInt product;
+    for (auto it_rhs = rhs.number.rbegin(); it_rhs != rhs.number.rend(); ++it_rhs) {
+        auto tmp = *this;
+        tmp.multiplyBy(*it_rhs).multiplyBy10(std::distance(rhs.number.rbegin(), it_rhs));
+        product += tmp;
+    }
+
+    return product;
 }
 
 bool BigInt::operator==(const BigInt &rhs) {
@@ -142,20 +169,63 @@ bool BigInt::operator<(const BigInt &rhs) const {
     return false;
 }
 
-BigInt::operator std::string_view() const {
-    auto snumber = std::accumulate(begin(), end(), std::string{""}, [](const auto &s, const auto &n) {
+bool BigInt::isZero() const {
+    return number.size() == 1 && number.front() == 0;
+}
+
+bool BigInt::isNil() const {
+    return number.empty();
+}
+
+std::string BigInt::str() const {
+    return std::accumulate(begin(), end(), std::string{""}, [](const auto &s, const auto &n) {
         return s + std::to_string(n);
     });
-    return std::string_view{snumber};
+}
+
+BigInt::operator std::string() const {
+    return this->str();
 }
 
 BigInt::operator size_t() const {
-    auto sv = std::string_view{*this};
-    size_t number;
-    if (auto [p, ec] = std::from_chars(sv.data(), sv.end(), number); ec != std::errc()) {
-        std::stringstream message;
-        message << "BigInt (" << sv << ") to big to be casted to size_t";
-        throw std::logic_error(message.str());
+    long double value = 0;
+//    std::string_view sv{str()};
+//    auto result = std::from_chars(sv.begin(), sv.end(), value);
+//    if (result.ec == std::errc::result_out_of_range || value > std::numeric_limits<size_t>::max()) {
+//        std::stringstream message;
+//        message << "BigInt (" << sv << ") to big to be casted to size_t";
+//        throw std::out_of_range(message.str());
+//    }
+    for (auto it = number.rbegin(); it != number.rend(); ++it) {
+        auto exponent = std::distance(number.rbegin(), it);
+        value += *it * std::pow(10, exponent);
     }
-    return number;
+
+    if (value > std::numeric_limits<size_t>::max()) {
+        std::stringstream message;
+        message << "BigInt (" << value << ") to big to be casted to size_t";
+        throw std::out_of_range(message.str());
+    }
+
+    return static_cast<size_t>(value);
+}
+
+BigInt &BigInt::multiplyBy(const BigInt_t::value_type &small_int) {
+    BigInt_t::value_type reminder = 0;
+    for (auto it = number.rbegin(); it != number.rend(); ++it) {
+        auto product = *it * small_int + reminder;
+        *it = product % 10;
+        reminder = (product - *it) / 10;
+    }
+
+    if (reminder > 0) {
+        number.insert(number.begin(), reminder);
+    }
+
+    return *this;
+}
+
+BigInt &BigInt::multiplyBy10(const size_t &times) {
+    number.insert(number.end(), times, 0);
+    return *this;
 }

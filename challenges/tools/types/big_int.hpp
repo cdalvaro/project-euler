@@ -9,7 +9,7 @@
 #ifndef challenges_tools_types_big_int_hpp
 #define challenges_tools_types_big_int_hpp
 
-#include <string_view>
+#include <string>
 #include <vector>
 
 /**
@@ -28,6 +28,29 @@ namespace challenges::tools::types {
     private:
         using BigInt_t = std::vector<unsigned short int>;
         BigInt_t number;
+
+        /**
+         This method computes the product between the BigInt
+         and an int number whose absolute value is smaller than 10.
+
+         In order to improve performance, this method does not check whether
+         the absolute value of \p small_int is smaller than 10. It is responsibility
+         of the developer to use this method right.
+
+         @param small_int An Int whose absolute value is smaller than 10
+
+         @return The number itself
+         */
+        BigInt &multiplyBy(const BigInt_t::value_type &small_int);
+
+        /**
+         Multiply the number by 10 \p times times
+
+         @param times The number of times to multiply by 10
+
+         @return The number itself
+         */
+        BigInt &multiplyBy10(const size_t &times = 1);
 
     public:
         BigInt();
@@ -50,10 +73,18 @@ namespace challenges::tools::types {
         BigInt &operator+=(const BigInt &rhs);
         BigInt operator+(const BigInt &rhs) const;
 
+        BigInt &operator*=(const BigInt &rhs);
+        BigInt operator*(const BigInt &rhs) const;
+
         bool operator==(const BigInt &rhs);
         bool operator<(const BigInt &rhs) const;
 
-        operator std::string_view() const;
+        bool isZero() const;
+        bool isNil() const;
+
+        std::string str() const;
+
+        operator std::string() const;
         operator size_t() const;
     };
 

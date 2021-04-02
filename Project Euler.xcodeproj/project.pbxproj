@@ -87,6 +87,7 @@
 		07EE512625EC24E7008EF8D1 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07EE512325EC21BB008EF8D1 /* challenge.cpp */; };
 		07EE512C25EC25E0008EF8D1 /* testsChallenge17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EE512A25EC25D7008EF8D1 /* testsChallenge17.swift */; };
 		07EE512F25EC2610008EF8D1 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07EE512B25EC25D7008EF8D1 /* wrapper.cpp */; };
+		07F3CDBA26175B7300558350 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F3CDB926175B7300558350 /* tools.cpp */; };
 		07F8E4A524CC9BC60059A771 /* big_int.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07F8E4A324CC9BC60059A771 /* big_int.hpp */; };
 		07FEAD0824961179003E1BFC /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07FEAD0624961179003E1BFC /* challenge.hpp */; };
 /* End PBXBuildFile section */
@@ -198,6 +199,7 @@
 		07EE512525EC21BC008EF8D1 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		07EE512A25EC25D7008EF8D1 /* testsChallenge17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge17.swift; sourceTree = "<group>"; };
 		07EE512B25EC25D7008EF8D1 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		07F3CDB926175B7300558350 /* tools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
 		07F8E49324CC8A1B0059A771 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		07F8E49424CC8A1B0059A771 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		07F8E49524CC8A1B0059A771 /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
@@ -415,9 +417,9 @@
 		0760B340248002090092F926 /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				07F8E4A124CC9BA00059A771 /* types */,
 				0760B34B248032D70092F926 /* iterators */,
 				0760B3412480021F0092F926 /* math */,
+				07F8E4A124CC9BA00059A771 /* types */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -623,6 +625,7 @@
 			isa = PBXGroup;
 			children = (
 				07324F3824CD81140065BEF8 /* types */,
+				07F3CDB926175B7300558350 /* tools.cpp */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 				0711D10525EB8E0B0051C4D5 /* wrapper.cpp in Sources */,
 				07B6245B260FDD6D0024C938 /* wrapper.cpp in Sources */,
 				07CF367825EACE3B009582B9 /* testsChallenge5.swift in Sources */,
+				07F3CDBA26175B7300558350 /* tools.cpp in Sources */,
 				07CF367925EACE3B009582B9 /* wrapper.cpp in Sources */,
 				07CF367A25EACE3B009582B9 /* testsChallenge6.swift in Sources */,
 				07CF367B25EACE3B009582B9 /* wrapper.cpp in Sources */,

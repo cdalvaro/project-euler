@@ -31,12 +31,19 @@ long long solveChallenge18(long long *triangle, unsigned long long number_of_row
 unsigned long long solveChallenge19(int first_year, int last_year);
 
 // MARK: - Tools
+short throwsToBool(const void (*block)());
 
 // MARK: - Types/BigInt
 unsigned long long addNumbersAsBigInt(unsigned long long a, unsigned long long b);
 char *addNumbersAsBigIntFromChars(const char *a, const char *b);
+char *multiplyNumbersAsBigIntFromChars(const char *a, const char *b);
+char *mulitplyNumbersAsBigIntProductAssignment(const char *a, const char *b);
 short compareBigInt(const char *a, const char *b);
 short bigIntEqual(const char *a, const char *b);
+short bigIntIsZero(const char *a);
+short bigIntIsNil(const char *a);
+unsigned long long bigIntToSize_t(const char *a);
+char *bigIntToChar(const char *a);
 
 // MARK: - Types/NamedNumber
 char *nameForNumber(long long number);
