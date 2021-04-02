@@ -9,9 +9,6 @@
 #ifndef challenges_c0016_challenge_hpp
 #define challenges_c0016_challenge_hpp
 
-#include <map>
-#include <utility>
-
 #include "challenges/ichallenge.hpp"
 
 namespace challenges {

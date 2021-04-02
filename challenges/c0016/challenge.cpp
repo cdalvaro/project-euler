@@ -7,10 +7,10 @@
 //
 
 #include <cmath>
-#include <cwchar>
-#include <string>
+#include <numeric>
 
 #include "challenges/c0016/challenge.hpp"
+#include "challenges/tools/iterators/number_digits.hpp"
 
 using namespace challenges;
 
@@ -18,19 +18,7 @@ Challenge16::Challenge16(const size_t &exponent) : exponent(exponent) {
 }
 
 std::any Challenge16::solve() {
-    auto power = std::to_wstring(std::pow(2, exponent));
-
-    // Erase the decimal component of the number, i.e.: ".000000"
-    auto it_dot = power.find(L".");
-    if (it_dot != std::wstring::npos) {
-        power.erase(it_dot, power.size());
-    }
-
-    Type_t sum = 0;
-    wchar_t *end;
-    for (auto digit : power) {
-        sum += std::wcstol(&digit, &end, 10);
-    }
-
+    auto power = tools::iterators::NumberDigits(std::pow(2, exponent));
+    Type_t sum = std::accumulate(power.begin(), power.end(), 0);
     return sum;
 }

@@ -133,6 +133,8 @@
 		0711D0FE25EB8D070051C4D5 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		0711D10325EB8E050051C4D5 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		0711D10425EB8E050051C4D5 /* testsChallenge16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge16.swift; sourceTree = "<group>"; };
+		07297BDD2610FA6800D3C9A3 /* number_digits.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = number_digits.hpp; sourceTree = "<group>"; };
+		07297BDE2610FACD00D3C9A3 /* iterators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = iterators.hpp; sourceTree = "<group>"; };
 		073034D325D83945008A8116 /* testsChallenge15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge15.swift; sourceTree = "<group>"; };
 		073034D425D83945008A8116 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		07324F3924CD81310065BEF8 /* wrapperBigInt.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapperBigInt.cpp; sourceTree = "<group>"; };
@@ -453,6 +455,8 @@
 			isa = PBXGroup;
 			children = (
 				0760B34D248032FF0092F926 /* homogeneous_partition.hpp */,
+				07297BDD2610FA6800D3C9A3 /* number_digits.hpp */,
+				07297BDE2610FACD00D3C9A3 /* iterators.hpp */,
 			);
 			path = iterators;
 			sourceTree = "<group>";
