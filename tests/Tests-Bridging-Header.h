@@ -29,12 +29,26 @@ unsigned long long solveChallenge16(unsigned int exponent);
 unsigned long long solveChallenge17(unsigned int first, unsigned int last);
 long long solveChallenge18(long long *triangle, unsigned long long number_of_rows);
 unsigned long long solveChallenge19(int first_year, int last_year);
+unsigned long long solveChallenge20(unsigned int number);
 
 // MARK: - Tools
+short throwsToBool(const void (*block)());
+
+// MARK: - Math/Factorial
+double factorial(unsigned long long number);
+char *factorialBigInt(unsigned long long number);
 
 // MARK: - Types/BigInt
 unsigned long long addNumbersAsBigInt(unsigned long long a, unsigned long long b);
 char *addNumbersAsBigIntFromChars(const char *a, const char *b);
+char *multiplyNumbersAsBigIntFromChars(const char *a, const char *b);
+char *mulitplyNumbersAsBigIntProductAssignment(const char *a, const char *b);
+short compareBigInt(const char *a, const char *b);
+short bigIntEqual(const char *a, const char *b);
+short bigIntIsZero(const char *a);
+short bigIntIsNil(const char *a);
+unsigned long long bigIntToSize_t(const char *a);
+char *bigIntToChar(const char *a);
 
 // MARK: - Types/NamedNumber
 char *nameForNumber(long long number);

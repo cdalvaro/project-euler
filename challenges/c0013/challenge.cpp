@@ -77,7 +77,7 @@ std::any Challenge13::solve() {
         bigint += number;
     }
 
-    std::string_view sv_bigint = bigint;
+    std::string_view sv_bigint{bigint.str()};
     std::from_chars(sv_bigint.begin(), std::next(sv_bigint.begin(), 10), result);
 
     return result;

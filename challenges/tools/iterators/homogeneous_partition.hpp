@@ -13,12 +13,6 @@
 #include <type_traits>
 #include <utility>
 
-/**
- @namespace challenges::tools::iterators
- @brief Iterators namespace with tools to make easy to iterate containers
-
- This namespace contains tools to iterate against series
- */
 namespace challenges::tools::iterators {
 
     /**

@@ -1,9 +1,10 @@
 ---
 Language: Cpp
+Standard: c++17
 BasedOnStyle: LLVM
 
 # Configurable Format Style Options
-# https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options
+# https://releases.llvm.org/11.0.0/tools/clang/docs/ClangFormatStyleOptions.html
 
 ColumnLimit: 140
 IndentWidth: 4
@@ -26,8 +27,11 @@ SpaceBeforeAssignmentOperators: true
 PointerAlignment: Right
 SortIncludes: true
 IndentExternBlock: true
+AllowShortLambdasOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Never
+AlwaysBreakAfterReturnType: None
 AllowShortIfStatementsOnASingleLine: Never
-AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortFunctionsOnASingleLine: None
 BreakBeforeBinaryOperators: NonAssignment
 AlignOperands: Align
 BreakBeforeBraces: Attach
