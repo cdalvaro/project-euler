@@ -50,6 +50,7 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge 18](challenges/c0018)
   - [Challenge 19](challenges/c0019)
   - [Challenge 20](challenges/c0020)
+  - [Challenge 21](challenges/c0021)
 </details>
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?logo=C%2B%2B
@@ -58,7 +59,7 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
 [unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
-[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-20-lightgrey
+[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-21-lightgrey
 
 [gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges
 [gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
