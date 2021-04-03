@@ -18,8 +18,8 @@ class TestsChallenge3: XCTestCase {
 
     func testPerformanceChallenge3() throws {
         measure {
-            for _ in 0...100 {
-                solveChallenge3(1_000_000_000)
+            for _ in 0...1_000 {
+                solveChallenge3(1_000)
             }
         }
     }
