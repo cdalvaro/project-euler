@@ -28,10 +28,6 @@ const std::string_view Challenge8::big_number {
 // clang-format on
 
 Challenge8::Challenge8(const Type_t &number_of_digits) : number_of_digits(number_of_digits) {
-    if (number_of_digits > big_number.size()) {
-        throw std::logic_error("The given number of digits is greater than the "
-                               "number of digits of the big number");
-    }
 }
 
 std::any Challenge8::solve() {

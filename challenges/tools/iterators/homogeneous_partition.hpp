@@ -34,7 +34,8 @@ namespace challenges::tools::iterators {
          @param number_of_partitions The number of homogeneous partitions
          */
         HomogeneousPartition(const Integer_t &first, const Integer_t &last, const size_t &number_of_partitions) :
-        first(first), last(last), number_of_partitions(number_of_partitions) {}
+        first(first), last(last), number_of_partitions(number_of_partitions) {
+        }
 
         /**
          @brief Default constructor
@@ -70,7 +71,9 @@ namespace challenges::tools::iterators {
 
          @return A constant iterator pointing to the first partition
          */
-        ConstIterator_t begin() const { return partitions().begin(); }
+        ConstIterator_t begin() const {
+            return partitions().begin();
+        }
 
         /**
          @brief Iterator to the element following the las element
@@ -78,7 +81,9 @@ namespace challenges::tools::iterators {
          @return A constant iterator pointing to the element following the las
          element
          */
-        ConstIterator_t end() const { return partitions().end(); }
+        ConstIterator_t end() const {
+            return partitions().end();
+        }
 
     private:
         Integer_t first;

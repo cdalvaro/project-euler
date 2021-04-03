@@ -43,12 +43,6 @@ const size_t Challenge11::number_of_rows = Challenge11::matrix.size();
 const size_t Challenge11::number_of_columns = Challenge11::matrix.front().size();
 
 Challenge11::Challenge11(const Type_t &numbers_to_take) : numbers_to_take(numbers_to_take) {
-    if (numbers_to_take > number_of_rows || numbers_to_take > number_of_columns) {
-        std::stringstream message;
-        message << "Numbers to take (" << numbers_to_take << ") cannot be bigger than the number of rows (" << number_of_rows
-                << ") or columns (" << number_of_columns << ")";
-        throw std::logic_error(message.str());
-    }
 }
 
 std::any Challenge11::solve() {
@@ -77,7 +71,9 @@ Challenge11::Type_t Challenge11::maxProductForPosition(const size_t &row, const 
     if (valid_row) {
         auto it_first = std::next(matrix.begin(), row);
         auto it_last = std::next(it_first, numbers_to_take);
-        products.insert(std::accumulate(it_first, it_last, Type_t(1), [&column](const auto &a, const auto &b) { return a * b[column]; }));
+        products.insert(std::accumulate(it_first, it_last, Type_t(1), [&column](const auto &a, const auto &b) {
+            return a * b[column];
+        }));
     }
 
     // Diagonal: Left -> Right
@@ -86,8 +82,9 @@ Challenge11::Type_t Challenge11::maxProductForPosition(const size_t &row, const 
         auto it_last = std::next(it_first, numbers_to_take);
 
         auto _column = column;
-        products.insert(
-            std::accumulate(it_first, it_last, Type_t(1), [&_column](const auto &a, const auto &b) { return a * b[_column++]; }));
+        products.insert(std::accumulate(it_first, it_last, Type_t(1), [&_column](const auto &a, const auto &b) {
+            return a * b[_column++];
+        }));
     }
 
     // Diagonal: Right -> Left
@@ -96,8 +93,9 @@ Challenge11::Type_t Challenge11::maxProductForPosition(const size_t &row, const 
         auto it_last = std::next(it_first, numbers_to_take);
 
         auto _column = column;
-        products.insert(
-            std::accumulate(it_first, it_last, Type_t(1), [&_column](const auto &a, const auto &b) { return a * b[_column--]; }));
+        products.insert(std::accumulate(it_first, it_last, Type_t(1), [&_column](const auto &a, const auto &b) {
+            return a * b[_column--];
+        }));
     }
 
     return (*products.rbegin());

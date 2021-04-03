@@ -189,13 +189,13 @@ BigInt::operator std::string() const {
 
 BigInt::operator size_t() const {
     long double value = 0;
-//    std::string_view sv{str()};
-//    auto result = std::from_chars(sv.begin(), sv.end(), value);
-//    if (result.ec == std::errc::result_out_of_range || value > std::numeric_limits<size_t>::max()) {
-//        std::stringstream message;
-//        message << "BigInt (" << sv << ") to big to be casted to size_t";
-//        throw std::out_of_range(message.str());
-//    }
+    //    std::string_view sv{str()};
+    //    auto result = std::from_chars(sv.begin(), sv.end(), value);
+    //    if (result.ec == std::errc::result_out_of_range || value > std::numeric_limits<size_t>::max()) {
+    //        std::stringstream message;
+    //        message << "BigInt (" << sv << ") to big to be casted to size_t";
+    //        throw std::out_of_range(message.str());
+    //    }
     for (auto it = number.rbegin(); it != number.rend(); ++it) {
         auto exponent = std::distance(number.rbegin(), it);
         value += *it * std::pow(10, exponent);

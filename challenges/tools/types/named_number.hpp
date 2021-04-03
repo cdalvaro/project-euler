@@ -99,11 +99,16 @@ namespace challenges::tools::types {
         };
 
     public:
-        NamedNumber(const Integer_t &number) : number(number), name(nameForNumber(number)) {}
+        NamedNumber(const Integer_t &number) : number(number), name(nameForNumber(number)) {
+        }
 
-        const std::string &getName() const { return name; }
+        const std::string &getName() const {
+            return name;
+        }
 
-        friend std::ostream &operator<<(std::ostream &os, const NamedNumber &named_number) { return os << named_number.getName(); }
+        friend std::ostream &operator<<(std::ostream &os, const NamedNumber &named_number) {
+            return os << named_number.getName();
+        }
     };
 
 } // namespace challenges::tools::types
