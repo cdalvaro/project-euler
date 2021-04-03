@@ -4,6 +4,8 @@
 [![GitHub Challenges][gh_challenges_badge]][gh_challenges_link]
 [![Code coverage][codecov_badge]][codecov_link]
 
+<a href="https://projecteuler.net/progress=cdalvaro"><img src="https://projecteuler.net/profile/cdalvaro.png" alt="cdalvaro" title="cdalvaro" height="48px" align="right" style="top: 1px; visibility: visible;" /></a>
+
 # Project Euler Challenges
 
 [Project Euler](https://projecteuler.net) is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.
