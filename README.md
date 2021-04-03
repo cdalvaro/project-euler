@@ -1,10 +1,8 @@
+[![Challenges Soved][challenges_solved_badge]][profile_link]
 [![C++ Version][cpp_badge]][cpp_link]
 [![Unit Tests][unit_testing_badge]][unit_testing_link]
-![Challenges Soved][challenges_solved_badge]
 [![GitHub Challenges][gh_challenges_badge]][gh_challenges_link]
 [![Code coverage][codecov_badge]][codecov_link]
-
-<a href="https://projecteuler.net/progress=cdalvaro"><img src="https://projecteuler.net/profile/cdalvaro.png" alt="cdalvaro" title="cdalvaro" height="48px" align="right" style="top: 1px; visibility: visible;" /></a>
 
 # Project Euler Challenges
 
@@ -55,13 +53,14 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge 21](challenges/c0021)
 </details>
 
+[challenges_solved_badge]: https://img.shields.io/badge/Solved-21-f93
+[profile_link]: https://projecteuler.net/progress=cdalvaro
+
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?logo=C%2B%2B
 [cpp_link]: https://en.cppreference.com/w/cpp/17
 
 [unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
-
-[challenges_solved_badge]: https://img.shields.io/badge/Challenges%20Solved-21-lightgrey
 
 [gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges
 [gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
