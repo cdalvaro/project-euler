@@ -186,6 +186,19 @@
 				</dict>
 			</dict>
 		</dict>
+		<key>TestsChallenge21</key>
+		<dict>
+			<key>testPerformanceChallenge21()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>1.5333</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Local Baseline</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>TestsChallenge3</key>
 		<dict>
 			<key>testPerformanceChallenge3()</key>
