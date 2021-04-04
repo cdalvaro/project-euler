@@ -45,7 +45,8 @@ std::any Challenge8::solve() {
     return biggest_product;
 }
 
-Challenge8::Type_t Challenge8::accumulate(std::string_view::const_iterator first, std::string_view::const_iterator last) {
+Challenge8::Type_t Challenge8::accumulate(std::string_view::const_iterator first,
+                                          std::string_view::const_iterator last) {
     Type_t product = 1;
     for (auto it = first; it != last; ++it) {
         product *= *it - '0';

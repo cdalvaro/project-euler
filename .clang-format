@@ -6,7 +6,7 @@ BasedOnStyle: LLVM
 # Configurable Format Style Options
 # https://releases.llvm.org/11.0.0/tools/clang/docs/ClangFormatStyleOptions.html
 
-ColumnLimit: 140
+ColumnLimit: 120
 IndentWidth: 4
 ContinuationIndentWidth: 4
 AccessModifierOffset: -4

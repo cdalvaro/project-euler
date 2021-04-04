@@ -32,8 +32,8 @@ std::any Challenge22::solve() {
     // Read file content splitting by commas
     std::set<std::string> names;
     std::ifstream ifs(file_path);
-    for (auto it_name = (std::istream_iterator<WordDelimitedBy<','>>(ifs)); it_name != (std::istream_iterator<WordDelimitedBy<','>>());
-         ++it_name) {
+    for (auto it_name = (std::istream_iterator<WordDelimitedBy<','>>(ifs));
+         it_name != (std::istream_iterator<WordDelimitedBy<','>>()); ++it_name) {
         auto name = std::move(*it_name);
 
         // Remove double quotes
@@ -48,9 +48,10 @@ std::any Challenge22::solve() {
     // Compute score
     Type_t total_score = 0;
     for (auto it_name = names.begin(); it_name != names.end(); ++it_name) {
-        Type_t name_score = std::accumulate(it_name->begin(), it_name->end(), 0, [](const auto &accumulated, const auto &character) {
-            return accumulated + character - 'A' + 1;
-        });
+        Type_t name_score =
+            std::accumulate(it_name->begin(), it_name->end(), 0, [](const auto &accumulated, const auto &character) {
+                return accumulated + character - 'A' + 1;
+            });
         auto position = std::distance(names.begin(), it_name) + 1;
         total_score += name_score * position;
     }
