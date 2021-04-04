@@ -87,7 +87,8 @@ namespace challenges::tools::types {
         };
 
         inline static const std::vector<std::string> TEENS{
-            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+            "ten",     "eleven",  "twelve",    "thirteen", "fourteen",
+            "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
         };
 
         inline static const std::vector<std::string> TENS{

@@ -31,7 +31,8 @@ std::any Challenge18::solve() {
     return max_cumulated;
 }
 
-Challenge18::Cumulated_t Challenge18::cumulateNextLevel(const Cumulated_t &cumulated, const size_t &next_level_index) const {
+Challenge18::Cumulated_t Challenge18::cumulateNextLevel(const Cumulated_t &cumulated,
+                                                        const size_t &next_level_index) const {
     Cumulated_t new_cumulated;
     auto next_level = triangle[next_level_index];
 

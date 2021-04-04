@@ -22,7 +22,8 @@ namespace challenges::tools::math {
 
      @return The factorial for the given number
      */
-    template <typename Integer_t = size_t, typename Return_t = Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
+    template <typename Integer_t = size_t, typename Return_t = Integer_t,
+              typename = std::enable_if<std::is_integral<Integer_t>::value>>
     constexpr Return_t factorial(const Integer_t &number) {
         Return_t product{2};
         for (Integer_t factor = 3; factor <= number; ++factor) {

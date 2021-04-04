@@ -19,7 +19,8 @@ namespace challenges::tools::iterators {
      @class HomogeneousPartition
      @brief Creates homogeneous partitions for iterating over a range
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>> class HomogeneousPartition {
+    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
+    class HomogeneousPartition {
     public:
         using Partition_t = std::pair<Integer_t, Integer_t>;
         using Partitions_t = std::set<Partition_t>;
