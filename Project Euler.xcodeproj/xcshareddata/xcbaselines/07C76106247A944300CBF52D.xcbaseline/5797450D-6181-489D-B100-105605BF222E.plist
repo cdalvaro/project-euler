@@ -199,6 +199,19 @@
 				</dict>
 			</dict>
 		</dict>
+		<key>TestsChallenge22</key>
+		<dict>
+			<key>testPerformanceChallenge22()</key>
+			<dict>
+				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>0.409</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Local Baseline</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>TestsChallenge3</key>
 		<dict>
 			<key>testPerformanceChallenge3()</key>

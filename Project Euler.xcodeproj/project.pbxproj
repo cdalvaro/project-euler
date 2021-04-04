@@ -26,6 +26,10 @@
 		0745D03F2618577900781D0D /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0745D03C2618577100781D0D /* challenge.cpp */; };
 		075B83D42492884C00CF244A /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B83D22492884C00CF244A /* challenge.hpp */; };
 		075B83DC2492B98000CF244A /* factorial.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 075B83DB2492B98000CF244A /* factorial.hpp */; };
+		075B958A2619C5CF0071DCED /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075B95862619BE4D0071DCED /* challenge.cpp */; };
+		075B95912619CCAC0071DCED /* testsChallenge22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B958F2619CC940071DCED /* testsChallenge22.swift */; };
+		075B95942619CCF00071DCED /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075B95902619CC950071DCED /* wrapper.cpp */; };
+		075B95982619CD790071DCED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B95972619CD790071DCED /* Utilities.swift */; };
 		0760B33F247FFC300092F926 /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0760B33D247FFC300092F926 /* challenge.hpp */; };
 		0760B345248002370092F926 /* factorization.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0760B343248002370092F926 /* factorization.hpp */; };
 		0760B34F248032FF0092F926 /* homogeneous_partition.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0760B34D248032FF0092F926 /* homogeneous_partition.hpp */; };
@@ -171,6 +175,13 @@
 		075B83D72492B58F00CF244A /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		075B83D82492B58F00CF244A /* testsChallenge5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge5.swift; sourceTree = "<group>"; };
 		075B83DB2492B98000CF244A /* factorial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = factorial.hpp; sourceTree = "<group>"; };
+		075B95852619BE4D0071DCED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		075B95862619BE4D0071DCED /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
+		075B95872619BE4D0071DCED /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
+		075B958D2619C68C0071DCED /* names.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = names.txt; sourceTree = "<group>"; };
+		075B958F2619CC940071DCED /* testsChallenge22.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge22.swift; sourceTree = "<group>"; };
+		075B95902619CC950071DCED /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		075B95972619CD790071DCED /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		0760B33C247FFC300092F926 /* challenge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = challenge.cpp; sourceTree = "<group>"; };
 		0760B33D247FFC300092F926 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		0760B343248002370092F926 /* factorization.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = factorization.hpp; sourceTree = "<group>"; };
@@ -465,6 +476,26 @@
 			path = c0005;
 			sourceTree = "<group>";
 		};
+		075B95842619BE370071DCED /* c0022 */ = {
+			isa = PBXGroup;
+			children = (
+				075B95852619BE4D0071DCED /* README.md */,
+				075B958D2619C68C0071DCED /* names.txt */,
+				075B95862619BE4D0071DCED /* challenge.cpp */,
+				075B95872619BE4D0071DCED /* challenge.hpp */,
+			);
+			path = c0022;
+			sourceTree = "<group>";
+		};
+		075B958E2619CC890071DCED /* c0022 */ = {
+			isa = PBXGroup;
+			children = (
+				075B958F2619CC940071DCED /* testsChallenge22.swift */,
+				075B95902619CC950071DCED /* wrapper.cpp */,
+			);
+			path = c0022;
+			sourceTree = "<group>";
+		};
 		0760B340248002090092F926 /* tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +667,7 @@
 				07FDB5BA260D23FB0044E20E /* c0019 */,
 				07297BD62610F86100D3C9A3 /* c0020 */,
 				0745D03B2618576700781D0D /* c0021 */,
+				075B95842619BE370071DCED /* c0022 */,
 				0760B340248002090092F926 /* tools */,
 			);
 			path = challenges;
@@ -655,6 +687,7 @@
 				07DA0636248404A1000458C7 /* tools */,
 				07C7610B247A944300CBF52D /* Info.plist */,
 				07C76121247AB3AC00CBF52D /* Tests-Bridging-Header.h */,
+				075B95972619CD790071DCED /* Utilities.swift */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -683,6 +716,7 @@
 				07B6244C260FCFEC0024C938 /* c0019 */,
 				07C66CEF26122BE70092D958 /* c0020 */,
 				0745D0322618570B00781D0D /* c0021 */,
+				075B958E2619CC890071DCED /* c0022 */,
 			);
 			path = challenges;
 			sourceTree = "<group>";
@@ -968,6 +1002,7 @@
 				07CF369E25EACE6F009582B9 /* challenge.cpp in Sources */,
 				07CF369F25EACE6F009582B9 /* challenge.cpp in Sources */,
 				07EE512625EC24E7008EF8D1 /* challenge.cpp in Sources */,
+				075B958A2619C5CF0071DCED /* challenge.cpp in Sources */,
 				07297BDA2610F8EB00D3C9A3 /* challenge.cpp in Sources */,
 				07CF36A025EACE6F009582B9 /* challenge.cpp in Sources */,
 				07CF36A125EACE6F009582B9 /* challenge.cpp in Sources */,
@@ -1015,9 +1050,12 @@
 				07CF367D25EACE3B009582B9 /* wrapper.cpp in Sources */,
 				07CF367E25EACE3B009582B9 /* testsChallenge8.swift in Sources */,
 				07CF367F25EACE3B009582B9 /* wrapper.cpp in Sources */,
+				075B95942619CCF00071DCED /* wrapper.cpp in Sources */,
 				07CF368025EACE3B009582B9 /* testsChallenge9.swift in Sources */,
 				07CF368125EACE3B009582B9 /* wrapper.cpp in Sources */,
 				07CF368225EACE3B009582B9 /* testsChallenge10.swift in Sources */,
+				075B95982619CD790071DCED /* Utilities.swift in Sources */,
+				075B95912619CCAC0071DCED /* testsChallenge22.swift in Sources */,
 				07CF368325EACE3B009582B9 /* wrapper.cpp in Sources */,
 				07CF368425EACE3B009582B9 /* testsChallenge11.swift in Sources */,
 				07CF368525EACE3B009582B9 /* wrapper.cpp in Sources */,

@@ -51,9 +51,10 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge 19](challenges/c0019)
   - [Challenge 20](challenges/c0020)
   - [Challenge 21](challenges/c0021)
+  - [Challenge 22](challenges/c0022)
 </details>
 
-[challenges_solved_badge]: https://img.shields.io/badge/Solved-21-f93
+[challenges_solved_badge]: https://img.shields.io/badge/Solved-22-f93
 [profile_link]: https://projecteuler.net/progress=cdalvaro
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?logo=C%2B%2B
