@@ -46,7 +46,7 @@ namespace challenges {
 
          @return The solution for challenge 11
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         //! The matrix type

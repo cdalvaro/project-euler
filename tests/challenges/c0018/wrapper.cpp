@@ -24,5 +24,5 @@ extern "C" long long solveChallenge18(long long *triangle, unsigned long long nu
         }
     }
 
-    return std::any_cast<Challenge18::Type_t>(Challenge18(_triangle).solve());
+    return IChallenge::castSolution<Challenge18::Type_t>(Challenge18(_triangle).solve());
 }

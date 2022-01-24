@@ -17,7 +17,7 @@ using namespace challenges::tools;
 Challenge21::Challenge21(const size_t &limit) : limit(limit) {
 }
 
-std::any Challenge21::solve() {
+IChallenge::Solution_t Challenge21::solve() {
     std::set<Type_t> amicable_numbers;
     for (Type_t number = 1; number <= limit; ++number) {
         if (amicable_numbers.find(number) != amicable_numbers.end()) {

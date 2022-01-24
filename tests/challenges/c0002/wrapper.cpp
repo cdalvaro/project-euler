@@ -11,5 +11,5 @@
 using namespace challenges;
 
 extern "C" long solveChallenge2(long limit) {
-    return std::any_cast<Challenge2::Type_t>(Challenge2(limit).solve());
+    return IChallenge::castSolution<Challenge2::Type_t>(Challenge2(limit).solve());
 }

@@ -45,7 +45,7 @@ const size_t Challenge11::number_of_columns = Challenge11::matrix.front().size()
 Challenge11::Challenge11(const Type_t &numbers_to_take) : numbers_to_take(numbers_to_take) {
 }
 
-std::any Challenge11::solve() {
+IChallenge::Solution_t Challenge11::solve() {
     Type_t max_product = 1;
     for (auto row = 0u; row < number_of_rows; ++row) {
         for (auto column = 0u; column < number_of_columns; ++column) {

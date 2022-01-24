@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 21
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         size_t limit; /**< The maximum number to find amicable numbers */

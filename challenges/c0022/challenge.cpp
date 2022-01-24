@@ -28,7 +28,7 @@ template <char delimiter> class WordDelimitedBy : public std::string {
 Challenge22::Challenge22(const std::string &file_path) : file_path(file_path) {
 }
 
-std::any Challenge22::solve() {
+IChallenge::Solution_t Challenge22::solve() {
     // Read file content splitting by commas
     std::set<std::string> names;
     std::ifstream ifs(file_path);

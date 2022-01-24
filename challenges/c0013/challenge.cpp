@@ -69,7 +69,7 @@ const std::vector<tools::types::BigInt> Challenge13::bigints{
 Challenge13::Challenge13() {
 }
 
-std::any Challenge13::solve() {
+IChallenge::Solution_t Challenge13::solve() {
     Type_t result;
 
     tools::types::BigInt bigint;

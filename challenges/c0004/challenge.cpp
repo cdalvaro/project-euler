@@ -18,7 +18,7 @@ Challenge4::Challenge4(const size_t &number_of_digits, const size_t &number_of_p
 number_of_digits(number_of_digits), number_of_products(number_of_products) {
 }
 
-std::any Challenge4::solve() {
+IChallenge::Solution_t Challenge4::solve() {
     Type_t factor = 0;
     for (auto n = 0u; n < number_of_digits; ++n) {
         factor += 9 * tools::math::pow10<Type_t>(n);

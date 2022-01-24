@@ -45,7 +45,7 @@ namespace challenges {
 
          @return The solution for challenge 22
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         std::string file_path; /**< The path to the file with all names */

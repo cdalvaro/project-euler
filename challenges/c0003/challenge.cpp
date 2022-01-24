@@ -18,7 +18,7 @@ using namespace challenges;
 Challenge3::Challenge3(const Type_t &number) : number(number) {
 }
 
-std::any Challenge3::solve() {
+IChallenge::Solution_t Challenge3::solve() {
 
     Type_t greatest_factor = std::sqrt(number);
 

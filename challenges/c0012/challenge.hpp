@@ -44,7 +44,7 @@ namespace challenges {
 
          @return The solution for challenge 12
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t numbers_of_divisors; /**< The number of divisors for the searched

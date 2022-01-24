@@ -17,7 +17,7 @@ using namespace challenges::tools::types;
 Challenge17::Challenge17(const size_t &first, const size_t &last) : first(first), last(last) {
 }
 
-std::any Challenge17::solve() {
+IChallenge::Solution_t Challenge17::solve() {
     Type_t sum = 0;
     for (auto number = first; number <= last; ++number) {
         auto name = NamedNumber(number).getName();

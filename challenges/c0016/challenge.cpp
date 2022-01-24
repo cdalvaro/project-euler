@@ -17,7 +17,7 @@ using namespace challenges;
 Challenge16::Challenge16(const size_t &exponent) : exponent(exponent) {
 }
 
-std::any Challenge16::solve() {
+IChallenge::Solution_t Challenge16::solve() {
     auto power = tools::iterators::NumberDigits(std::pow(2, exponent));
     Type_t sum = std::accumulate(power.begin(), power.end(), 0);
     return sum;

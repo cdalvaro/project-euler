@@ -13,7 +13,7 @@ using namespace challenges;
 Challenge15::Challenge15(const size_t &width, const size_t &height) : lattice({width, height}) {
 }
 
-std::any Challenge15::solve() {
+IChallenge::Solution_t Challenge15::solve() {
     return getNumberOfPaths(lattice);
 }
 

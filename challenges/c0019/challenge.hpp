@@ -47,7 +47,7 @@ namespace challenges {
 
          @return The solution for challenge 19
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         using Clock_t = std::chrono::system_clock;

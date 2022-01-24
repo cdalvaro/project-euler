@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 16
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         size_t exponent; /**< The exponent of the problem */

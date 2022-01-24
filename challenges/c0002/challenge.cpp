@@ -13,7 +13,7 @@ using namespace challenges;
 Challenge2::Challenge2(const Type_t &limit) : limit(limit) {
 }
 
-std::any Challenge2::solve() {
+IChallenge::Solution_t Challenge2::solve() {
 
     Type_t f0 = 0, f1 = 1;
     Type_t sum = 0, tmp;

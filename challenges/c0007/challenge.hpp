@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 7
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t nth_prime; /**< The nth prime number to find */

@@ -44,7 +44,7 @@ namespace challenges {
 
          @return The solution for challenge 4
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         size_t number_of_digits;   /**< The number of digits of each product

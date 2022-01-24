@@ -11,5 +11,5 @@
 using namespace challenges;
 
 extern "C" unsigned long long solveChallenge17(unsigned int first, unsigned int last) {
-    return std::any_cast<Challenge17::Type_t>(Challenge17(first, last).solve());
+    return IChallenge::castSolution<Challenge17::Type_t>(Challenge17(first, last).solve());
 }

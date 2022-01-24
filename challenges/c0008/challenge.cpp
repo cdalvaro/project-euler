@@ -30,7 +30,7 @@ const std::string_view Challenge8::big_number {
 Challenge8::Challenge8(const Type_t &number_of_digits) : number_of_digits(number_of_digits) {
 }
 
-std::any Challenge8::solve() {
+IChallenge::Solution_t Challenge8::solve() {
     auto it_lhs = big_number.begin();
     auto it_rhs = std::next(it_lhs, number_of_digits);
 

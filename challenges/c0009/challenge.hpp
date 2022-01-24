@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 9
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t number; /**< The number to be reached by the Pythagorean triplet */

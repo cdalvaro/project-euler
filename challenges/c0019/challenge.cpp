@@ -13,7 +13,7 @@ using namespace challenges;
 Challenge19::Challenge19(const int &first_year, const int &last_year) : first_year(first_year), last_year(last_year) {
 }
 
-std::any Challenge19::solve() {
+IChallenge::Solution_t Challenge19::solve() {
     constexpr int first_of_month = 1;
     constexpr int sunday = 0;
     constexpr std::chrono::hours one_day(24);

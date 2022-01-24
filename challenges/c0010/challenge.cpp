@@ -14,7 +14,7 @@ using namespace challenges;
 Challenge10::Challenge10(const Type_t &limit) : limit(limit) {
 }
 
-std::any Challenge10::solve() {
+IChallenge::Solution_t Challenge10::solve() {
     Type_t number = 3;
     Type_t sum = 2 + number; // 2 is the only even prime number
 

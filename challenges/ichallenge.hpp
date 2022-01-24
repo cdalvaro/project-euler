@@ -30,10 +30,10 @@ namespace challenges {
     class IChallenge {
     public:
         /**
-         The real type masked std::any when recovering
+         The real type masked by std::any when recovering
          the solution with \fn solve() method.
          */
-        using Type_t = std::any;
+        using Solution_t = std::any;
 
         /**
          Default virtual destructor
@@ -46,13 +46,22 @@ namespace challenges {
          Must be implemented by any challenge class that inherites from this
          with the algorithm that solves the challenge.
 
-         @return The solution of the challenge inside a std::any type.
+         @return The solution of the challenge inside a Solution_t.
          The real value can be unwrapped using std::any_cast<T>() where
          T is the alias Type_t belonging to the corresponding challenge class.
 
-         @see Type_t
+         @see Solution_t
          */
-        virtual std::any solve() = 0;
+        virtual Solution_t solve() = 0;
+
+        /**
+         Cass the Solution_t type to the solution type
+
+         @return The solution value casted.
+         */
+        template <typename T> static inline T castSolution(const Solution_t &solution) {
+            return std::any_cast<T>(solution);
+        }
     };
 } // namespace challenges
 

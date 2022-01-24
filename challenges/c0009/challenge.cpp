@@ -13,7 +13,7 @@ using namespace challenges;
 Challenge9::Challenge9(const Type_t &number) : number(number) {
 }
 
-std::any Challenge9::solve() {
+IChallenge::Solution_t Challenge9::solve() {
     Type_t a = 0, b = 0, c = 0;
     Type_t triplet = 0;
 

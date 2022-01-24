@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 14
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t maximum_number; /**< The maximum starting number */

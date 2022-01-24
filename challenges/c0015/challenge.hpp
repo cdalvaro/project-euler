@@ -47,7 +47,7 @@ namespace challenges {
 
          @return The solution for challenge 15
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         using Lattice_t = std::pair<size_t, size_t>;

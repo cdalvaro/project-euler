@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 6
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t last_number; /**< The las number of the serires */

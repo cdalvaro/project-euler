@@ -16,7 +16,7 @@ using namespace challenges;
 Challenge18::Challenge18(const Triangle_t &triangle) : triangle(triangle) {
 }
 
-std::any Challenge18::solve() {
+IChallenge::Solution_t Challenge18::solve() {
     Cumulated_t cumulated{{{0, 0}, triangle.front().front()}};
 
     for (size_t index = 1; index < triangle.size(); ++index) {

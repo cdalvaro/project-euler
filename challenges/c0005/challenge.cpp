@@ -17,7 +17,7 @@ using namespace challenges;
 Challenge5::Challenge5(const Type_t &last_number) : last_number(last_number) {
 }
 
-std::any Challenge5::solve() {
+IChallenge::Solution_t Challenge5::solve() {
     std::vector<Type_t> divisors(last_number - 1, 0);
     std::iota(divisors.begin(), divisors.end(), 2);
 

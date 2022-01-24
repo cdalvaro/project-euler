@@ -44,7 +44,7 @@ namespace challenges {
 
          @return The solution for challenge 5
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t last_number; /**< The las number starting from 1 to be divisible

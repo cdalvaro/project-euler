@@ -47,7 +47,7 @@ namespace challenges {
 
          @return The solution for challenge 17
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         size_t first; /**< The first number of the sequence */

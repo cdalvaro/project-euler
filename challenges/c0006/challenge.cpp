@@ -13,7 +13,7 @@ using namespace challenges;
 Challenge6::Challenge6(const Type_t &last_number) : last_number(last_number) {
 }
 
-std::any Challenge6::solve() {
+IChallenge::Solution_t Challenge6::solve() {
     Type_t square_sum = 0;
     Type_t sum_squares = 0;
 

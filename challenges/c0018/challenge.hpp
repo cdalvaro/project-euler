@@ -50,7 +50,7 @@ namespace challenges {
 
          @return The solution for challenge 18
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         using Cumulated_t = std::vector<std::pair<std::pair<size_t, size_t>, Type_t>>;

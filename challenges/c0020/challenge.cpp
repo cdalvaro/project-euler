@@ -18,7 +18,7 @@ using namespace challenges::tools;
 Challenge20::Challenge20(const size_t &number) : number(number) {
 }
 
-std::any Challenge20::solve() {
+IChallenge::Solution_t Challenge20::solve() {
     auto factorial = math::factorial<size_t, types::BigInt>(number);
     Type_t sum = std::accumulate(factorial.begin(), factorial.end(), 0);
     return sum;

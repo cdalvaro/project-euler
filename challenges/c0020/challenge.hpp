@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 20
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         size_t number; /**< The number to compute the sum of the digits of its factorial number */

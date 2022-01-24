@@ -46,7 +46,7 @@ namespace challenges {
 
          @return The solution for challenge 8
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         Type_t number_of_digits; /**< The number of digits to compute the

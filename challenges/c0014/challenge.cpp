@@ -16,7 +16,7 @@ using namespace challenges;
 Challenge14::Challenge14(const Type_t &maximum_number) : maximum_number(maximum_number) {
 }
 
-std::any Challenge14::solve() {
+IChallenge::Solution_t Challenge14::solve() {
     std::pair<Type_t, size_t> result = {0, 0};
 
     for (auto seed = 1u; seed <= maximum_number; ++seed) {

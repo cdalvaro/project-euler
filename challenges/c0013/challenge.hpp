@@ -43,7 +43,7 @@ namespace challenges {
 
          @return The solution for challenge 13
          */
-        std::any solve() override final;
+        Solution_t solve() override final;
 
     private:
         static const std::vector<tools::types::BigInt> bigints;

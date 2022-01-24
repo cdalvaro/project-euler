@@ -14,7 +14,7 @@ using namespace challenges;
 Challenge12::Challenge12(const Type_t &numbers_of_divisors) : numbers_of_divisors(numbers_of_divisors) {
 }
 
-std::any Challenge12::solve() {
+IChallenge::Solution_t Challenge12::solve() {
     Type_t triangle_number = 1;
     auto divisors = tools::math::divisors(triangle_number);
 

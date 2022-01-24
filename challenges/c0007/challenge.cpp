@@ -14,7 +14,7 @@ using namespace challenges;
 Challenge7::Challenge7(const Type_t &nth_prime) : nth_prime(nth_prime) {
 }
 
-std::any Challenge7::solve() {
+IChallenge::Solution_t Challenge7::solve() {
     size_t prime_numbers_found = 2;
     Type_t prime_found = 3;
 
