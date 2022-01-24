@@ -11,7 +11,7 @@ import XCTest
 class TestsChallenge18: XCTestCase {
 
     func testChallenge18() throws {
-        let triangle: Array<Int64> = [
+        let triangle: [Int64] = [
             75,
             95, 64,
             17, 47, 82,
@@ -41,7 +41,7 @@ class TestsChallenge18: XCTestCase {
     }
 
     func testPerformanceChallenge18() throws {
-        let triangle: Array<Int64> = [
+        let triangle: [Int64] = [
             3,
             7, 4,
             2, 4, 6,

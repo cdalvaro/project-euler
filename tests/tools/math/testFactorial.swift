@@ -8,7 +8,7 @@
 
 import XCTest
 
-class testFactorial: XCTestCase {
+class TestFactorial: XCTestCase {
 
     func testFactorial10() throws {
         let expected = 3628800.0
