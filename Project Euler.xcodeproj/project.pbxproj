@@ -18,6 +18,9 @@
 		0711D10525EB8E0B0051C4D5 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0711D10325EB8E050051C4D5 /* wrapper.cpp */; };
 		0711D10625EB8E0B0051C4D5 /* testsChallenge16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711D10425EB8E050051C4D5 /* testsChallenge16.swift */; };
 		07297BDA2610F8EB00D3C9A3 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07297BD82610F86A00D3C9A3 /* challenge.cpp */; };
+		0730FF4827A473B400AEF1CF /* testNumberProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730FF4727A473B400AEF1CF /* testNumberProperties.swift */; };
+		0730FF4A27A473F200AEF1CF /* wrapperNumberProperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0730FF4927A473F200AEF1CF /* wrapperNumberProperties.cpp */; };
+		0730FF4C27A4792F00AEF1CF /* TestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730FF4B27A4792F00AEF1CF /* TestsExtensions.swift */; };
 		0735FC9824817F3800D6F69F /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0735FC9624817F3800D6F69F /* challenge.hpp */; };
 		073996AC24D0917E003A79B4 /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 073996AA24D0917E003A79B4 /* challenge.hpp */; };
 		0744493424CF3EBB0033BB07 /* collatz.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0744493224CF3EBB0033BB07 /* collatz.hpp */; };
@@ -99,6 +102,7 @@
 		07EE512625EC24E7008EF8D1 /* challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07EE512325EC21BB008EF8D1 /* challenge.cpp */; };
 		07EE512C25EC25E0008EF8D1 /* testsChallenge17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EE512A25EC25D7008EF8D1 /* testsChallenge17.swift */; };
 		07EE512F25EC2610008EF8D1 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07EE512B25EC25D7008EF8D1 /* wrapper.cpp */; };
+		07F24F8127A057FB007E4699 /* number_properties.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07F24F8027A057FB007E4699 /* number_properties.hpp */; };
 		07F3CDBA26175B7300558350 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F3CDB926175B7300558350 /* tools.cpp */; };
 		07F8E4A524CC9BC60059A771 /* big_int.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07F8E4A324CC9BC60059A771 /* big_int.hpp */; };
 		07FEAD0824961179003E1BFC /* challenge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 07FEAD0624961179003E1BFC /* challenge.hpp */; };
@@ -150,6 +154,9 @@
 		07297BDE2610FACD00D3C9A3 /* iterators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = iterators.hpp; sourceTree = "<group>"; };
 		073034D325D83945008A8116 /* testsChallenge15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge15.swift; sourceTree = "<group>"; };
 		073034D425D83945008A8116 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		0730FF4727A473B400AEF1CF /* testNumberProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testNumberProperties.swift; sourceTree = "<group>"; };
+		0730FF4927A473F200AEF1CF /* wrapperNumberProperties.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapperNumberProperties.cpp; sourceTree = "<group>"; };
+		0730FF4B27A4792F00AEF1CF /* TestsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExtensions.swift; sourceTree = "<group>"; };
 		07324F3924CD81310065BEF8 /* wrapperBigInt.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapperBigInt.cpp; sourceTree = "<group>"; };
 		07324F3A24CD81310065BEF8 /* testsBigInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsBigInt.swift; sourceTree = "<group>"; };
 		0735FC9424817EF900D6F69F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -232,6 +239,7 @@
 		07EE512525EC21BC008EF8D1 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		07EE512A25EC25D7008EF8D1 /* testsChallenge17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsChallenge17.swift; sourceTree = "<group>"; };
 		07EE512B25EC25D7008EF8D1 /* wrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		07F24F8027A057FB007E4699 /* number_properties.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = number_properties.hpp; sourceTree = "<group>"; };
 		07F3CDB926175B7300558350 /* tools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
 		07F8E49324CC8A1B0059A771 /* challenge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = challenge.hpp; sourceTree = "<group>"; };
 		07F8E49424CC8A1B0059A771 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -500,7 +508,9 @@
 			isa = PBXGroup;
 			children = (
 				0760B34B248032D70092F926 /* iterators */,
+				07297BDE2610FACD00D3C9A3 /* iterators.hpp */,
 				0760B3412480021F0092F926 /* math */,
+				070B7D0F2482DE9E000AABB4 /* math.hpp */,
 				07F8E4A124CC9BA00059A771 /* types */,
 			);
 			path = tools;
@@ -509,11 +519,11 @@
 		0760B3412480021F0092F926 /* math */ = {
 			isa = PBXGroup;
 			children = (
-				0744493024CF3E850033BB07 /* sequences */,
 				075B83DB2492B98000CF244A /* factorial.hpp */,
 				0760B343248002370092F926 /* factorization.hpp */,
-				070B7D0F2482DE9E000AABB4 /* math.hpp */,
+				07F24F8027A057FB007E4699 /* number_properties.hpp */,
 				070B7D0C2482DD4F000AABB4 /* power.hpp */,
+				0744493024CF3E850033BB07 /* sequences */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -532,7 +542,6 @@
 			children = (
 				0760B34D248032FF0092F926 /* homogeneous_partition.hpp */,
 				07297BDD2610FA6800D3C9A3 /* number_digits.hpp */,
-				07297BDE2610FACD00D3C9A3 /* iterators.hpp */,
 			);
 			path = iterators;
 			sourceTree = "<group>";
@@ -618,6 +627,8 @@
 			children = (
 				07C66CF9261239430092D958 /* testFactorial.swift */,
 				07C66D05261239710092D958 /* wrapperFactorial.cpp */,
+				0730FF4727A473B400AEF1CF /* testNumberProperties.swift */,
+				0730FF4927A473F200AEF1CF /* wrapperNumberProperties.cpp */,
 			);
 			path = math;
 			sourceTree = "<group>";
@@ -688,6 +699,7 @@
 				07C7610B247A944300CBF52D /* Info.plist */,
 				07C76121247AB3AC00CBF52D /* Tests-Bridging-Header.h */,
 				075B95972619CD790071DCED /* Utilities.swift */,
+				0730FF4B27A4792F00AEF1CF /* TestsExtensions.swift */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -887,6 +899,7 @@
 				075B83D42492884C00CF244A /* challenge.hpp in Headers */,
 				0760B33F247FFC300092F926 /* challenge.hpp in Headers */,
 				075B83DC2492B98000CF244A /* factorial.hpp in Headers */,
+				07F24F8127A057FB007E4699 /* number_properties.hpp in Headers */,
 				07F8E4A524CC9BC60059A771 /* big_int.hpp in Headers */,
 				073996AC24D0917E003A79B4 /* challenge.hpp in Headers */,
 				07FEAD0824961179003E1BFC /* challenge.hpp in Headers */,
@@ -1069,9 +1082,12 @@
 				07CF368925EACE3B009582B9 /* wrapper.cpp in Sources */,
 				07CF368A25EACE3B009582B9 /* testsChallenge14.swift in Sources */,
 				07CF368B25EACE3B009582B9 /* wrapper.cpp in Sources */,
+				0730FF4A27A473F200AEF1CF /* wrapperNumberProperties.cpp in Sources */,
 				07910379260FDE4D00AEA693 /* testsChallenge19.swift in Sources */,
 				07CF368C25EACE3B009582B9 /* testsChallenge15.swift in Sources */,
 				017916562601F3E100A90A8A /* wrapper.cpp in Sources */,
+				0730FF4C27A4792F00AEF1CF /* TestsExtensions.swift in Sources */,
+				0730FF4827A473B400AEF1CF /* testNumberProperties.swift in Sources */,
 				07CF368D25EACE3B009582B9 /* wrapper.cpp in Sources */,
 				07C66CF526122C2E0092D958 /* wrapper.cpp in Sources */,
 				07CF368E25EACE3B009582B9 /* testsBigInt.swift in Sources */,
@@ -1143,7 +1159,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1203,7 +1219,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

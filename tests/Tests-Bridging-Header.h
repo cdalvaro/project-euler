@@ -40,6 +40,11 @@ short throwsToBool(const void (*block)());
 double factorial(unsigned long long number);
 char *factorialBigInt(unsigned long long number);
 
+// MARK: - Math/NumberProperties
+short isAbundant(unsigned long long number);
+short isDeficient(unsigned long long number);
+short isPerfect(unsigned long long number);
+
 // MARK: - Types/BigInt
 unsigned long long addNumbersAsBigInt(unsigned long long a, unsigned long long b);
 char *addNumbersAsBigIntFromChars(const char *a, const char *b);
