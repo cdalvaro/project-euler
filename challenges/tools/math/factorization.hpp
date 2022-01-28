@@ -17,10 +17,6 @@
 #include <utility>
 #include <vector>
 
-/**
- @namespace challenges::tools::math
- @brief Math namespace with mathematical functions
- */
 namespace challenges::tools::math {
 
     /**
