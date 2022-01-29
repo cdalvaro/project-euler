@@ -11,10 +11,6 @@
 
 #include <type_traits>
 
-/**
- @namespace challenges::tools::math
- @brief Math namespace with mathematical functions
- */
 namespace challenges::tools::math {
 
     /**

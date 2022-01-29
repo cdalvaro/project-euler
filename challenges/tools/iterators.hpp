@@ -6,8 +6,8 @@
 //  Copyright © 2021 cdalvaro. All rights reserved.
 //
 
-#ifndef challenges_tools_iterators_iterators_hpp
-#define challenges_tools_iterators_iterators_hpp
+#ifndef challenges_tools_iterators_hpp
+#define challenges_tools_iterators_hpp
 
 #include "challenges/tools/iterators/homogeneous_partition.hpp"
 #include "challenges/tools/iterators/number_digits.hpp"
@@ -20,4 +20,4 @@
  */
 namespace challenges::tools::iterators;
 
-#endif /* challenges_tools_iterators_iterators_hpp */
+#endif /* challenges_tools_iterators_hpp */

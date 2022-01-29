@@ -32,6 +32,7 @@ unsigned long long solveChallenge19(int first_year, int last_year);
 unsigned long long solveChallenge20(unsigned int number);
 unsigned long long solveChallenge21(unsigned long long number);
 unsigned long long solveChallenge22(const char *file_path);
+unsigned long long solveChallenge23(unsigned long long number);
 
 // MARK: - Tools
 short throwsToBool(const void (*block)());
@@ -39,6 +40,11 @@ short throwsToBool(const void (*block)());
 // MARK: - Math/Factorial
 double factorial(unsigned long long number);
 char *factorialBigInt(unsigned long long number);
+
+// MARK: - Math/NumberProperties
+short isAbundant(unsigned long long number);
+short isDeficient(unsigned long long number);
+short isPerfect(unsigned long long number);
 
 // MARK: - Types/BigInt
 unsigned long long addNumbersAsBigInt(unsigned long long a, unsigned long long b);

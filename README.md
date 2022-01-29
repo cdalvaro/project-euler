@@ -52,15 +52,16 @@ Solutions are located inside `challenges/cXYZ` directory, where `XYZ` is the cal
   - [Challenge 20](challenges/c0020)
   - [Challenge 21](challenges/c0021)
   - [Challenge 22](challenges/c0022)
+  - [Challenge 23](challenges/c0023)
 </details>
 
-[challenges_solved_badge]: https://img.shields.io/badge/Solved-22-f93
+[challenges_solved_badge]: https://img.shields.io/badge/Solved-23-f93
 [profile_link]: https://projecteuler.net/progress=cdalvaro
 
 [cpp_badge]: https://img.shields.io/badge/C++-17-00599C?logo=C%2B%2B
 [cpp_link]: https://en.cppreference.com/w/cpp/17
 
-[unit_testing_badge]: https://img.shields.io/badge/Xcode-11.4-1575F9?logo=Xcode
+[unit_testing_badge]: https://img.shields.io/badge/Xcode-13.2-1575F9?logo=Xcode
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
 [gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges
