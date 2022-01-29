@@ -32,6 +32,7 @@ unsigned long long solveChallenge19(int first_year, int last_year);
 unsigned long long solveChallenge20(unsigned int number);
 unsigned long long solveChallenge21(unsigned long long number);
 unsigned long long solveChallenge22(const char *file_path);
+unsigned long long solveChallenge23(unsigned long long number);
 
 // MARK: - Tools
 short throwsToBool(const void (*block)());
