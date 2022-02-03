@@ -8,36 +8,133 @@ on:
     branches:
       - main
 
+env:
+  CC: clang
+  CXX: clang++
+  BUILD_TYPE: Release
+  BUILD_DIRECTORY: cmake-build
+
 jobs:
-  Challenges:
-    runs-on: macOS-latest
+  build-targets:
+    name: Build targets
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install xcbeautify
-      run: brew install xcbeautify
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang cmake
 
-    - name: Xcode unit test
-      env:
-        NSUnbufferedIO: YES
-      run: |
-        set -o pipefail && \
-        xcodebuild -scheme Challenges build test 2>&1 | xcbeautify && exit ${PIPESTATUS[0]}
+      - name: Create build directory
+        run: cmake -E make_directory "${BUILD_DIRECTORY}"
 
-    - name: Use ruby 3.0
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.0
+      - name: Download cache files
+        uses: actions/cache@v2
+        with:
+          path: |
+            "${BUILD_DIRECTORY}/_deps"
+          key: ${{ runner.os }}-build
 
-    - name: Install slather for code coverage
-      run: gem install slather
+      - name: Build ${{ env.TARGET }} library
+        run: |
+          cmake -S . -B "${BUILD_DIRECTORY}" -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
+          cmake --build "${BUILD_DIRECTORY}" --config ${BUILD_TYPE} -- -j$(nproc)
 
-    - name: Run slather for code coverage
-      run: slather
+      - name: Create tar.gz file with cmake-build
+        run: tar -czf cmake-build.tar.gz "${BUILD_DIRECTORY}"
 
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        files: xml_report/cobertura.xml
-        functionalities: coveragepy,gcov,xcode
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cmake-build
+          path: cmake-build.tar.gz
+
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    needs: [ build-targets ]
+    env:
+      TEST_NAME: unit
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends llvm
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: cmake-build
+
+      - name: Extract cmake-build files
+        run: tar -xf cmake-build.tar.gz
+
+      - name: Run ${{ env.TEST_NAME }} tests
+        env:
+          TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/${{ env.TEST_NAME }}
+        run: ${TARGET_DIR}/project-euler-${TEST_NAME}-tests
+
+      - name: Generate coverage
+        run: |
+          mkdir -p coverage
+          while IFS= read -r -d '' file; do
+            llvm-cov gcov -abcfu "${BUILD_DIRECTORY}/CMakeFiles/project-euler-library.dir/${file}"
+          done < <(find challenges -name "*.cpp" -type f -print0)
+          mv *.gcov coverage
+
+      - name: Upload coverage restuls to codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: coverage
+          flags: unit-tests
+          fail_ci_if_error: true
+          verbose: true
+
+  benchmark-tests:
+    name: Benchmark tests
+    runs-on: ubuntu-latest
+    needs: [ build-targets ]
+    env:
+      TEST_NAME: benchmark
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: cmake-build
+
+      - name: Extract cmake-build files
+        run: tar -xf cmake-build.tar.gz
+
+      - name: Run ${{ env.TEST_NAME }} tests
+        env:
+          TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/${{ env.TEST_NAME }}
+        run: |
+          ${TARGET_DIR}/project-euler-${TEST_NAME}-tests \
+            --benchmark_format=json \
+          | tee benchmark-results.json
+
+      - name: Download previous benchmark results
+        uses: actions/cache@v2
+        with:
+          path: ./cache
+          key: ${{ runner.os }}-benchmark
+
+      - name: Store benchmark results
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          tool: googlecpp
+          output-file-path: benchmark-results.json
+          external-data-json-path: ./cache/benchmark-data.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          alert-threshold: "150%"
+          comment-on-alert: true
+          fail-on-alert: true
