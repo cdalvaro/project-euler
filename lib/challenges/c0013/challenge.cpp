@@ -69,15 +69,19 @@ Challenge13::Challenge13() {
 }
 
 IChallenge::Solution_t Challenge13::solve() {
-    Type_t result;
+    Type_t value;
 
     tools::types::BigInt bigint;
     for (const auto &number : bigints) {
         bigint += number;
     }
 
-    std::string_view sv_bigint{bigint.str()};
-    std::from_chars(sv_bigint.begin(), std::next(sv_bigint.begin(), 10), result);
+    auto bigint_str = bigint.str().substr(0, 10);
+    std::string_view sv_bigint(bigint_str);
+    auto result = std::from_chars(sv_bigint.begin(), sv_bigint.end(), value);
+    if (result.ec == std::errc::invalid_argument) {
+        throw std::logic_error("Unable to cast " + bigint_str + " into a number");
+    }
 
-    return result;
+    return value;
 }

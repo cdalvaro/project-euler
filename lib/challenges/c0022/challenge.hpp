@@ -9,6 +9,7 @@
 #ifndef challenges_c0022_challenge_hpp
 #define challenges_c0022_challenge_hpp
 
+#include <filesystem>
 #include <string>
 
 #include "challenges/ichallenge.hpp"
@@ -33,7 +34,7 @@ namespace challenges {
 
          This is the main constructor of Challenge22 class
          */
-        Challenge22(const std::string &file_path);
+        Challenge22(const std::filesystem::path &file_path);
 
         /**
          @brief Default destructor
@@ -48,7 +49,7 @@ namespace challenges {
         Solution_t solve() override final;
 
     private:
-        std::string file_path; /**< The path to the file with all names */
+        std::filesystem::path file_path; /**< The path to the file with all names */
     };
 
 } // namespace challenges

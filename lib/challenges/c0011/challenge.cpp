@@ -97,5 +97,9 @@ Challenge11::Type_t Challenge11::maxProductForPosition(const size_t &row, const 
         }));
     }
 
+    if (products.empty()) {
+        return 0;
+    }
+
     return (*products.rbegin());
 }

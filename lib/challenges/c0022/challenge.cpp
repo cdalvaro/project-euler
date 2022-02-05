@@ -8,14 +8,15 @@
 
 #include <algorithm>
 #include <exception>
-#include <filesystem>
 #include <fstream>
 #include <numeric>
 #include <set>
+#include <sstream>
 
 #include "challenges/c0022/challenge.hpp"
 
 using namespace challenges;
+namespace fs = std::filesystem;
 
 /**
  @brief Auxiliary class for splitting a string by any delimiter
@@ -27,9 +28,11 @@ template <char delimiter> class WordDelimitedBy : public std::string {
     }
 };
 
-Challenge22::Challenge22(const std::string &file_path) : file_path(file_path) {
-    if (!std::filesystem::exists(file_path)) {
-        throw std::runtime_error("File: " + file_path + " could not be found.");
+Challenge22::Challenge22(const fs::path &file_path) : file_path(file_path) {
+    if (!fs::exists(file_path)) {
+        std::stringstream msg;
+        msg << "File: " << file_path << " could not be found at: " << fs::current_path();
+        throw std::runtime_error(msg.str());
     }
 }
 

@@ -55,8 +55,6 @@ jobs:
     name: Unit tests
     runs-on: ubuntu-latest
     needs: [ build-targets ]
-    env:
-      TEST_NAME: unit
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -74,10 +72,10 @@ jobs:
       - name: Extract cmake-build files
         run: tar -xf cmake-build.tar.gz
 
-      - name: Run ${{ env.TEST_NAME }} tests
+      - name: Run unit tests
         env:
-          TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/${{ env.TEST_NAME }}
-        run: ${TARGET_DIR}/project-euler-${TEST_NAME}-tests --gtest_color=yes
+          TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/unit
+        run: ${TARGET_DIR}/project-euler-unit-tests
 
       - name: Generate coverage
         run: |
@@ -100,8 +98,6 @@ jobs:
     name: Benchmark tests
     runs-on: ubuntu-latest
     needs: [ build-targets ]
-    env:
-      TEST_NAME: benchmark
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -114,11 +110,11 @@ jobs:
       - name: Extract cmake-build files
         run: tar -xf cmake-build.tar.gz
 
-      - name: Run ${{ env.TEST_NAME }} tests
+      - name: Run benchmark tests
         env:
-          TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/${{ env.TEST_NAME }}
+          TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/benchmark
         run: |
-          ${TARGET_DIR}/project-euler-${TEST_NAME}-tests \
+          ${TARGET_DIR}/project-euler-benchmark-tests \
             --benchmark_format=json \
           | tee benchmark-results.json
 
