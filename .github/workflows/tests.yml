@@ -75,7 +75,11 @@ jobs:
       - name: Run unit tests
         env:
           TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/unit
-        run: ${TARGET_DIR}/project-euler-unit-tests
+        run: |
+          ${TARGET_DIR}/project-euler-unit-tests \
+            --gtest_color=yes \
+            --gtest_brief=1 \
+            --gtest_output=xml:unit_test_details.xml
 
       - name: Generate coverage
         run: |
@@ -90,9 +94,14 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           directory: coverage
-          flags: unit-tests
+          flags: project-euler-library
           fail_ci_if_error: true
           verbose: true
+
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          files: unit_test_details.xml
 
   benchmark-tests:
     name: Benchmark tests
