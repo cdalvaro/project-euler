@@ -7,6 +7,8 @@
 //
 
 #include <algorithm>
+#include <exception>
+#include <filesystem>
 #include <fstream>
 #include <numeric>
 #include <set>
@@ -26,6 +28,9 @@ template <char delimiter> class WordDelimitedBy : public std::string {
 };
 
 Challenge22::Challenge22(const std::string &file_path) : file_path(file_path) {
+    if (!std::filesystem::exists(file_path)) {
+        throw std::runtime_error("File: " + file_path + " could not be found.");
+    }
 }
 
 IChallenge::Solution_t Challenge22::solve() {

@@ -82,6 +82,6 @@ the [Archive](https://projecteuler.net/archives) section on Project Euler webpag
 
 [gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
 
-[codecov_badge]: https://img.shields.io/codecov/c/github/cdalvaro/project-euler?logo=codecov
+[codecov_badge]: https://codecov.io/gh/cdalvaro/project-euler/branch/main/graph/badge.svg?token=O8ZAI16P6C
 
 [codecov_link]: https://codecov.io/gh/cdalvaro/project-euler

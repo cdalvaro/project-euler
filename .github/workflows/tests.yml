@@ -77,14 +77,14 @@ jobs:
       - name: Run ${{ env.TEST_NAME }} tests
         env:
           TARGET_DIR: ${{ env.BUILD_DIRECTORY }}/tests/${{ env.TEST_NAME }}
-        run: ${TARGET_DIR}/project-euler-${TEST_NAME}-tests
+        run: ${TARGET_DIR}/project-euler-${TEST_NAME}-tests --gtest_color=yes
 
       - name: Generate coverage
         run: |
           mkdir -p coverage
           while IFS= read -r -d '' file; do
             llvm-cov gcov -abcfu "${BUILD_DIRECTORY}/CMakeFiles/project-euler-library.dir/${file}"
-          done < <(find lib tests -name "*.cpp" -type f -print0)
+          done < <(find lib tests -regex ".*\.[ch]pp$" -not -path '*/tests/benchmark/*' -type f -print0)
           mv *.gcov coverage
 
       - name: Upload coverage restuls to codecov

@@ -61,7 +61,7 @@ BigInt &BigInt::operator=(const BigInt &rhs) {
     return *this;
 }
 
-BigInt &BigInt::operator=(BigInt &&rhs) {
+BigInt &BigInt::operator=(BigInt &&rhs) noexcept {
     if (this != &rhs) {
         this->number = std::move(rhs.number);
         rhs.number = {};
@@ -133,7 +133,11 @@ BigInt BigInt::operator*(const BigInt &rhs) const {
     return product;
 }
 
-bool BigInt::operator==(const BigInt &rhs) {
+bool BigInt::operator==(const BigInt &rhs) const {
+    if (this == &rhs) {
+        return true;
+    }
+
     if (this->number.size() != rhs.number.size()) {
         return false;
     }
@@ -147,6 +151,10 @@ bool BigInt::operator==(const BigInt &rhs) {
     }
 
     return true;
+}
+
+bool BigInt::operator!=(const BigInt &rhs) const {
+    return !this->operator==(rhs);
 }
 
 bool BigInt::operator<(const BigInt &rhs) const {
@@ -163,6 +171,26 @@ bool BigInt::operator<(const BigInt &rhs) const {
     for (; it_number != this->number.end(); ++it_number, ++it_rhs) {
         if (*it_number != *it_rhs) {
             return *it_number < *it_rhs;
+        }
+    }
+
+    return false;
+}
+
+bool BigInt::operator>(const BigInt &rhs) const {
+    if (this->number.size() > rhs.number.size()) {
+        return true;
+    }
+
+    if (this->number.size() < rhs.number.size()) {
+        return false;
+    }
+
+    auto it_number = this->number.begin();
+    auto it_rhs = rhs.begin();
+    for (; it_number != this->number.end(); ++it_number, ++it_rhs) {
+        if (*it_number != *it_rhs) {
+            return *it_number > *it_rhs;
         }
     }
 

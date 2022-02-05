@@ -68,7 +68,7 @@ namespace tools::types {
         BigInt_t::const_iterator end() const;
 
         BigInt &operator=(const BigInt &rhs);
-        BigInt &operator=(BigInt &&rhs);
+        BigInt &operator=(BigInt &&rhs) noexcept;
 
         BigInt &operator+=(const BigInt &rhs);
         BigInt operator+(const BigInt &rhs) const;
@@ -76,8 +76,10 @@ namespace tools::types {
         BigInt &operator*=(const BigInt &rhs);
         BigInt operator*(const BigInt &rhs) const;
 
-        bool operator==(const BigInt &rhs);
+        bool operator==(const BigInt &rhs) const;
+        bool operator!=(const BigInt &rhs) const;
         bool operator<(const BigInt &rhs) const;
+        bool operator>(const BigInt &rhs) const;
 
         bool isZero() const;
         bool isNil() const;

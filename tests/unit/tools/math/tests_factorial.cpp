@@ -33,8 +33,8 @@ namespace tests {
     }
 
     TEST(ToolsMathFactorial, FactorialOfThirty) {
-        const std::string expected = "265252859812191058636308480000000";
-        const auto result = factorial<size_t, tools::types::BigInt>(30).str();
+        const tools::types::BigInt expected("265252859812191058636308480000000");
+        const auto result = factorial<size_t, tools::types::BigInt>(30);
         EXPECT_EQ(expected, result) << "Factorial of thirty is 265252859812191058636308480000000";
     }
 
