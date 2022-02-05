@@ -1,0 +1,36 @@
+name: clang-format linter
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  clang-format:
+    name: clang-format linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Format code with clang-format
+        uses: DoozyX/clang-format-lint-action@v0.13
+        with:
+          source: lib tests
+          exclude: .github/
+          clangFormatVersion: 13
+          inplace: True
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          add: lib/ tests/
+          author_name: cdalvaroBot
+          author_email: githubbot@cdalvaro.io
+          message: 'Committing clang-format changes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
