@@ -1,0 +1,26 @@
+path_classifiers:
+  test:
+    - exclude: /
+    - tests
+  library:
+    - exclude: _deps/
+    - lib
+
+extraction:
+  cpp:
+    prepare:
+      packages:
+        - clang
+        - llvm
+        - cmake
+        - googletest
+    after_prepare:
+      - export cc=clang
+      - export cxx=clang++
+      - mkdir cmake-build
+    configure:
+      command:
+        - cmake -s . -b cmake-build -dcmake_build_type=debug
+    index:
+      build_command:
+        - cmake --build cmake-build --config release -- -j$(nproc)
