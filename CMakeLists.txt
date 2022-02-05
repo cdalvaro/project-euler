@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage -fsanitize=address")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage -fsanitize=address")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 add_compile_options(-Wall -Wextra -Werror -pedantic-errors)
