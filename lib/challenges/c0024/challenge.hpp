@@ -49,7 +49,7 @@ namespace challenges {
         Solution_t solve() override final;
 
     private:
-        Type_t sequence; /**< The sequence to compute its lexicographic permutations */
+        Type_t sequence;        /**< The sequence to compute its lexicographic permutations */
         size_t nth_permutation; /**< The position of the permutation to be recovered */
     };
 
