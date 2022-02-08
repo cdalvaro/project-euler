@@ -16,7 +16,7 @@ namespace tests {
 
     static void BM_Challenges_0022(benchmark::State &state) {
         for (auto _ : state) {
-            benchmark::DoNotOptimize(Challenge22("lib/challenges/c0022/names.txt").solve());
+            benchmark::DoNotOptimize(Challenge22("tests/benchmark/challenges/c0022_names.txt").solve());
         }
     }
 
