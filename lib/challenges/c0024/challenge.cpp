@@ -35,12 +35,11 @@ sequence(sequence), nth_permutation(nth_permutation) {
 }
 
 IChallenge::Solution_t Challenge24::solve() {
-    std::set<Type_t> permutations{};
-
     std::sort(sequence.begin(), sequence.end());
-    do {
-        permutations.insert(sequence);
-    } while (std::next_permutation(sequence.begin(), sequence.end()));
-
-    return (*std::next(permutations.begin(), nth_permutation - 1));
+    size_t permutation_index = 1;
+    while (permutation_index < nth_permutation) {
+        std::next_permutation(sequence.begin(), sequence.end());
+        permutation_index += 1;
+    }
+    return sequence;
 }

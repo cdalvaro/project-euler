@@ -16,7 +16,7 @@ namespace tests {
 
     static void BM_Challenges_0023(benchmark::State &state) {
         for (auto _ : state) {
-            benchmark::DoNotOptimize(Challenge23(28'123).solve());
+            benchmark::DoNotOptimize(Challenge23(2'000).solve());
         }
     }
 

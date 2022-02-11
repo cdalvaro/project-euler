@@ -22,16 +22,17 @@ namespace tools::math {
     /**
      @brief Function to check if a number is a prime number or not
 
+     @link https://mathworld.wolfram.com/PrimeNumber.html @endlink
+
      @return true if number is prime, false otherwise
      */
     template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
     constexpr bool isPrime(const Integer_t &number) {
-        Integer_t biggest_factor(std::sqrt(number));
-
-        if ((number - 1) % 6 != 0 && (number + 1) % 6 != 0) {
+        if (number > 2 && number % 2 == 0) {
             return false;
         }
 
+        Integer_t biggest_factor(std::sqrt(number));
         if (biggest_factor % 2 == 0) {
             --biggest_factor;
         }
@@ -47,6 +48,8 @@ namespace tools::math {
 
     /**
      @brief Function to compute divisors for a given number
+
+     @link https://mathworld.wolfram.com/Divisor.html @endlink
 
      @param number The number whose divisors are to be computed
 
@@ -68,7 +71,9 @@ namespace tools::math {
     }
 
     /**
-     @brief Function to factorize a number
+     @brief Function to factorize a number into its prime factors
+
+     @link https://mathworld.wolfram.com/PrimeFactor.html @endlink
 
      @param number The number to be factorized
 
@@ -81,7 +86,7 @@ namespace tools::math {
         auto factor = number;
         while (factor % 2 == 0) {
             factorization.push_back(2);
-            factor /= 2;
+            factor *= 0.5;
         }
 
         for (Integer_t divisor = 3; divisor * divisor <= factor; divisor += 2) {
@@ -100,6 +105,8 @@ namespace tools::math {
 
     /**
      @brief Returns the amicable pair for the given number if it exists
+
+     @link https://mathworld.wolfram.com/AmicablePair.html @endlink
 
      @param number The number to look for its amicable pair
 
