@@ -16,8 +16,8 @@ delve into unfamiliar areas and learn new concepts in a fun and recreational con
 
 ## Table of Contents
 
-  - [Structure](#structure)
-  - [Solutions](#solutions)
+- [Structure](#structure)
+- [Solutions](#solutions)
 
 ## Structure
 
@@ -36,34 +36,35 @@ the [Archive](https://projecteuler.net/archives) section on Project Euler webpag
 <details>
   <summary>Click here to unfold solved challenges list</summary>
 
-  - [Challenge 1](lib/challenges/c0001)
-  - [Challenge 2](lib/challenges/c0002)
-  - [Challenge 3](lib/challenges/c0003)
-  - [Challenge 4](lib/challenges/c0004)
-  - [Challenge 5](lib/challenges/c0005)
-  - [Challenge 6](lib/challenges/c0006)
-  - [Challenge 7](lib/challenges/c0007)
-  - [Challenge 8](lib/challenges/c0008)
-  - [Challenge 9](lib/challenges/c0009)
-  - [Challenge 10](lib/challenges/c0010)
-  - [Challenge 11](lib/challenges/c0011)
-  - [Challenge 12](lib/challenges/c0012)
-  - [Challenge 13](lib/challenges/c0013)
-  - [Challenge 14](lib/challenges/c0014)
-  - [Challenge 15](lib/challenges/c0015)
-  - [Challenge 16](lib/challenges/c0016)
-  - [Challenge 17](lib/challenges/c0017)
-  - [Challenge 18](lib/challenges/c0018)
-  - [Challenge 19](lib/challenges/c0019)
-  - [Challenge 20](lib/challenges/c0020)
-  - [Challenge 21](lib/challenges/c0021)
-  - [Challenge 22](lib/challenges/c0022)
-  - [Challenge 23](lib/challenges/c0023)
-  - [Challenge 24](lib/challenges/c0024)
+- [Challenge 1](lib/challenges/c0001)
+- [Challenge 2](lib/challenges/c0002)
+- [Challenge 3](lib/challenges/c0003)
+- [Challenge 4](lib/challenges/c0004)
+- [Challenge 5](lib/challenges/c0005)
+- [Challenge 6](lib/challenges/c0006)
+- [Challenge 7](lib/challenges/c0007)
+- [Challenge 8](lib/challenges/c0008)
+- [Challenge 9](lib/challenges/c0009)
+- [Challenge 10](lib/challenges/c0010)
+- [Challenge 11](lib/challenges/c0011)
+- [Challenge 12](lib/challenges/c0012)
+- [Challenge 13](lib/challenges/c0013)
+- [Challenge 14](lib/challenges/c0014)
+- [Challenge 15](lib/challenges/c0015)
+- [Challenge 16](lib/challenges/c0016)
+- [Challenge 17](lib/challenges/c0017)
+- [Challenge 18](lib/challenges/c0018)
+- [Challenge 19](lib/challenges/c0019)
+- [Challenge 20](lib/challenges/c0020)
+- [Challenge 21](lib/challenges/c0021)
+- [Challenge 22](lib/challenges/c0022)
+- [Challenge 23](lib/challenges/c0023)
+- [Challenge 24](lib/challenges/c0024)
+- [Challenge 25](lib/challenges/c0025)
 
 </details>
 
-[challenges_solved_badge]: https://img.shields.io/badge/Solved-24-f93
+[challenges_solved_badge]: https://img.shields.io/badge/Solved-25-f93
 
 [profile_link]: https://projecteuler.net/progress=cdalvaro
 
