@@ -33,11 +33,13 @@ namespace tools::math::sequences {
          */
         Return_t operator()(const size_t &n) {
             if (n == 0) {
-                return 0;
+                _cache[n] = size_t(0);
+                return size_t(0);
             }
 
             if (n == 1) {
-                return 1;
+                _cache[n] = size_t(1);
+                return size_t(1);
             }
 
             auto it = _cache.find(n);
