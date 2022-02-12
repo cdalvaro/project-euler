@@ -21,7 +21,7 @@ endif ()
 file(GLOB_RECURSE BENCHMARK_TESTS_FILES LIST_DIRECTORIES false ${CMAKE_SOURCE_DIR}/tests/benchmark/*.cpp)
 add_executable(${PROJECT_NAME} ${BENCHMARK_TESTS_FILES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/tests/lib)
 target_link_libraries(${PROJECT_NAME} ${PROJECT_EULER_LIBRARY})
 if (benchmark_FOUND)
     target_link_libraries(${PROJECT_NAME} benchmark::benchmark_main)

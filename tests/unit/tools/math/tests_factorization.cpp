@@ -8,6 +8,7 @@
 
 #include <gtest/gtest.h>
 
+#include "tests/tests.hpp"
 #include "tools/math/factorization.hpp"
 
 using namespace tools::math;
@@ -59,26 +60,19 @@ namespace tests {
 
         auto result = divisors(135716031);
 
-        EXPECT_EQ(expected.size(), result.size()) << "The number of divisors is not correct";
-
-        auto it_expected = expected.begin();
-        auto it_result = result.begin();
-        for (; it_expected != expected.end() && it_result != result.end(); ++it_expected, ++it_result) {
-            EXPECT_EQ(*it_expected, *it_result) << "The divisor are not correct";
-        }
+        EXPECT_EQ_COLLECTIONS(expected.begin(), expected.end(), result.begin(), result.end());
     }
 
     TEST(Tools_Math_Factorization, Factorize) {
-        const std::vector<uint> expected{3, 3, 3, 5, 5, 7, 2'851, 100'747};
+        std::vector<uint> expected{3, 3, 3, 5, 5, 7, 2'851, 100'747};
         auto result = factorize(1'357'160'318'325);
 
-        EXPECT_EQ(expected.size(), result.size()) << "The number of divisors is not correct";
+        EXPECT_EQ_COLLECTIONS(expected.begin(), expected.end(), result.begin(), result.end());
 
-        auto it_expected = expected.begin();
-        auto it_result = result.begin();
-        for (; it_expected != expected.end() && it_result != result.end(); ++it_expected, ++it_result) {
-            EXPECT_EQ(*it_expected, *it_result) << "The factors are not correct";
-        }
+        expected = {2, 2, 2, 2, 53, 4519, 23'568'119};
+        result = factorize(90'315'671'637'328);
+
+        EXPECT_EQ_COLLECTIONS(expected.begin(), expected.end(), result.begin(), result.end());
     }
 
     TEST(Tools_Math_Factorization, amicablePair) {
