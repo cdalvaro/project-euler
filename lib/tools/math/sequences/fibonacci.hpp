@@ -32,15 +32,16 @@ namespace tools::math::sequences {
          @return The value for the nth element of the Fibonacci sequence
          */
         Return_t operator()(const size_t &n) {
-            auto it = _cache.find(n);
-            if (it != _cache.end()) {
+            if (n < 2) {
+                return cache[n] = n == 0 ? size_t(0) : size_t(1);
+            }
+
+            auto it = cache.find(n);
+            if (it != cache.end()) {
                 return it->second;
             }
 
-            auto value = getValueForIndex(n - 1) + getValueForIndex(n - 2);
-            _cache[n] = value;
-
-            return value;
+            return cache[n] = getValueForIndex(n - 1) + getValueForIndex(n - 2);
         }
 
         /**
@@ -49,11 +50,11 @@ namespace tools::math::sequences {
          @return The value for the next element of the Fibonacci sequence
          */
         Return_t next() {
-            return this->operator()(_cache.size());
+            return this->operator()(cache.size());
         }
 
     private:
-        std::map<size_t, Return_t> _cache; /**< Cache for the Fibonacci sequence */
+        std::map<size_t, Return_t> cache; /**< Cache for the Fibonacci sequence */
 
         /**
          @brief Get the value for a given index
@@ -63,20 +64,12 @@ namespace tools::math::sequences {
          @return The value for the given index
          */
         inline Return_t getValueForIndex(const size_t &n) {
-            auto it_cache = _cache.find(n);
-            if (it_cache != _cache.end()) {
+            auto it_cache = cache.find(n);
+            if (it_cache != cache.end()) {
                 return it_cache->second;
             }
 
-            Return_t value;
-            if (n > 1) {
-                value = this->operator()(n);
-            } else {
-                value = n == 0 ? size_t(0) : size_t(1);
-            }
-
-            _cache[n] = value;
-            return value;
+            return cache[n] = this->operator()(n);
         }
     };
 
