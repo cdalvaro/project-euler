@@ -86,7 +86,7 @@ jobs:
           mkdir -p coverage
           while IFS= read -r -d '' file; do
             llvm-cov gcov -abcfulp "${BUILD_DIRECTORY}/CMakeFiles/project-euler-library.dir/${file}"
-          done < <(find lib tests -not -path '*/tests/benchmark/*' -type f | egrep -i '\.(c|cpp)$')
+          done < <(find lib tests -not -path '*/tests/benchmark/*' -type f | egrep --color=never -i '\.(c|cpp)$')
           mv *.gcov coverage
 
       - name: Upload coverage restuls to codecov
