@@ -84,6 +84,8 @@ namespace tools::types {
         bool isZero() const;
         bool isNil() const;
 
+        size_t size() const;
+
         std::string str() const;
 
         operator std::string() const;

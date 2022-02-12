@@ -47,6 +47,13 @@ namespace tests {
         EXPECT_TRUE(nil.isNil()) << "Nil is nil";
     }
 
+    TEST(ToolsTypesBigInt, Size) {
+        const BigInt number("1234567890");
+        const size_t expected = 10;
+
+        EXPECT_EQ(expected, number.size()) << "Number size is not 10";
+    }
+
     TEST(ToolsTypesBigInt, CastToSize_t) {
         const size_t expected = std::numeric_limits<size_t>::max();
         const BigInt sizeTLimit(expected);
