@@ -14,7 +14,7 @@ using namespace tools::math;
 
 namespace tests {
 
-    TEST(ToolsMathNumberProperties, IsAbundant) {
+    TEST(Tools_Math_NumberProperties, IsAbundant) {
         EXPECT_FALSE(isAbundant(6)) << "6 is not abundant";
         EXPECT_FALSE(isAbundant(10)) << "10 is not abundant";
         EXPECT_TRUE(isAbundant(12)) << "12 is abundant";
@@ -22,7 +22,7 @@ namespace tests {
         EXPECT_TRUE(isAbundant(66)) << "66 is abundant";
     }
 
-    TEST(ToolsMathNumberProperties, IsDeficient) {
+    TEST(Tools_Math_NumberProperties, IsDeficient) {
         EXPECT_FALSE(isDeficient(6)) << "6 is not deficient";
         EXPECT_FALSE(isDeficient(12)) << "12 is not deficient";
         EXPECT_TRUE(isDeficient(10)) << "10 is deficient";
@@ -30,7 +30,7 @@ namespace tests {
         EXPECT_TRUE(isDeficient(19)) << "19 is deficient";
     }
 
-    TEST(ToolsMathNumberProperties, IsPerfect) {
+    TEST(Tools_Math_NumberProperties, IsPerfect) {
         EXPECT_FALSE(isPerfect(10)) << "10 is not perfect";
         EXPECT_FALSE(isPerfect(12)) << "12 is not perfect";
         EXPECT_TRUE(isPerfect(6)) << "6 is perfect";

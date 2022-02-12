@@ -15,27 +15,27 @@ using namespace tools::math;
 
 namespace tests {
 
-    TEST(ToolsMathFactorial, FactorialOfZero) {
+    TEST(Tools_Math_Factorial, Zero) {
         EXPECT_EQ(1, factorial(0)) << "Factorial of zero is 1";
     }
 
-    TEST(ToolsMathFactorial, FactorialOfOne) {
+    TEST(Tools_Math_Factorial, One) {
         EXPECT_EQ(1, factorial(1)) << "Factorial of one is 1";
     }
 
-    TEST(ToolsMathFactorial, FactorialOfTen) {
-        EXPECT_EQ(3628800, factorial(10)) << "Factorial of ten is 3628800";
+    TEST(Tools_Math_Factorial, Ten) {
+        EXPECT_EQ(3628800, factorial(10)) << "Factorial of ten is 3,628,800";
     }
 
-    TEST(ToolsMathFactorial, FactorialOfTwenty) {
-        const size_t expected = 2432902008176640000;
-        EXPECT_EQ(expected, factorial<size_t>(20)) << "Factorial of twenty is 2432902008176640000";
+    TEST(Tools_Math_Factorial, Twenty) {
+        const size_t expected = 2'432'902'008'176'640'000;
+        EXPECT_EQ(expected, factorial<size_t>(20)) << "Factorial of twenty is 2,432,902,008,176,640,000";
     }
 
-    TEST(ToolsMathFactorial, FactorialOfThirty) {
+    TEST(Tools_Math_Factorial, BigInt) {
         const tools::types::BigInt expected("265252859812191058636308480000000");
         const auto result = factorial<size_t, tools::types::BigInt>(30);
-        EXPECT_EQ(expected, result) << "Factorial of thirty is 265252859812191058636308480000000";
+        EXPECT_EQ(expected, result) << "Factorial of thirty is 265,252,859,812,191,058,636,308,480,000,000";
     }
 
 } // namespace tests

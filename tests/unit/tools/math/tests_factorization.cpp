@@ -75,7 +75,7 @@ namespace tests {
         EXPECT_EQ_COLLECTIONS(expected.begin(), expected.end(), result.begin(), result.end());
     }
 
-    TEST(Tools_Math_Factorization, amicablePair) {
+    TEST(Tools_Math_Factorization, AmicablePair) {
         std::pair<uint, uint> expected = {17'296, 18'416};
         auto result = amicablePair(17'296);
 
