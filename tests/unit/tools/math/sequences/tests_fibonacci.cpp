@@ -21,6 +21,7 @@ namespace tests {
         auto result = fibonacci(12);
 
         EXPECT_EQ(expected, result) << "Fibonacci(12) is wrong";
+        EXPECT_EQ(233, fibonacci.next()) << "Fibonacci.next() is wrong";
     }
 
-}
+} // namespace tests

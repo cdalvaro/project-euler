@@ -24,7 +24,6 @@ namespace tools::math::sequences {
      */
     template <typename Return_t = size_t> class Fibonacci {
     public:
-
         /**
          @brief Compute the Fibonacci sequence for a given number
 
@@ -50,6 +49,15 @@ namespace tools::math::sequences {
             _cache[n] = value;
 
             return value;
+        }
+
+        /**
+         @brief Compute the next element of the Fibonacci sequence
+
+         @return The value for the next element of the Fibonacci sequence
+         */
+        Return_t next() {
+            return this->operator()(_cache.size());
         }
 
     private:
