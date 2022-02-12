@@ -32,16 +32,6 @@ namespace tools::math::sequences {
          @return The value for the nth element of the Fibonacci sequence
          */
         Return_t operator()(const size_t &n) {
-            if (n == 0) {
-                _cache[n] = size_t(0);
-                return size_t(0);
-            }
-
-            if (n == 1) {
-                _cache[n] = size_t(1);
-                return size_t(1);
-            }
-
             auto it = _cache.find(n);
             if (it != _cache.end()) {
                 return it->second;
@@ -78,9 +68,14 @@ namespace tools::math::sequences {
                 return it_cache->second;
             }
 
-            auto value = this->operator()(n);
-            _cache[n] = value;
+            Return_t value;
+            if (n > 1) {
+                value = this->operator()(n);
+            } else {
+                value = n == 0 ? size_t(0) : size_t(1);
+            }
 
+            _cache[n] = value;
             return value;
         }
     };
