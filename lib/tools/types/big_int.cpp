@@ -205,6 +205,10 @@ bool BigInt::isNil() const {
     return number.empty();
 }
 
+size_t BigInt::size() const {
+    return number.size();
+}
+
 std::string BigInt::str() const {
     return std::accumulate(begin(), end(), std::string{""}, [](const auto &s, const auto &n) {
         return s + std::to_string(n);

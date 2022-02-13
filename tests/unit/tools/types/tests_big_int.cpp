@@ -16,7 +16,7 @@ using namespace tools::types;
 
 namespace tests {
 
-    TEST(ToolsTypesBigInt, EqualityAndComparisons) {
+    TEST(Tools_Types_BigInt, EqualityAndComparisons) {
         const BigInt numberA("97107287533902102798797998220837590246510135740250");
         const BigInt numberB("96376937677490009712648124896970078050417018260538");
         const BigInt numberC("963769376774900097126481248"); // Sorter number
@@ -31,7 +31,7 @@ namespace tests {
         EXPECT_NE(numberA, numberC) << "A is not equal to C";
     }
 
-    TEST(ToolsTypesBigInt, IsZero) {
+    TEST(Tools_Types_BigInt, IsZero) {
         const BigInt numberA("97107287533902102798797998220837590246510135740250");
         const BigInt zero("0");
 
@@ -39,7 +39,7 @@ namespace tests {
         EXPECT_TRUE(zero.isZero()) << "Zero is 0";
     }
 
-    TEST(ToolsTypesBigInt, IsNil) {
+    TEST(Tools_Types_BigInt, IsNil) {
         const BigInt numberA("97107287533902102798797998220837590246510135740250");
         const BigInt nil("");
 
@@ -47,7 +47,14 @@ namespace tests {
         EXPECT_TRUE(nil.isNil()) << "Nil is nil";
     }
 
-    TEST(ToolsTypesBigInt, CastToSize_t) {
+    TEST(Tools_Types_BigInt, Size) {
+        const BigInt number("1234567890");
+        const size_t expected = 10;
+
+        EXPECT_EQ(expected, number.size()) << "Number size is not 10";
+    }
+
+    TEST(Tools_Types_BigInt, CastToSize_t) {
         const size_t expected = std::numeric_limits<size_t>::max();
         const BigInt sizeTLimit(expected);
         const BigInt tooBigNumber = sizeTLimit + sizeTLimit;
@@ -58,14 +65,14 @@ namespace tests {
         EXPECT_EQ(expected, result) << "BigInt casts to size_t properly";
     }
 
-    TEST(ToolsTypesBigInt, ToString) {
+    TEST(Tools_Types_BigInt, ToString) {
         const std::string expected = "97107287533902102798797998220837590246510135740250";
         const BigInt numberA(expected);
 
         EXPECT_EQ(expected, std::string(numberA)) << "BigInt casts to std::string";
     }
 
-    TEST(ToolsTypesBigInt, AdditionWithSmallNumbers) {
+    TEST(Tools_Types_BigInt, AdditionWithSmallNumbers) {
         const auto numberA = 99;
         const auto numberB = 999;
 
@@ -75,7 +82,7 @@ namespace tests {
         EXPECT_EQ(expected, obtained) << "BigInt addition with small numbers";
     }
 
-    TEST(ToolsTypesBigInt, AdditionWithBigNumbers) {
+    TEST(Tools_Types_BigInt, AdditionWithBigNumbers) {
         const BigInt numberA("97107287533902102798797998220837590246510135740250");
         const BigInt numberB("96376937677490009712648124896970078050417018260538");
 
@@ -85,7 +92,7 @@ namespace tests {
         EXPECT_EQ(expected, obtained) << "BigInt addition with big numbers";
     }
 
-    TEST(ToolsTypesBigInt, ProductWithBigNumbers) {
+    TEST(Tools_Types_BigInt, ProductWithBigNumbers) {
         const BigInt numberA("97107287533902102798797998220837590246510135740250");
         const BigInt numberB("96376937677490009712648124896970078050417018260538");
 
@@ -96,7 +103,7 @@ namespace tests {
         EXPECT_EQ(expected, obtained) << "BigInt product with big numbers";
     }
 
-    TEST(ToolsTypesBigInt, ProductWithBignumbersInPlace) {
+    TEST(Tools_Types_BigInt, ProductWithBignumbersInPlace) {
         BigInt numberA("97107287533902102798797998220837590246510135740250");
         const BigInt numberB("96376937677490009712648124896970078050417018260538");
 

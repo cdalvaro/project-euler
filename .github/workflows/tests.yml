@@ -84,9 +84,9 @@ jobs:
       - name: Generate coverage
         run: |
           mkdir -p coverage
-          while IFS= read -r -d '' file; do
-            llvm-cov gcov -abcfu "${BUILD_DIRECTORY}/CMakeFiles/project-euler-library.dir/${file}"
-          done < <(find lib tests -regex ".*\.[ch]pp$" -not -path '*/tests/benchmark/*' -type f -print0)
+          while IFS= read -r file; do
+            llvm-cov gcov -abcfulp "${BUILD_DIRECTORY}/CMakeFiles/project-euler-library.dir/${file}"
+          done < <(find lib tests -not -path '*/tests/benchmark/*' -type f | egrep --color=never -i '\.(c|cpp)$')
           mv *.gcov coverage
 
       - name: Upload coverage restuls to codecov
@@ -140,6 +140,5 @@ jobs:
           output-file-path: benchmark-results.json
           external-data-json-path: ./cache/benchmark-data.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          alert-threshold: "150%"
           comment-on-alert: true
           fail-on-alert: true
