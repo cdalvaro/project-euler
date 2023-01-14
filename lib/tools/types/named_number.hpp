@@ -15,18 +15,22 @@
 #include <type_traits>
 #include <vector>
 
+#include "tools/math/concepts.hpp"
+
 namespace tools::types {
 
     /**
      @class NamedNumber
      @brief A class to convert an integer number into its english name
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>> class NamedNumber {
+    template <typename T>
+        requires Integral<T>
+    class NamedNumber {
     private:
-        Integer_t number; /**< The value of the number */
+        T number;         /**< The value of the number */
         std::string name; /**< The name of the number */
 
-        static std::string nameForNumber(const Integer_t &number, short number_of_segments = -1) {
+        static std::string nameForNumber(const T &number, short number_of_segments = -1) {
             if (number < 0) {
                 return "minus " + nameForNumber(-number);
             }
@@ -50,7 +54,7 @@ namespace tools::types {
             return rep + " " + nameForNumber(number % factor, number_of_segments - 1);
         }
 
-        static std::string repBelow1000(const Integer_t &number) {
+        static std::string repBelow1000(const T &number) {
             if (number < 10) {
                 return DIGITS[number];
             }
@@ -74,7 +78,7 @@ namespace tools::types {
             return rep + " and " + repBelow1000(number % 100);
         }
 
-        static short countSegments(Integer_t number) {
+        static short countSegments(T number) {
             short segments = 0;
             while ((number /= 1000) != 0) {
                 ++segments;
@@ -100,7 +104,7 @@ namespace tools::types {
         };
 
     public:
-        NamedNumber(const Integer_t &number) : number(number), name(nameForNumber(number)) {
+        NamedNumber(const T &number) : number(number), name(nameForNumber(number)) {
         }
 
         const std::string &getName() const {

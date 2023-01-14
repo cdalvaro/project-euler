@@ -17,6 +17,8 @@
 #include <utility>
 #include <vector>
 
+#include "tools/math/concepts.hpp"
+
 namespace tools::math {
 
     /**
@@ -26,13 +28,14 @@ namespace tools::math {
 
      @return true if number is prime, false otherwise
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
-    constexpr bool isPrime(const Integer_t &number) {
+    template <typename T>
+        requires Integral<T>
+    constexpr bool isPrime(const T &number) {
         if (number > 2 && number % 2 == 0) {
             return false;
         }
 
-        Integer_t biggest_factor(std::sqrt(number));
+        T biggest_factor(std::sqrt(number));
         if (biggest_factor % 2 == 0) {
             --biggest_factor;
         }
@@ -55,12 +58,13 @@ namespace tools::math {
 
      @return A set with divisors
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
-    constexpr std::set<Integer_t> divisors(const Integer_t &number) {
-        std::set<Integer_t> divisors;
+    template <typename T>
+        requires Integral<T>
+    constexpr std::set<T> divisors(const T &number) {
+        std::set<T> divisors;
 
-        Integer_t limit = std::sqrt(number);
-        for (Integer_t factor = 1; factor <= limit; ++factor) {
+        T limit = std::sqrt(number);
+        for (T factor = 1; factor <= limit; ++factor) {
             if (number % factor == 0) {
                 divisors.insert(factor);
                 divisors.insert(number / factor);
@@ -79,9 +83,10 @@ namespace tools::math {
 
      @return Factor sorted in ascended order
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
-    constexpr std::vector<Integer_t> factorize(const Integer_t &number) {
-        std::vector<Integer_t> factorization;
+    template <typename T>
+        requires Integral<T>
+    constexpr std::vector<T> factorize(const T &number) {
+        std::vector<T> factorization;
 
         auto factor = number;
         while (factor % 2 == 0) {
@@ -89,7 +94,7 @@ namespace tools::math {
             factor *= 0.5;
         }
 
-        for (Integer_t divisor = 3; divisor * divisor <= factor; divisor += 2) {
+        for (T divisor = 3; divisor * divisor <= factor; divisor += 2) {
             while (factor % divisor == 0) {
                 factorization.push_back(divisor);
                 factor /= divisor;
@@ -112,11 +117,12 @@ namespace tools::math {
 
      @return Optional with the amicable pair if exists
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral_v<Integer_t>>>
-    constexpr std::optional<std::pair<Integer_t, Integer_t>> amicablePair(const Integer_t &number) {
-        constexpr auto amicable_number = [](const Integer_t &number) -> Integer_t {
+    template <typename T>
+        requires Integral<T>
+    constexpr std::optional<std::pair<T, T>> amicablePair(const T &number) {
+        constexpr auto amicable_number = [](const T &number) -> T {
             auto number_divisors = divisors(number);
-            Integer_t sum = std::accumulate(number_divisors.begin(), std::prev(number_divisors.end()), 0);
+            T sum = std::accumulate(number_divisors.begin(), std::prev(number_divisors.end()), 0);
             return sum;
         };
 
@@ -127,7 +133,7 @@ namespace tools::math {
 
         auto amicable = amicable_number(sum);
         if (amicable == number) {
-            return std::optional<std::pair<Integer_t, Integer_t>>{{sum, amicable}};
+            return {{sum, amicable}};
         }
 
         return std::nullopt;

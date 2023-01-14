@@ -11,6 +11,8 @@
 
 #include <type_traits>
 
+#include "tools/math/concepts.hpp"
+
 namespace tools::math {
 
     /**
@@ -18,14 +20,14 @@ namespace tools::math {
 
      @return The factorial for the given number
      */
-    template <typename Integer_t = size_t, typename Return_t = Integer_t,
-              typename = std::enable_if<std::is_integral<Integer_t>::value>>
-    constexpr Return_t factorial(const Integer_t &number) {
+    template <typename T = size_t, typename Return_t = T>
+        requires Integral<T>
+    constexpr Return_t factorial(const T &number) {
         if (number < 2) {
             return Return_t{1};
         }
         Return_t product{2};
-        for (Integer_t factor = 3; factor <= number; ++factor) {
+        for (T factor = 3; factor <= number; ++factor) {
             product *= Return_t{factor};
         }
         return product;

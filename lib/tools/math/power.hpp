@@ -12,11 +12,14 @@
 #include <cmath>
 #include <type_traits>
 
+#include "tools/math/concepts.hpp"
+
 namespace tools::math {
 
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
-    constexpr Integer_t pow10(const size_t &n) {
-        Integer_t pow = 1;
+    template <typename T>
+        requires Integral<T>
+    constexpr T pow10(const size_t &n) {
+        T pow = 1;
         for (auto __n = 0u; __n < n; ++__n) {
             pow *= 10;
         }

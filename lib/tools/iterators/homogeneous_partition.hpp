@@ -13,13 +13,16 @@
 #include <type_traits>
 #include <utility>
 
+#include "tools/math/concepts.hpp"
+
 namespace tools::iterators {
 
     /**
      @class HomogeneousPartition
      @brief Creates homogeneous partitions for iterating over a range
      */
-    template <typename Integer_t, typename = std::enable_if<std::is_integral<Integer_t>::value>>
+    template <typename Integer_t>
+        requires Integral<Integer_t>
     class HomogeneousPartition {
     public:
         using Partition_t = std::pair<Integer_t, Integer_t>;
