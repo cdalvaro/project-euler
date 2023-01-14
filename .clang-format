@@ -1,6 +1,6 @@
 ---
 Language: Cpp
-Standard: c++17
+Standard: c++20
 BasedOnStyle: LLVM
 
 # Configurable Format Style Options
@@ -25,8 +25,8 @@ IndentCaseLabels: false
 IndentCaseBlocks: true
 SpaceBeforeAssignmentOperators: true
 PointerAlignment: Right
-SortIncludes: true
-IndentExternBlock: true
+SortIncludes: CaseInsensitive
+IndentExternBlock: Indent
 AllowShortLambdasOnASingleLine: Empty
 AllowShortBlocksOnASingleLine: Never
 AlwaysBreakAfterReturnType: None
@@ -36,6 +36,7 @@ BreakBeforeBinaryOperators: NonAssignment
 AlignOperands: Align
 BreakBeforeBraces: Attach
 NamespaceIndentation: All
+AlwaysBreakTemplateDeclarations: Yes
 
 # EmptyLineBeforeAccessModifier: LogicalBlock - Not supported
 # SpaceBeforeCaseColon: false - Not supported

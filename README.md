@@ -68,9 +68,9 @@ the [Archive](https://projecteuler.net/archives) section on Project Euler webpag
 
 [profile_link]: https://projecteuler.net/progress=cdalvaro
 
-[cpp_badge]: https://img.shields.io/badge/C++-17-00599C?logo=C%2B%2B
+[cpp_badge]: https://img.shields.io/badge/C++-20-00599C?logo=C%2B%2B
 
-[cpp_link]: https://en.cppreference.com/w/cpp/17
+[cpp_link]: https://en.cppreference.com/w/cpp/20
 
 [compilation_tool_badge]: https://img.shields.io/badge/CMake-3.9-064F8C?logo=CMake
 
