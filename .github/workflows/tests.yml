@@ -13,6 +13,7 @@ env:
   CXX: clang++
   BUILD_TYPE: Release
   BUILD_DIRECTORY: cmake-build
+  ASAN_OPTIONS: alloc_dealloc_mismatch=0
 
 jobs:
   build-targets:

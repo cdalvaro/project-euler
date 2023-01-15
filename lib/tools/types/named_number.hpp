@@ -24,7 +24,7 @@ namespace tools::types {
      @brief A class to convert an integer number into its english name
      */
     template <typename T>
-        requires Integral<T>
+    requires Integral<T>
     class NamedNumber {
     private:
         T number;         /**< The value of the number */

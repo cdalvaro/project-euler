@@ -21,7 +21,7 @@ namespace tools::math {
      @return The factorial for the given number
      */
     template <typename T = size_t, typename Return_t = T>
-        requires Integral<T>
+    requires Integral<T>
     constexpr Return_t factorial(const T &number) {
         if (number < 2) {
             return Return_t{1};

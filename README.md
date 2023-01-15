@@ -61,10 +61,12 @@ the [Archive](https://projecteuler.net/archives) section on Project Euler webpag
 - [Challenge 23](lib/challenges/c0023)
 - [Challenge 24](lib/challenges/c0024)
 - [Challenge 25](lib/challenges/c0025)
+- Challenge 26 - Not yet solved...
+- [Challenge 27](lib/challenges/c0027)
 
 </details>
 
-[challenges_solved_badge]: https://img.shields.io/badge/Solved-25-f93
+[challenges_solved_badge]: https://img.shields.io/badge/Solved-27-f93
 
 [profile_link]: https://projecteuler.net/progress=cdalvaro
 
@@ -80,7 +82,7 @@ the [Archive](https://projecteuler.net/archives) section on Project Euler webpag
 
 [unit_testing_link]: https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UnitTesting.html
 
-[gh_challenges_badge]: https://img.shields.io/github/workflow/status/cdalvaro/project-euler/Challenges
+[gh_challenges_badge]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml/badge.svg?branch=main
 
 [gh_challenges_link]: https://github.com/cdalvaro/project-euler/actions/workflows/tests.yml
 

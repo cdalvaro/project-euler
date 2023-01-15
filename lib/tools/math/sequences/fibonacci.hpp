@@ -22,7 +22,8 @@ namespace tools::math::sequences {
 
      @link https://mathworld.wolfram.com/FibonacciNumber.html @endlink
      */
-    template <typename Return_t = size_t> class Fibonacci {
+    template <typename Return_t = size_t>
+    class Fibonacci {
     public:
         /**
          @brief Compute the Fibonacci sequence for a given number
