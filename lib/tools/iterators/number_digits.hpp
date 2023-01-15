@@ -19,7 +19,8 @@ namespace tools::iterators {
      @class NumberDigits
      @brief Creates an object to iterate over the digits of a number
      */
-    template <typename Numeric_t> class NumberDigits {
+    template <typename Numeric_t>
+    class NumberDigits {
     private:
         static_assert(std::is_arithmetic_v<Numeric_t>, "Numeric_t must be numeric");
 

@@ -59,7 +59,8 @@ namespace challenges {
 
          @return The solution value casted.
          */
-        template <typename T> static inline T castSolution(const Solution_t &solution) {
+        template <typename T>
+        static inline T castSolution(const Solution_t &solution) {
             return std::any_cast<T>(solution);
         }
     };

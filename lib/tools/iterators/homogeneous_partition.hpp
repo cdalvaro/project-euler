@@ -22,7 +22,7 @@ namespace tools::iterators {
      @brief Creates homogeneous partitions for iterating over a range
      */
     template <typename Integer_t>
-        requires Integral<Integer_t>
+    requires Integral<Integer_t>
     class HomogeneousPartition {
     public:
         using Partition_t = std::pair<Integer_t, Integer_t>;

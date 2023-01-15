@@ -29,7 +29,7 @@ namespace tools::math {
      @return true if number is prime, false otherwise
      */
     template <typename T>
-        requires Integral<T>
+    requires Integral<T>
     constexpr bool isPrime(const T &number) {
         if (number > 2 && number % 2 == 0) {
             return false;
@@ -59,7 +59,7 @@ namespace tools::math {
      @return A set with divisors
      */
     template <typename T>
-        requires Integral<T>
+    requires Integral<T>
     constexpr std::set<T> divisors(const T &number) {
         std::set<T> divisors;
 
@@ -84,7 +84,7 @@ namespace tools::math {
      @return Factor sorted in ascended order
      */
     template <typename T>
-        requires Integral<T>
+    requires Integral<T>
     constexpr std::vector<T> factorize(const T &number) {
         std::vector<T> factorization;
 
@@ -118,7 +118,7 @@ namespace tools::math {
      @return Optional with the amicable pair if exists
      */
     template <typename T>
-        requires Integral<T>
+    requires Integral<T>
     constexpr std::optional<std::pair<T, T>> amicablePair(const T &number) {
         constexpr auto amicable_number = [](const T &number) -> T {
             auto number_divisors = divisors(number);

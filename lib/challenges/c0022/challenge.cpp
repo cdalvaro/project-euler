@@ -21,7 +21,8 @@ namespace fs = std::filesystem;
 /**
  @brief Auxiliary class for splitting a string by any delimiter
  */
-template <char delimiter> class WordDelimitedBy : public std::string {
+template <char delimiter>
+class WordDelimitedBy : public std::string {
     friend std::istream &operator>>(std::istream &is, WordDelimitedBy &output) {
         std::getline(is, output, delimiter);
         return is;
