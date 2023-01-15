@@ -81,16 +81,16 @@ jobs:
         run: |
           mkdir -p coverage
           while IFS= read -r file; do
-            llvm-cov gcov -abcfulp "${BUILD_DIRECTORY}/CMakeFiles/project-euler-library.dir/${file}"
-          done < <(find lib tests -not -path '*/tests/benchmark/*' -type f | egrep --color=never -i '\.(c|cpp)$')
-          mv *.gcov coverage
+            mv "${file}" coverage/
+          done < <(find lib tests -not -path '*/tests/benchmark/*' -type f | egrep --color=never -i '\.(c|cpp|gcno|gcda)$')
       
       # https://about.codecov.io/blog/how-to-set-up-codecov-with-c-and-github-actions/
       - name: Upload coverage results to codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: coverage
+          gcov: true
+          gcov_include: coverage
           flags: project-euler-library
           fail_ci_if_error: true
           verbose: true
