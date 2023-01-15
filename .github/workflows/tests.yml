@@ -100,7 +100,7 @@ jobs:
           verbose: true
 
       - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
+        uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: unit_test_details.xml
 
