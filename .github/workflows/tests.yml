@@ -76,7 +76,9 @@ jobs:
             --gtest_color=yes \
             --gtest_brief=1 \
             --gtest_output=xml:unit_test_details.xml
-
+          ls -lR .
+      
+      # https://about.codecov.io/blog/how-to-set-up-codecov-with-c-and-github-actions/
       - name: Upload coverage results to codecov
         uses: codecov/codecov-action@v3
         with:
