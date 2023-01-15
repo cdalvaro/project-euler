@@ -90,7 +90,8 @@ jobs:
           done < <(find lib tests -not -path '*/tests/benchmark/*' -type f | egrep --color=never -i '\.(c|cpp)$')
           mv *.gcov coverage
 
-      - name: Upload coverage restuls to codecov
+      # https://about.codecov.io/blog/how-to-set-up-codecov-with-c-and-github-actions/
+      - name: Upload coverage results to codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -98,6 +99,7 @@ jobs:
           flags: project-euler-library
           fail_ci_if_error: true
           verbose: true
+          dry_run: github.actor == 'dependabot[bot]'
 
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
@@ -108,6 +110,7 @@ jobs:
     name: Benchmark tests
     runs-on: ubuntu-latest
     needs: [ build-targets ]
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

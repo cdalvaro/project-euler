@@ -2,8 +2,10 @@
 [![C++ Version][cpp_badge]][cpp_link]
 [![Compilation Tool][compilation_tool_badge]][compilation_tool_link]
 [![Unit Tests][unit_testing_badge]][unit_testing_link]
+
 [![GitHub Challenges][gh_challenges_badge]][gh_challenges_link]
 [![Code coverage][codecov_badge]][codecov_link]
+[![Codacy][codacy_badge]][codacy_link]
 
 # Project Euler Challenges
 
@@ -89,3 +91,7 @@ the [Archive](https://projecteuler.net/archives) section on Project Euler webpag
 [codecov_badge]: https://codecov.io/gh/cdalvaro/project-euler/branch/main/graph/badge.svg?token=O8ZAI16P6C
 
 [codecov_link]: https://codecov.io/gh/cdalvaro/project-euler
+
+[codacy_badge]: https://app.codacy.com/project/badge/Grade/098449f7656b4d019b39d6b11f216066
+
+[codacy_link]: https://www.codacy.com/gh/cdalvaro/project-euler
