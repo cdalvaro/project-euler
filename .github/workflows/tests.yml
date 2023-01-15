@@ -77,11 +77,14 @@ jobs:
             --gtest_brief=1 \
             --gtest_output=xml:unit_test_details.xml
 
-      - name: Upload coverage restuls to codecov
+      - name: Upload coverage results to codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           gcov: true
+          gcov_args: -bp
+          gcov_include: lib/
+          gcov_ignore: tests/
           flags: project-euler-library
           fail_ci_if_error: true
           verbose: true
