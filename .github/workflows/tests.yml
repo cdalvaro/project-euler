@@ -83,7 +83,7 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           gcov: true
-          gcov_include: ${{ env.BUILD_DIRECTORY }}/CMakeFiles/project-euler-library.dir/lib/
+          gcov_include: ${{ env.BUILD_DIRECTORY }}/CMakeFiles/project-euler-library.dir/lib/**/*
           flags: project-euler-library
           fail_ci_if_error: true
           verbose: true
