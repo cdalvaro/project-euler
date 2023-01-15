@@ -22,9 +22,9 @@ namespace tests {
 
         EXPECT_EQ(expected, result) << "Challenge 24 failed";
 
-        EXPECT_THROW(Challenge24("", 1), std::logic_error) << "Sequence cannot be empty";
-        EXPECT_THROW(Challenge24("01", 0), std::logic_error) << "nth_permutation > 0";
-        EXPECT_THROW(Challenge24("01", 3), std::logic_error) << "nth_permutation > number of permutations";
+        EXPECT_THROW(challenge = Challenge24("", 1), std::logic_error) << "Sequence cannot be empty";
+        EXPECT_THROW(challenge = Challenge24("01", 0), std::logic_error) << "nth_permutation > 0";
+        EXPECT_THROW(challenge = Challenge24("01", 3), std::logic_error) << "nth_permutation > number of permutations";
     }
 
 } // namespace tests
