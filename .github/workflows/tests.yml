@@ -32,7 +32,7 @@ jobs:
         run: cmake -E make_directory "${BUILD_DIRECTORY}"
 
       - name: Download cache files
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             "${BUILD_DIRECTORY}/_deps"
@@ -129,7 +129,7 @@ jobs:
           | tee benchmark-results.json
 
       - name: Download previous benchmark results
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ./cache
           key: ${{ runner.os }}-benchmark
