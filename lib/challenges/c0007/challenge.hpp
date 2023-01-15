@@ -31,22 +31,22 @@ namespace challenges {
 
          @param nth_prime The nth prime number to find
          */
-        Challenge7(const Type_t &nth_prime);
+        explicit Challenge7(const Type_t &nth_prime);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge7() = default;
+        ~Challenge7() override = default;
 
         /**
          This method contains the algorithm that solves challenge 7
 
          @return The solution for challenge 7
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t nth_prime; /**< The nth prime number to find */
+        Type_t nth_prime; ///< The nth prime number to find
     };
 } // namespace challenges
 

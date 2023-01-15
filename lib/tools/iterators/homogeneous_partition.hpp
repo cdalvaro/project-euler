@@ -55,16 +55,16 @@ namespace tools::iterators {
             if (partitions_cache.empty()) {
                 auto step = (last - first) / number_of_partitions;
 
-                auto __first = first;
-                auto __last = __first + step;
-                auto __last_index = number_of_partitions - 1;
-                for (size_t index = 0; index < __last_index; ++index) {
-                    partitions_cache.emplace(__first, __last);
-                    __first = __last + 1;
-                    __last = __first + step;
+                auto _first = first;
+                auto _last = _first + step;
+                auto _last_index = number_of_partitions - 1;
+                for (size_t index = 0; index < _last_index; ++index) {
+                    partitions_cache.emplace(_first, _last);
+                    _first = _last + 1;
+                    _last = _first + step;
                 }
 
-                partitions_cache.emplace(__first, last);
+                partitions_cache.emplace(_first, last);
             }
 
             return partitions_cache;

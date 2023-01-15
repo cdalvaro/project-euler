@@ -39,18 +39,18 @@ namespace challenges {
         /**
          @brief Default destructor
          */
-        virtual ~Challenge24() = default;
+        ~Challenge24() override = default;
 
         /**
          This method contains the algorithm that solves challenge 24
 
          @return The solution for challenge 24
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t sequence;        /**< The sequence to compute its lexicographic permutations */
-        size_t nth_permutation; /**< The position of the permutation to be recovered */
+        Type_t sequence;        ///< The sequence to compute its lexicographic permutations
+        size_t nth_permutation; ///< The position of the permutation to be recovered
     };
 
 } // namespace challenges

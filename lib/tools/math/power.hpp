@@ -20,7 +20,7 @@ namespace tools::math {
     requires Integral<T>
     constexpr T pow10(const size_t &n) {
         T pow = 1;
-        for (auto __n = 0u; __n < n; ++__n) {
+        for (auto _n = 0u; _n < n; ++_n) {
             pow *= 10;
         }
         return pow;

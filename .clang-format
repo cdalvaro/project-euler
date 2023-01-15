@@ -37,6 +37,7 @@ AlignOperands: Align
 BreakBeforeBraces: Attach
 NamespaceIndentation: All
 AlwaysBreakTemplateDeclarations: Yes
+IndentRequiresClause: false
 
 # EmptyLineBeforeAccessModifier: LogicalBlock - Not supported
 # SpaceBeforeCaseColon: false - Not supported

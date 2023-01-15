@@ -40,21 +40,20 @@ namespace challenges {
         /**
          @brief Default destructor
          */
-        virtual ~Challenge15() = default;
+        ~Challenge15() override = default;
 
         /**
          This method contains the algorithm that solves challenge 15
 
          @return The solution for challenge 15
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
         using Lattice_t = std::pair<size_t, size_t>;
 
-        Lattice_t lattice;                       /**< The lattice to find the number of possible paths */
-        std::map<Lattice_t, Type_t> paths_cache; /**< A cache for storing the number
-                                                    of paths for each sublattice */
+        Lattice_t lattice;                       ///< The lattice to find the number of possible paths
+        std::map<Lattice_t, Type_t> paths_cache; ///< A cache for storing the number of paths for each sublattice
 
         /**
          @brief Get the number of paths of the given lattice

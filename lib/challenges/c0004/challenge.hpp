@@ -37,19 +37,18 @@ namespace challenges {
         /**
          @brief Default constructor
          */
-        virtual ~Challenge4() = default;
+        ~Challenge4() override = default;
 
         /**
          This method contains the algorithm that solves challenge 4
 
          @return The solution for challenge 4
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        size_t number_of_digits;   /**< The number of digits of each product
-                                      number */
-        size_t number_of_products; /**< The number of products to multipy */
+        size_t number_of_digits;   ///< The number of digits of each product number
+        size_t number_of_products; ///< The number of products to multiply
 
         /**
          @brief Check if given number fulfills the required conditions
@@ -62,7 +61,7 @@ namespace challenges {
 
          @return True if the number fulfills the requirements, false otherwise.
          */
-        bool checkDivisors(const Type_t &number, const size_t &depth) const;
+        [[nodiscard]] bool checkDivisors(const Type_t &number, const size_t &depth) const;
 
         /**
          @brief Check wether \p number is a palindromic number or not

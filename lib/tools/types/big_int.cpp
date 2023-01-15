@@ -15,9 +15,6 @@
 
 using namespace tools::types;
 
-BigInt::BigInt() {
-}
-
 BigInt::BigInt(const size_t &number) : BigInt{std::to_string(number)} {
 }
 
@@ -31,10 +28,7 @@ BigInt::BigInt(const std::string_view &number) {
     });
 }
 
-BigInt::BigInt(const BigInt &number) : number(number.number) {
-}
-
-BigInt::BigInt(BigInt &&number) : number(std::move(number.number)) {
+BigInt::BigInt(BigInt &&number) noexcept : number(std::move(number.number)) {
     number.number = {};
 }
 

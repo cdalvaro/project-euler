@@ -31,22 +31,22 @@ namespace challenges {
 
          @param limit The last number to be summed
          */
-        Challenge1(const Type_t &limit);
+        explicit Challenge1(const Type_t &limit);
 
         /**
          @brief Class destructor
          */
-        virtual ~Challenge1() = default;
+        ~Challenge1() override = default;
 
         /**
          This method contains the algorithm that solves challenge 1
 
          @return The solution for challenge 1
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t limit; /**< The last number to be summed by the algorithm */
+        Type_t limit; ///< The last number to be summed by the algorithm
     };
 
 } // namespace challenges

@@ -30,7 +30,7 @@ namespace tools::iterators {
         Number_t number;
 
     public:
-        NumberDigits(const Numeric_t &number) {
+        explicit NumberDigits(const Numeric_t &number) {
             // Erase the decimal separator, i.e.: "."
             auto wstr_number = std::to_wstring(number);
             auto it_dot = wstr_number.find(L".");

@@ -39,7 +39,7 @@ namespace challenges {
         /**
          @brief Default destructor
          */
-        virtual ~Challenge27() = default;
+        ~Challenge27() override = default;
 
         /**
          This method contains the algorithm that solves challenge 27

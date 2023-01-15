@@ -21,13 +21,13 @@ IChallenge::Solution_t Challenge17::solve() {
     Type_t sum = 0;
     for (auto number = first; number <= last; ++number) {
         auto name = NamedNumber(number).getName();
-        removeAllOccurencesOf(name, {' ', '-'});
+        removeAllOccurrencesOf(name, {' ', '-'});
         sum += name.size();
     }
     return sum;
 }
 
-void Challenge17::removeAllOccurencesOf(std::string &str, const std::set<char> &characters) {
+void Challenge17::removeAllOccurrencesOf(std::string &str, const std::set<char> &characters) {
     for (auto character : characters) {
         auto it = std::remove(str.begin(), str.end(), character);
         str.erase(it, str.end());

@@ -32,23 +32,22 @@ namespace challenges {
          @param number The number whose biggest prime factor is going to be
          computed
          */
-        Challenge3(const Type_t &number);
+        explicit Challenge3(const Type_t &number);
 
         /**
          @brief Default constructor
          */
-        virtual ~Challenge3() = default;
+        ~Challenge3() override = default;
 
         /**
          This method contains the algorithm that solves challenge 3
 
          @return The solution for challenge 3
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t number; /**< The number whose biggest prime factor is going to be
-                          computed */
+        Type_t number; ///< The number whose biggest prime factor is going to be computed
     };
 } // namespace challenges
 

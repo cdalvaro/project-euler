@@ -31,22 +31,22 @@ namespace challenges {
 
          This is the main constructor of Challenge21 class
          */
-        Challenge21(const size_t &limit);
+        explicit Challenge21(const size_t &limit);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge21() = default;
+        ~Challenge21() override = default;
 
         /**
          This method contains the algorithm that solves challenge 21
 
          @return The solution for challenge 21
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        size_t limit; /**< The maximum number to find amicable numbers */
+        size_t limit; ///< The maximum number to find amicable numbers
     };
 
 } // namespace challenges

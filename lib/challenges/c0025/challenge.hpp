@@ -33,22 +33,22 @@ namespace challenges {
 
          This is the main constructor of Challenge25 class
          */
-        Challenge25(const size_t &number_of_digits);
+        explicit Challenge25(const size_t &number_of_digits);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge25() = default;
+        ~Challenge25() override = default;
 
         /**
          This method contains the algorithm that solves challenge 25
 
          @return The solution for challenge 25
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        size_t number_of_digits; /**< The number of digits of the number to be found */
+        size_t number_of_digits; ///< The number of digits of the number to be found
     };
 
 } // namespace challenges

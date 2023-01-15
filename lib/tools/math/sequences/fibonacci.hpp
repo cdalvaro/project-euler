@@ -34,7 +34,7 @@ namespace tools::math::sequences {
          */
         Return_t operator()(const size_t &n) {
             if (n < 2) {
-                return cache[n] = n == 0 ? size_t(0) : size_t(1);
+                return cache[n] = Return_t{static_cast<size_t>(n == 0 ? 0 : 1)};
             }
 
             auto it = cache.find(n);

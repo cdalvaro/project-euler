@@ -32,23 +32,22 @@ namespace challenges {
          @param last_number The las number starting from 1 to be divisible
          without remainder
          */
-        Challenge5(const Type_t &last_number);
+        explicit Challenge5(const Type_t &last_number);
 
         /**
          @brief Default constructor
          */
-        virtual ~Challenge5() = default;
+        ~Challenge5() override = default;
 
         /**
          This method contains the algorithm that solves challenge 5
 
          @return The solution for challenge 5
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t last_number; /**< The las number starting from 1 to be divisible
-                               without remainder */
+        Type_t last_number; ///< The las number starting from 1 to be divisible without remainder
     };
 } // namespace challenges
 

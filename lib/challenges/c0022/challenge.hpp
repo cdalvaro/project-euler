@@ -34,22 +34,22 @@ namespace challenges {
 
          This is the main constructor of Challenge22 class
          */
-        Challenge22(const std::filesystem::path &file_path);
+        explicit Challenge22(const std::filesystem::path &file_path);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge22() = default;
+        ~Challenge22() override = default;
 
         /**
          This method contains the algorithm that solves challenge 22
 
          @return The solution for challenge 22
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        std::filesystem::path file_path; /**< The path to the file with all names */
+        std::filesystem::path file_path; ///< The path to the file with all names
     };
 
 } // namespace challenges

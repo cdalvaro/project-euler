@@ -40,21 +40,21 @@ namespace challenges {
         /**
          @brief Default destructor
          */
-        virtual ~Challenge19() = default;
+        ~Challenge19() override = default;
 
         /**
          This method contains the algorithm that solves challenge 19
 
          @return The solution for challenge 19
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
         using Clock_t = std::chrono::system_clock;
         using Date_t = std::chrono::time_point<Clock_t>;
 
-        int first_year; /**< Initial year */
-        int last_year;  /**< Last year */
+        int first_year; ///< Initial year
+        int last_year;  ///< Last year
 
         /**
          Create a \c Date_t object from integers

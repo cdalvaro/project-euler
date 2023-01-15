@@ -53,19 +53,20 @@ namespace tools::types {
         BigInt &multiplyBy10(const size_t &times = 1);
 
     public:
-        BigInt();
-        BigInt(const size_t &number);
+        BigInt() = default;
+        explicit BigInt(const size_t &number);
         BigInt(const char *number);
-        BigInt(const std::string_view &number);
-        BigInt(const BigInt &number);
-        BigInt(BigInt &&number);
+        explicit BigInt(const std::string_view &number);
+
+        BigInt(const BigInt &number) = default;
+        BigInt(BigInt &&number) noexcept;
 
         virtual ~BigInt() = default;
 
         BigInt_t::iterator begin();
-        BigInt_t::const_iterator begin() const;
+        [[nodiscard]] BigInt_t::const_iterator begin() const;
         BigInt_t::iterator end();
-        BigInt_t::const_iterator end() const;
+        [[nodiscard]] BigInt_t::const_iterator end() const;
 
         BigInt &operator=(const BigInt &rhs);
         BigInt &operator=(BigInt &&rhs) noexcept;
@@ -81,15 +82,15 @@ namespace tools::types {
         bool operator<(const BigInt &rhs) const;
         bool operator>(const BigInt &rhs) const;
 
-        bool isZero() const;
-        bool isNil() const;
+        [[nodiscard]] bool isZero() const;
+        [[nodiscard]] bool isNil() const;
 
-        size_t size() const;
+        [[nodiscard]] size_t size() const;
 
-        std::string str() const;
+        [[nodiscard]] std::string str() const;
 
-        operator std::string() const;
-        operator size_t() const;
+        explicit operator std::string() const;
+        explicit operator size_t() const;
     };
 
 } // namespace tools::types

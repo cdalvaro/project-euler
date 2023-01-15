@@ -31,22 +31,22 @@ namespace challenges {
 
          @param limit The limit for the maximum prime number
          */
-        Challenge10(const Type_t &limit);
+        explicit Challenge10(const Type_t &limit);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge10() = default;
+        ~Challenge10() override = default;
 
         /**
          This method contains the algorithm that solves challenge 10
 
          @return The solution for challenge 10
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t limit; /**< The limit for the maximum prime number */
+        Type_t limit; ///< The limit for the maximum prime number
     };
 } // namespace challenges
 

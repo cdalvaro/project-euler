@@ -30,19 +30,19 @@ namespace challenges {
 
          This is the main constructor of Challenge13 class
          */
-        Challenge13();
+        Challenge13() = default;
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge13() = default;
+        ~Challenge13() override = default;
 
         /**
          This method contains the algorithm that solves challenge 13
 
          @return The solution for challenge 13
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
         static const std::vector<tools::types::BigInt> bigints;

@@ -34,30 +34,29 @@ namespace challenges {
          @param numbers_to_take The number of adjacent numbers to compute the
          product
          */
-        Challenge11(const Type_t &numbers_to_take);
+        explicit Challenge11(const Type_t &numbers_to_take);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge11() = default;
+        ~Challenge11() override = default;
 
         /**
          This method contains the algorithm that solves challenge 11
 
          @return The solution for challenge 11
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
         //! The matrix type
         using Matrix_t = std::vector<std::vector<int>>;
 
-        Type_t numbers_to_take; /**< The number of adjacent numbers to compute
-                                   the product */
+        Type_t numbers_to_take; ///< The number of adjacent numbers to compute the product
 
-        static const Matrix_t matrix;          /**< The matrix to be explored */
-        static const size_t number_of_rows;    /**< The number of rows of the matrix */
-        static const size_t number_of_columns; /**< The number of columns of the matrix */
+        static const Matrix_t matrix;          ///< The matrix to be explored
+        static const size_t number_of_rows;    ///< The number of rows of the matrix
+        static const size_t number_of_columns; ///< The number of columns of the matrix
 
         /**
          Return the maximum product for the given position
@@ -67,7 +66,7 @@ namespace challenges {
 
          @return The maximum product for the given position
          */
-        Type_t maxProductForPosition(const size_t &row, const size_t &column) const;
+        [[nodiscard]] Type_t maxProductForPosition(const size_t &row, const size_t &column) const;
     };
 } // namespace challenges
 

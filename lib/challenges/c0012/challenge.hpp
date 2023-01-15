@@ -32,23 +32,22 @@ namespace challenges {
          @param numbers_of_divisors The number of divisors for the searched
          number
          */
-        Challenge12(const Type_t &numbers_of_divisors);
+        explicit Challenge12(const Type_t &numbers_of_divisors);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge12() = default;
+        ~Challenge12() override = default;
 
         /**
          This method contains the algorithm that solves challenge 12
 
          @return The solution for challenge 12
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t numbers_of_divisors; /**< The number of divisors for the searched
-                                       number */
+        Type_t numbers_of_divisors; ///< The number of divisors for the searched number
     };
 } // namespace challenges
 

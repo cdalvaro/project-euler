@@ -31,22 +31,22 @@ namespace challenges {
 
          This is the main constructor of Challenge20 class
          */
-        Challenge20(const size_t &number);
+        explicit Challenge20(const size_t &number);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge20() = default;
+        ~Challenge20() override = default;
 
         /**
          This method contains the algorithm that solves challenge 20
 
          @return The solution for challenge 20
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        size_t number; /**< The number to compute the sum of the digits of its factorial number */
+        size_t number; ///< The number to compute the sum of the digits of its factorial number
     };
 } // namespace challenges
 

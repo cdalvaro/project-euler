@@ -40,28 +40,28 @@ namespace challenges {
         /**
          @brief Default destructor
          */
-        virtual ~Challenge17() = default;
+        ~Challenge17() override = default;
 
         /**
          This method contains the algorithm that solves challenge 17
 
          @return The solution for challenge 17
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        size_t first; /**< The first number of the sequence */
-        size_t last;  /**< The last number of the sequence */
+        size_t first; ///< The first number of the sequence
+        size_t last;  ///< The last number of the sequence
 
         /**
-         @brief Remove all occurences of the given characters in the string
+         @brief Remove all occurrences of the given characters in the string
 
          This method performs its operations over the input string.
 
          @param str The string to be cleaned
          @param characters A set with characters to remove from the string
          */
-        static void removeAllOccurencesOf(std::string &str, const std::set<char> &characters);
+        static void removeAllOccurrencesOf(std::string &str, const std::set<char> &characters);
     };
 } // namespace challenges
 

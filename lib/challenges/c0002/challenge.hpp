@@ -31,22 +31,22 @@ namespace challenges {
 
          @param limit The limit for the last number of Fibonacci sequence
          */
-        Challenge2(const Type_t &limit);
+        explicit Challenge2(const Type_t &limit);
 
         /**
          @brief Default constructor
          */
-        virtual ~Challenge2() = default;
+        ~Challenge2() override = default;
 
         /**
          This method contains the algorithm that solves challenge 2
 
          @return The solution for challenge 2
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t limit; /**< The limit for the last number of Fibonacci sequence */
+        Type_t limit; ///< The limit for the last number of Fibonacci sequence
     };
 
 } // namespace challenges

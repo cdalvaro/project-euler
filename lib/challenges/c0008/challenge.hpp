@@ -34,25 +34,24 @@ namespace challenges {
 
          @param number_of_digits The number of digits to compute the product
          */
-        Challenge8(const Type_t &number_of_digits);
+        explicit Challenge8(const Type_t &number_of_digits);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge8() = default;
+        ~Challenge8() override = default;
 
         /**
          This method contains the algorithm that solves challenge 8
 
          @return The solution for challenge 8
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t number_of_digits; /**< The number of digits to compute the
-                                    product */
+        Type_t number_of_digits; ///< The number of digits to compute the product
 
-        static const std::string_view big_number; /**< The big number to be searched */
+        static const std::string_view big_number; ///< The big number to be searched
 
         /**
          Accumulate the product for a given range of numbers

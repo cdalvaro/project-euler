@@ -31,22 +31,22 @@ namespace challenges {
 
          @param maximum_number The maximum starting number
          */
-        Challenge14(const Type_t &maximum_number);
+        explicit Challenge14(const Type_t &maximum_number);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge14() = default;
+        ~Challenge14() override = default;
 
         /**
          This method contains the algorithm that solves challenge 14
 
          @return The solution for challenge 14
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t maximum_number; /**< The maximum starting number */
+        Type_t maximum_number; ///< The maximum starting number
     };
 } // namespace challenges
 

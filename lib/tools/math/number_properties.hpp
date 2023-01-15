@@ -20,7 +20,7 @@ namespace tools::math {
 
     template <typename T>
     requires Integral<T>
-    constexpr T __divisorsSum(const T &number) {
+    constexpr T divisorsSum(const T &number) {
         auto number_divisors = divisors(number);
         return std::accumulate(number_divisors.begin(), number_divisors.end(), static_cast<T>(0));
     }
@@ -28,19 +28,19 @@ namespace tools::math {
     template <typename T>
     requires Integral<T>
     constexpr bool isAbundant(const T &number) {
-        return __divisorsSum(number) > (number * 2);
+        return divisorsSum(number) > (number * 2);
     }
 
     template <typename T>
     requires Integral<T>
     constexpr bool isDeficient(const T &number) {
-        return __divisorsSum(number) < (number * 2);
+        return divisorsSum(number) < (number * 2);
     }
 
     template <typename T>
     requires Integral<T>
     constexpr bool isPerfect(const T &number) {
-        return __divisorsSum(number) == (number * 2);
+        return divisorsSum(number) == (number * 2);
     }
 
 } // namespace tools::math

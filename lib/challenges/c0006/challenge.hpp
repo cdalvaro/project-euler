@@ -31,22 +31,22 @@ namespace challenges {
 
          @param last_number The las number of the serires
          */
-        Challenge6(const Type_t &last_number);
+        explicit Challenge6(const Type_t &last_number);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge6() = default;
+        ~Challenge6() override = default;
 
         /**
          This method contains the algorithm that solves challenge 6
 
          @return The solution for challenge 6
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        Type_t last_number; /**< The las number of the serires */
+        Type_t last_number; ///< The las number of the series
     };
 } // namespace challenges
 

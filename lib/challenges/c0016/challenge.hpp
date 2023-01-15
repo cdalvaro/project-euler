@@ -31,22 +31,22 @@ namespace challenges {
 
          @param exponent The exponent to solve the problem
          */
-        Challenge16(const size_t &exponent);
+        explicit Challenge16(const size_t &exponent);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge16() = default;
+        ~Challenge16() override = default;
 
         /**
          This method contains the algorithm that solves challenge 16
 
          @return The solution for challenge 16
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
-        size_t exponent; /**< The exponent of the problem */
+        size_t exponent; ///< The exponent of the problem
     };
 } // namespace challenges
 

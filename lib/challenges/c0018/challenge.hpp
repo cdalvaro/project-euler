@@ -38,24 +38,24 @@ namespace challenges {
 
          @param triangle The triangle to be solved
          */
-        Challenge18(const Triangle_t &triangle);
+        explicit Challenge18(const Triangle_t &triangle);
 
         /**
          @brief Default destructor
          */
-        virtual ~Challenge18() = default;
+        ~Challenge18() override = default;
 
         /**
          This method contains the algorithm that solves challenge 18
 
          @return The solution for challenge 18
          */
-        Solution_t solve() override final;
+        Solution_t solve() final;
 
     private:
         using Cumulated_t = std::vector<std::pair<std::pair<size_t, size_t>, Type_t>>;
 
-        Triangle_t triangle; /**< The triangle to be solved */
+        Triangle_t triangle; ///< The triangle to be solved
 
         /**
          @brief Cumulates the next level into current cumulation.
@@ -67,7 +67,7 @@ namespace challenges {
 
          @return The total cumulation until level \p next_level_index
          */
-        Cumulated_t cumulateNextLevel(const Cumulated_t &cumulated, const size_t &next_level_index) const;
+        [[nodiscard]] Cumulated_t cumulateNextLevel(const Cumulated_t &cumulated, const size_t &next_level_index) const;
     };
 } // namespace challenges
 

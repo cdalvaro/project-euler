@@ -43,7 +43,7 @@ namespace tools::types {
                 number_of_segments = countSegments(number);
             }
 
-            const auto factor_name = SEGMENTS[number_of_segments];
+            const auto &factor_name = SEGMENTS[number_of_segments];
             const uint64_t factor = std::pow(1000, number_of_segments);
             const auto groups = static_cast<int>(number / factor);
             const auto rep = repBelow1000(groups) + " " + factor_name;
@@ -104,10 +104,10 @@ namespace tools::types {
         };
 
     public:
-        NamedNumber(const T &number) : number(number), name(nameForNumber(number)) {
+        explicit NamedNumber(const T &number) : number(number), name(nameForNumber(number)) {
         }
 
-        const std::string &getName() const {
+        [[nodiscard]] const std::string &getName() const {
             return name;
         }
 
