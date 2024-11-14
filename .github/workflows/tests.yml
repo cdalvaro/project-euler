@@ -92,7 +92,7 @@ jobs:
 
       # https://about.codecov.io/blog/how-to-set-up-codecov-with-c-and-github-actions/
       - name: Upload coverage results to codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           directory: coverage
