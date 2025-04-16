@@ -17,7 +17,7 @@ Challenge14::Challenge14(const Type_t &maximum_number) : maximum_number(maximum_
 }
 
 IChallenge::Solution_t Challenge14::solve() {
-    std::pair<Type_t, size_t> result = {0, 0};
+    std::pair<Type_t, std::size_t> result = {0, 0};
 
     for (auto seed = 1u; seed <= maximum_number; ++seed) {
         auto sequence = tools::math::sequences::collatz(seed);

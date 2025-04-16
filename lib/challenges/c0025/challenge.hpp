@@ -24,7 +24,7 @@ namespace challenges {
     class Challenge25 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -33,7 +33,7 @@ namespace challenges {
 
          This is the main constructor of Challenge25 class
          */
-        explicit Challenge25(const size_t &number_of_digits);
+        explicit Challenge25(const std::size_t &number_of_digits);
 
         /**
          @brief Default destructor
@@ -48,7 +48,7 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t number_of_digits; ///< The number of digits of the number to be found
+        std::size_t number_of_digits; ///< The number of digits of the number to be found
     };
 
 } // namespace challenges

@@ -14,7 +14,7 @@
 using namespace challenges;
 using namespace tools::types;
 
-Challenge17::Challenge17(const size_t &first, const size_t &last) : first(first), last(last) {
+Challenge17::Challenge17(const std::size_t &first, const std::size_t &last) : first(first), last(last) {
 }
 
 IChallenge::Solution_t Challenge17::solve() {

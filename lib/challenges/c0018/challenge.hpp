@@ -53,7 +53,7 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        using Cumulated_t = std::vector<std::pair<std::pair<size_t, size_t>, Type_t>>;
+        using Cumulated_t = std::vector<std::pair<std::pair<std::size_t, std::size_t>, Type_t>>;
 
         Triangle_t triangle; ///< The triangle to be solved
 
@@ -67,7 +67,8 @@ namespace challenges {
 
          @return The total cumulation until level \p next_level_index
          */
-        [[nodiscard]] Cumulated_t cumulateNextLevel(const Cumulated_t &cumulated, const size_t &next_level_index) const;
+        [[nodiscard]] Cumulated_t cumulateNextLevel(const Cumulated_t &cumulated,
+                                                    const std::size_t &next_level_index) const;
     };
 } // namespace challenges
 

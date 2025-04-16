@@ -18,7 +18,7 @@ IChallenge::Solution_t Challenge19::solve() {
     constexpr int sunday = 0;
     constexpr std::chrono::hours one_day(24);
 
-    size_t number_of_sundays = 0;
+    std::size_t number_of_sundays = 0;
     const auto final_date = dateFor(last_year, 12, 31);
 
     for (auto date = dateFor(first_year, 1, 1); date <= final_date; date += one_day) {

@@ -24,7 +24,7 @@ namespace challenges {
     class Challenge11 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -54,9 +54,9 @@ namespace challenges {
 
         Type_t numbers_to_take; ///< The number of adjacent numbers to compute the product
 
-        static const Matrix_t matrix;          ///< The matrix to be explored
-        static const size_t number_of_rows;    ///< The number of rows of the matrix
-        static const size_t number_of_columns; ///< The number of columns of the matrix
+        static const Matrix_t matrix;               ///< The matrix to be explored
+        static const std::size_t number_of_rows;    ///< The number of rows of the matrix
+        static const std::size_t number_of_columns; ///< The number of columns of the matrix
 
         /**
          Return the maximum product for the given position
@@ -66,7 +66,7 @@ namespace challenges {
 
          @return The maximum product for the given position
          */
-        [[nodiscard]] Type_t maxProductForPosition(const size_t &row, const size_t &column) const;
+        [[nodiscard]] Type_t maxProductForPosition(const std::size_t &row, const std::size_t &column) const;
     };
 } // namespace challenges
 

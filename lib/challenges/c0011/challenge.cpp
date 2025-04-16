@@ -38,8 +38,8 @@ const Challenge11::Matrix_t Challenge11::matrix = {
 };
 // clang-format on
 
-const size_t Challenge11::number_of_rows = Challenge11::matrix.size();
-const size_t Challenge11::number_of_columns = Challenge11::matrix.front().size();
+const std::size_t Challenge11::number_of_rows = Challenge11::matrix.size();
+const std::size_t Challenge11::number_of_columns = Challenge11::matrix.front().size();
 
 Challenge11::Challenge11(const Type_t &numbers_to_take) : numbers_to_take(numbers_to_take) {
 }
@@ -54,7 +54,7 @@ IChallenge::Solution_t Challenge11::solve() {
     return max_product;
 }
 
-Challenge11::Type_t Challenge11::maxProductForPosition(const size_t &row, const size_t &column) const {
+Challenge11::Type_t Challenge11::maxProductForPosition(const std::size_t &row, const std::size_t &column) const {
     std::set<Type_t> products;
 
     // Horizontal: Left -> Right

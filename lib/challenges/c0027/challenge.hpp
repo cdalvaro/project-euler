@@ -34,7 +34,7 @@ namespace challenges {
 
          This is the main constructor of Challenge27 class
          */
-        Challenge27(const size_t &a_limit, const size_t &b_limit);
+        Challenge27(const std::size_t &a_limit, const std::size_t &b_limit);
 
         /**
          @brief Default destructor
@@ -49,8 +49,8 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t a_limit; ///< The maximum value for the a coefficient
-        size_t b_limit; ///< The maximum value for the b coefficient
+        std::size_t a_limit; ///< The maximum value for the a coefficient
+        std::size_t b_limit; ///< The maximum value for the b coefficient
     };
 
 } // namespace challenges

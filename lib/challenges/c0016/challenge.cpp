@@ -14,7 +14,7 @@
 
 using namespace challenges;
 
-Challenge16::Challenge16(const size_t &exponent) : exponent(exponent) {
+Challenge16::Challenge16(const std::size_t &exponent) : exponent(exponent) {
 }
 
 IChallenge::Solution_t Challenge16::solve() {

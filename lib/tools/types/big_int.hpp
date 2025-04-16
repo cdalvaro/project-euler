@@ -50,11 +50,11 @@ namespace tools::types {
 
          @return The number itself
          */
-        BigInt &multiplyBy10(const size_t &times = 1);
+        BigInt &multiplyBy10(const std::size_t &times = 1);
 
     public:
         BigInt() = default;
-        explicit BigInt(const size_t &number);
+        explicit BigInt(const std::size_t &number);
         BigInt(const char *number);
         explicit BigInt(const std::string_view &number);
 
@@ -85,12 +85,12 @@ namespace tools::types {
         [[nodiscard]] bool isZero() const;
         [[nodiscard]] bool isNil() const;
 
-        [[nodiscard]] size_t size() const;
+        [[nodiscard]] std::size_t size() const;
 
         [[nodiscard]] std::string str() const;
 
         explicit operator std::string() const;
-        explicit operator size_t() const;
+        explicit operator std::size_t() const;
     };
 
 } // namespace tools::types

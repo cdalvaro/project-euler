@@ -18,7 +18,7 @@ namespace tools::math {
 
     template <typename T>
     requires Integral<T>
-    constexpr T pow10(const size_t &n) {
+    constexpr T pow10(const std::size_t &n) {
         T pow = 1;
         for (auto _n = 0u; _n < n; ++_n) {
             pow *= 10;

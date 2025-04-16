@@ -19,7 +19,7 @@ Challenge18::Challenge18(const Triangle_t &triangle) : triangle(triangle) {
 IChallenge::Solution_t Challenge18::solve() {
     Cumulated_t cumulated{{{0, 0}, triangle.front().front()}};
 
-    for (size_t index = 1; index < triangle.size(); ++index) {
+    for (std::size_t index = 1; index < triangle.size(); ++index) {
         cumulated = cumulateNextLevel(cumulated, index);
     }
 
@@ -32,7 +32,7 @@ IChallenge::Solution_t Challenge18::solve() {
 }
 
 Challenge18::Cumulated_t Challenge18::cumulateNextLevel(const Cumulated_t &cumulated,
-                                                        const size_t &next_level_index) const {
+                                                        const std::size_t &next_level_index) const {
     Cumulated_t new_cumulated;
     auto next_level = triangle[next_level_index];
 

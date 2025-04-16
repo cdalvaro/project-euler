@@ -15,7 +15,7 @@
 
 using namespace tools::types;
 
-BigInt::BigInt(const size_t &number) : BigInt{std::to_string(number)} {
+BigInt::BigInt(const std::size_t &number) : BigInt{std::to_string(number)} {
 }
 
 BigInt::BigInt(const char *number) : BigInt{std::string_view{number}} {
@@ -199,7 +199,7 @@ bool BigInt::isNil() const {
     return number.empty();
 }
 
-size_t BigInt::size() const {
+std::size_t BigInt::size() const {
     return number.size();
 }
 
@@ -213,13 +213,13 @@ BigInt::operator std::string() const {
     return this->str();
 }
 
-BigInt::operator size_t() const {
+BigInt::operator std::size_t() const {
     long double value = 0;
     //    std::string_view sv{str()};
     //    auto result = std::from_chars(sv.begin(), sv.end(), value);
-    //    if (result.ec == std::errc::result_out_of_range || value > std::numeric_limits<size_t>::max()) {
+    //    if (result.ec == std::errc::result_out_of_range || value > std::numeric_limits<std::size_t>::max()) {
     //        std::stringstream message;
-    //        message << "BigInt (" << sv << ") to big to be casted to size_t";
+    //        message << "BigInt (" << sv << ") to big to be casted to std::size_t";
     //        throw std::out_of_range(message.str());
     //    }
     for (auto it = number.rbegin(); it != number.rend(); ++it) {
@@ -227,13 +227,13 @@ BigInt::operator size_t() const {
         value += *it * std::pow(10, exponent);
     }
 
-    if (value > std::numeric_limits<size_t>::max()) {
+    if (value > std::numeric_limits<std::size_t>::max()) {
         std::stringstream message;
-        message << "BigInt (" << value << ") to big to be casted to size_t";
+        message << "BigInt (" << value << ") to big to be casted to std::size_t";
         throw std::out_of_range(message.str());
     }
 
-    return static_cast<size_t>(value);
+    return static_cast<std::size_t>(value);
 }
 
 BigInt &BigInt::multiplyBy(const BigInt_t::value_type &small_int) {
@@ -251,7 +251,7 @@ BigInt &BigInt::multiplyBy(const BigInt_t::value_type &small_int) {
     return *this;
 }
 
-BigInt &BigInt::multiplyBy10(const size_t &times) {
+BigInt &BigInt::multiplyBy10(const std::size_t &times) {
     number.insert(number.end(), times, 0);
     return *this;
 }

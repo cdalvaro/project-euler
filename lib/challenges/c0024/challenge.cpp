@@ -15,7 +15,7 @@
 
 using namespace challenges;
 
-Challenge24::Challenge24(const Type_t &sequence, const size_t &nth_permutation) :
+Challenge24::Challenge24(const Type_t &sequence, const std::size_t &nth_permutation) :
 sequence(sequence), nth_permutation(nth_permutation) {
     if (sequence.empty()) {
         throw std::logic_error("sequence cannot be empty");
@@ -36,7 +36,7 @@ sequence(sequence), nth_permutation(nth_permutation) {
 
 IChallenge::Solution_t Challenge24::solve() {
     std::sort(sequence.begin(), sequence.end());
-    size_t permutation_index = 1;
+    std::size_t permutation_index = 1;
     while (permutation_index < nth_permutation) {
         std::next_permutation(sequence.begin(), sequence.end());
         permutation_index += 1;

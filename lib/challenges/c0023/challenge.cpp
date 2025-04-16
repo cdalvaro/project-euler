@@ -14,7 +14,7 @@
 
 using namespace challenges;
 
-Challenge23::Challenge23(const size_t &limit) : limit(limit) {
+Challenge23::Challenge23(const std::size_t &limit) : limit(limit) {
 }
 
 IChallenge::Solution_t Challenge23::solve() {

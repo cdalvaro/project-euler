@@ -22,7 +22,7 @@ namespace challenges {
     class Challenge23 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -31,7 +31,7 @@ namespace challenges {
 
          This is the main constructor of Challenge23 class
          */
-        explicit Challenge23(const size_t &limit);
+        explicit Challenge23(const std::size_t &limit);
 
         /**
          @brief Default destructor
@@ -46,7 +46,7 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t limit; ///< The upper limit to check for abundant numbers
+        std::size_t limit; ///< The upper limit to check for abundant numbers
     };
 
 } // namespace challenges

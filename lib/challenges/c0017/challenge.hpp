@@ -25,7 +25,7 @@ namespace challenges {
     class Challenge17 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -35,7 +35,7 @@ namespace challenges {
          @param first The first number of the sequence
          @param last The last number of the sequence
          */
-        Challenge17(const size_t &first, const size_t &last);
+        Challenge17(const std::size_t &first, const std::size_t &last);
 
         /**
          @brief Default destructor
@@ -50,8 +50,8 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t first; ///< The first number of the sequence
-        size_t last;  ///< The last number of the sequence
+        std::size_t first; ///< The first number of the sequence
+        std::size_t last;  ///< The last number of the sequence
 
         /**
          @brief Remove all occurrences of the given characters in the string

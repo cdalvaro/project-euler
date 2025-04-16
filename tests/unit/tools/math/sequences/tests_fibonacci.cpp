@@ -15,7 +15,7 @@ using namespace tools::math::sequences;
 namespace tests {
 
     TEST(Tools_Math_Sequences, Fibonacci) {
-        const size_t expected = 144;
+        const std::size_t expected = 144;
 
         Fibonacci fibonacci;
         auto result = fibonacci(12);

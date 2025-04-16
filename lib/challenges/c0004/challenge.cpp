@@ -14,7 +14,7 @@
 
 using namespace challenges;
 
-Challenge4::Challenge4(const size_t &number_of_digits, const size_t &number_of_products) :
+Challenge4::Challenge4(const std::size_t &number_of_digits, const std::size_t &number_of_products) :
 number_of_digits(number_of_digits), number_of_products(number_of_products) {
 }
 
@@ -36,7 +36,7 @@ IChallenge::Solution_t Challenge4::solve() {
     return number;
 }
 
-bool Challenge4::checkDivisors(const Type_t &number, const size_t &depth) const {
+bool Challenge4::checkDivisors(const Type_t &number, const std::size_t &depth) const {
     if (depth == 1) {
         return getNumberOfDigits(number) == number_of_digits;
     }
@@ -67,7 +67,7 @@ bool Challenge4::isPalindromic(const Type_t &number) {
 }
 
 Challenge4::Type_t Challenge4::findNextPalindrome(const Type_t &number) {
-    size_t number_of_digits = getNumberOfDigits(number);
+    std::size_t number_of_digits = getNumberOfDigits(number);
 
     auto first_part_power = tools::math::pow10<Type_t>(number_of_digits / 2);
     Type_t first_part = number / first_part_power;
@@ -83,7 +83,7 @@ Challenge4::Type_t Challenge4::findNextPalindrome(const Type_t &number) {
     return first_part * first_part_power + new_second_part;
 }
 
-size_t Challenge4::getNumberOfDigits(const Type_t &number) {
+std::size_t Challenge4::getNumberOfDigits(const Type_t &number) {
     return std::floor(std::log10(number)) + 1;
 }
 
