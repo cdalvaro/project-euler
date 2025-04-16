@@ -6,6 +6,8 @@
 //  Copyright © 2020 cdalvaro. All rights reserved.
 //
 
+#include <algorithm>
+#include <functional>
 #include <thread>
 #include <vector>
 
