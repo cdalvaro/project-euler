@@ -12,7 +12,7 @@ if (NOT GTest_FOUND)
     FetchContent_Declare(
       GTest
       GIT_REPOSITORY https://github.com/google/googletest.git
-      GIT_TAG release-${GTEST_VERSION}
+      GIT_TAG v${GTEST_VERSION}
     )
     FetchContent_MakeAvailable(GTest)
   else ()
