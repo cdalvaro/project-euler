@@ -9,6 +9,7 @@
 #ifndef tools_iterators_number_digits_hpp
 #define tools_iterators_number_digits_hpp
 
+#include <algorithm>
 #include <string>
 #include <type_traits>
 #include <vector>

@@ -6,7 +6,7 @@
 //  Copyright © 2020 cdalvaro.io. All rights reserved.
 //
 
-#include <charconv>
+#include <algorithm>
 #include <limits>
 #include <numeric>
 #include <sstream>

@@ -7,7 +7,6 @@
 //
 
 #include <algorithm>
-#include <exception>
 #include <fstream>
 #include <numeric>
 #include <set>
