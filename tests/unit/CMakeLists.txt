@@ -2,7 +2,7 @@ project(project-euler-unit-tests)
 
 include(GoogleTest)
 
-set(GTEST_VERSION 1.11.0)
+set(GTEST_VERSION 1.16.0)
 
 find_package(GTest ${GTEST_VERSION})
 if (NOT GTest_FOUND)
