@@ -54,7 +54,7 @@ namespace tests {
         EXPECT_EQ(expected, number.size()) << "Number size is not 10";
     }
 
-    TEST(Tools_Types_BigInt, CastTostd::size_t) {
+    TEST(Tools_Types_BigInt, CastToSize_t) {
         const std::size_t expected = std::numeric_limits<std::size_t>::max();
         const BigInt sizeTLimit(expected);
         const BigInt tooBigNumber = sizeTLimit + sizeTLimit;
