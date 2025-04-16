@@ -12,6 +12,7 @@ if (NOT benchmark_FOUND)
                 GIT_REPOSITORY https://github.com/google/benchmark.git
                 GIT_TAG v${BENCHMARK_VERSION}
         )
+    set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(benchmark)
   else ()
     MESSAGE(FATAL_ERROR "Google::benchmark ${BENCHMARK_VERSION} not found")

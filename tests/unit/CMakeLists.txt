@@ -20,10 +20,15 @@ if (NOT GTest_FOUND)
   endif ()
 endif ()
 
-file(GLOB_RECURSE UNIT_TESTS_FILES LIST_DIRECTORIES false ${CMAKE_SOURCE_DIR}/tests/unit/*.cpp)
+file(GLOB_RECURSE UNIT_TESTS_FILES LIST_DIRECTORIES false
+  ${CMAKE_SOURCE_DIR}/tests/unit/*.cpp
+)
 add_executable(${PROJECT_NAME} ${UNIT_TESTS_FILES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/tests/lib)
+target_include_directories(${PROJECT_NAME} PUBLIC
+  ${CMAKE_SOURCE_DIR}
+  ${CMAKE_SOURCE_DIR}/tests/lib
+)
 target_link_libraries(${PROJECT_NAME} ${PROJECT_EULER_LIBRARY})
 if (GTest_FOUND)
   target_link_libraries(${PROJECT_NAME} GTest::Main)
