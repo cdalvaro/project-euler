@@ -7,6 +7,7 @@
 //
 
 #include <charconv>
+#include <stdexcept>
 #include <string>
 
 #include "challenges/c0013/challenge.hpp"
