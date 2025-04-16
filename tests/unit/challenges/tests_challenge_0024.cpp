@@ -7,6 +7,7 @@
 //
 
 #include <gtest/gtest.h>
+#include <stdexcept>
 
 #include "challenges/c0024/challenge.hpp"
 

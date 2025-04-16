@@ -7,8 +7,8 @@
 //
 
 #include <algorithm>
-#include <set>
 #include <sstream>
+#include <stdexcept>
 
 #include "challenges/c0024/challenge.hpp"
 #include "tools/math/factorial.hpp"
