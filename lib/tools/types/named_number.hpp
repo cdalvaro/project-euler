@@ -10,9 +10,9 @@
 #define tools_types_named_number_hpp
 
 #include <cmath>
+#include <cstdint>
 #include <iostream>
 #include <string>
-#include <type_traits>
 #include <vector>
 
 #include "tools/math/concepts.hpp"

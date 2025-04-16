@@ -9,6 +9,8 @@
 #ifndef challenges_c0003_challenge_hpp
 #define challenges_c0003_challenge_hpp
 
+#include <cstdint>
+
 #include "challenges/ichallenge.hpp"
 
 namespace challenges {
