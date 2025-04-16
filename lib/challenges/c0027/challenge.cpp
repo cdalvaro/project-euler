@@ -12,12 +12,12 @@
 using namespace challenges;
 using namespace tools::math;
 
-Challenge27::Challenge27(const size_t &a_limit, const size_t &b_limit) : a_limit(a_limit), b_limit(b_limit) {
+Challenge27::Challenge27(const std::size_t &a_limit, const std::size_t &b_limit) : a_limit(a_limit), b_limit(b_limit) {
 }
 
 IChallenge::Solution_t Challenge27::solve() {
     Type_t coefficient = 0;
-    size_t max_n = 0;
+    std::size_t max_n = 0;
     for (auto a = static_cast<long>(-a_limit); std::cmp_less_equal(a, a_limit); ++a) {
         for (auto b = static_cast<long>(-b_limit); std::cmp_less_equal(b, b_limit); ++b) {
             long n = 0;

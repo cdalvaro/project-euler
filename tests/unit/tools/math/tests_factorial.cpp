@@ -28,13 +28,13 @@ namespace tests {
     }
 
     TEST(Tools_Math_Factorial, Twenty) {
-        const size_t expected = 2'432'902'008'176'640'000;
-        EXPECT_EQ(expected, factorial<size_t>(20)) << "Factorial of twenty is 2,432,902,008,176,640,000";
+        const std::size_t expected = 2'432'902'008'176'640'000;
+        EXPECT_EQ(expected, factorial<std::size_t>(20)) << "Factorial of twenty is 2,432,902,008,176,640,000";
     }
 
     TEST(Tools_Math_Factorial, BigInt) {
         const tools::types::BigInt expected("265252859812191058636308480000000");
-        const auto result = factorial<size_t, tools::types::BigInt>(30);
+        const auto result = factorial<std::size_t, tools::types::BigInt>(30);
         EXPECT_EQ(expected, result) << "Factorial of thirty is 265,252,859,812,191,058,636,308,480,000,000";
     }
 

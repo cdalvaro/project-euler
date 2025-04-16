@@ -22,7 +22,7 @@ namespace challenges {
     class Challenge20 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -31,7 +31,7 @@ namespace challenges {
 
          This is the main constructor of Challenge20 class
          */
-        explicit Challenge20(const size_t &number);
+        explicit Challenge20(const std::size_t &number);
 
         /**
          @brief Default destructor
@@ -46,7 +46,7 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t number; ///< The number to compute the sum of the digits of its factorial number
+        std::size_t number; ///< The number to compute the sum of the digits of its factorial number
     };
 } // namespace challenges
 

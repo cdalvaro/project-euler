@@ -22,7 +22,7 @@ namespace tools::math::sequences {
 
      @link https://mathworld.wolfram.com/FibonacciNumber.html @endlink
      */
-    template <typename Return_t = size_t>
+    template <typename Return_t = std::size_t>
     class Fibonacci {
     public:
         /**
@@ -32,9 +32,9 @@ namespace tools::math::sequences {
 
          @return The value for the nth element of the Fibonacci sequence
          */
-        Return_t operator()(const size_t &n) {
+        Return_t operator()(const std::size_t &n) {
             if (n < 2) {
-                return cache[n] = Return_t{static_cast<size_t>(n == 0 ? 0 : 1)};
+                return cache[n] = Return_t{static_cast<std::size_t>(n == 0 ? 0 : 1)};
             }
 
             auto it = cache.find(n);
@@ -55,7 +55,7 @@ namespace tools::math::sequences {
         }
 
     private:
-        std::map<size_t, Return_t> cache; /**< Cache for the Fibonacci sequence */
+        std::map<std::size_t, Return_t> cache; /**< Cache for the Fibonacci sequence */
 
         /**
          @brief Get the value for a given index
@@ -64,7 +64,7 @@ namespace tools::math::sequences {
 
          @return The value for the given index
          */
-        inline Return_t getValueForIndex(const size_t &n) {
+        inline Return_t getValueForIndex(const std::size_t &n) {
             auto it_cache = cache.find(n);
             if (it_cache != cache.end()) {
                 return it_cache->second;

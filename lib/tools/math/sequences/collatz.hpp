@@ -24,7 +24,7 @@ namespace tools::math::sequences {
 
      @return A vector with the sequence
      */
-    std::vector<size_t> collatz(const size_t &seed);
+    std::vector<std::size_t> collatz(const std::size_t &seed);
 
 } // namespace tools::math::sequences
 

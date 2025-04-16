@@ -34,7 +34,7 @@ namespace challenges {
 
          This is the main constructor of Challenge24 class
          */
-        Challenge24(const Type_t &sequence, const size_t &nth_permutation);
+        Challenge24(const Type_t &sequence, const std::size_t &nth_permutation);
 
         /**
          @brief Default destructor
@@ -49,8 +49,8 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        Type_t sequence;        ///< The sequence to compute its lexicographic permutations
-        size_t nth_permutation; ///< The position of the permutation to be recovered
+        Type_t sequence;             ///< The sequence to compute its lexicographic permutations
+        std::size_t nth_permutation; ///< The position of the permutation to be recovered
     };
 
 } // namespace challenges

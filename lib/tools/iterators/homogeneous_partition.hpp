@@ -37,7 +37,7 @@ namespace tools::iterators {
          @param last Last range number
          @param number_of_partitions The number of homogeneous partitions
          */
-        HomogeneousPartition(const Integer_t &first, const Integer_t &last, const size_t &number_of_partitions) :
+        HomogeneousPartition(const Integer_t &first, const Integer_t &last, const std::size_t &number_of_partitions) :
         first(first), last(last), number_of_partitions(number_of_partitions) {
         }
 
@@ -58,7 +58,7 @@ namespace tools::iterators {
                 auto _first = first;
                 auto _last = _first + step;
                 auto _last_index = number_of_partitions - 1;
-                for (size_t index = 0; index < _last_index; ++index) {
+                for (std::size_t index = 0; index < _last_index; ++index) {
                     partitions_cache.emplace(_first, _last);
                     _first = _last + 1;
                     _last = _first + step;
@@ -92,7 +92,7 @@ namespace tools::iterators {
     private:
         Integer_t first;
         Integer_t last;
-        size_t number_of_partitions;
+        std::size_t number_of_partitions;
 
         mutable Partitions_t partitions_cache;
     };

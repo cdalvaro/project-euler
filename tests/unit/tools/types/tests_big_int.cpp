@@ -49,20 +49,20 @@ namespace tests {
 
     TEST(Tools_Types_BigInt, Size) {
         const BigInt number("1234567890");
-        const size_t expected = 10;
+        const std::size_t expected = 10;
 
         EXPECT_EQ(expected, number.size()) << "Number size is not 10";
     }
 
-    TEST(Tools_Types_BigInt, CastToSize_t) {
-        const size_t expected = std::numeric_limits<size_t>::max();
+    TEST(Tools_Types_BigInt, CastTostd::size_t) {
+        const std::size_t expected = std::numeric_limits<std::size_t>::max();
         const BigInt sizeTLimit(expected);
         const BigInt tooBigNumber = sizeTLimit + sizeTLimit;
 
-        size_t result;
-        EXPECT_THROW(result = size_t(tooBigNumber), std::out_of_range) << "BigInt do not cast to size_t";
-        EXPECT_NO_THROW(result = size_t(sizeTLimit)) << "BigInt casts to size_t";
-        EXPECT_EQ(expected, result) << "BigInt casts to size_t properly";
+        std::size_t result;
+        EXPECT_THROW(result = std::size_t(tooBigNumber), std::out_of_range) << "BigInt do not cast to std::size_t";
+        EXPECT_NO_THROW(result = std::size_t(sizeTLimit)) << "BigInt casts to std::size_t";
+        EXPECT_EQ(expected, result) << "BigInt casts to std::size_t properly";
     }
 
     TEST(Tools_Types_BigInt, ToString) {

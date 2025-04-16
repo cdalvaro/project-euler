@@ -14,7 +14,7 @@ using namespace challenges;
 using namespace tools::math::sequences;
 using namespace tools::types;
 
-Challenge25::Challenge25(const size_t &number_of_digits) : number_of_digits(number_of_digits) {
+Challenge25::Challenge25(const std::size_t &number_of_digits) : number_of_digits(number_of_digits) {
 }
 
 IChallenge::Solution_t Challenge25::solve() {

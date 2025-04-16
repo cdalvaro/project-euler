@@ -25,7 +25,7 @@ namespace challenges {
     class Challenge15 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -35,7 +35,7 @@ namespace challenges {
          @param width The width of the lattice
          @param height The height of the lattice
          */
-        Challenge15(const size_t &width, const size_t &height);
+        Challenge15(const std::size_t &width, const std::size_t &height);
 
         /**
          @brief Default destructor
@@ -50,7 +50,7 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        using Lattice_t = std::pair<size_t, size_t>;
+        using Lattice_t = std::pair<std::size_t, std::size_t>;
 
         Lattice_t lattice;                       ///< The lattice to find the number of possible paths
         std::map<Lattice_t, Type_t> paths_cache; ///< A cache for storing the number of paths for each sublattice

@@ -22,7 +22,7 @@ namespace challenges {
     class Challenge4 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -32,7 +32,7 @@ namespace challenges {
          @param number_of_digits The number of digits of each product number
          @param number_of_products The number of products to multipy
          */
-        Challenge4(const size_t &number_of_digits, const size_t &number_of_products);
+        Challenge4(const std::size_t &number_of_digits, const std::size_t &number_of_products);
 
         /**
          @brief Default constructor
@@ -47,8 +47,8 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t number_of_digits;   ///< The number of digits of each product number
-        size_t number_of_products; ///< The number of products to multiply
+        std::size_t number_of_digits;   ///< The number of digits of each product number
+        std::size_t number_of_products; ///< The number of products to multiply
 
         /**
          @brief Check if given number fulfills the required conditions
@@ -61,7 +61,7 @@ namespace challenges {
 
          @return True if the number fulfills the requirements, false otherwise.
          */
-        [[nodiscard]] bool checkDivisors(const Type_t &number, const size_t &depth) const;
+        [[nodiscard]] bool checkDivisors(const Type_t &number, const std::size_t &depth) const;
 
         /**
          @brief Check wether \p number is a palindromic number or not
@@ -88,7 +88,7 @@ namespace challenges {
 
          @return The number of digits for the given number
          */
-        static size_t getNumberOfDigits(const Type_t &number);
+        static std::size_t getNumberOfDigits(const Type_t &number);
 
         /**
          @brief Flip digits for the given number

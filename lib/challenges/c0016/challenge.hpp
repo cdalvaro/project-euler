@@ -22,7 +22,7 @@ namespace challenges {
     class Challenge16 : virtual public IChallenge {
     public:
         //! @copydoc IChallenge::Type_t
-        using Type_t = size_t;
+        using Type_t = std::size_t;
 
         /**
          @brief Class constructor
@@ -31,7 +31,7 @@ namespace challenges {
 
          @param exponent The exponent to solve the problem
          */
-        explicit Challenge16(const size_t &exponent);
+        explicit Challenge16(const std::size_t &exponent);
 
         /**
          @brief Default destructor
@@ -46,7 +46,7 @@ namespace challenges {
         Solution_t solve() final;
 
     private:
-        size_t exponent; ///< The exponent of the problem
+        std::size_t exponent; ///< The exponent of the problem
     };
 } // namespace challenges
 
