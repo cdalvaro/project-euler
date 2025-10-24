@@ -51,7 +51,7 @@ jobs:
         run: tar -czf cmake-build.tar.gz "${BUILD_DIRECTORY}"
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: cmake-build
           path: cmake-build.tar.gz
